@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render Button with styles 1`] = `
+<DocumentFragment>
+  <button
+    class="p-4 uppercase bg-orange-600 text-yellow-100 mt-4"
+  >
+    Test
+  </button>
+</DocumentFragment>
+`;

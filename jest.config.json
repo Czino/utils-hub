@@ -1,0 +1,11 @@
+{
+  "rootDir": "./",
+  "testEnvironment": "jsdom",
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx"],
+  "clearMocks": true,
+  "collectCoverage": false,
+  "coverageProvider": "v8",
+  "coverageReporters": ["lcov", "text-summary"],
+  "moduleDirectories": ["node_modules"],
+  "coveragePathIgnorePatterns": ["/node_modules/"]
+}
