@@ -3,11 +3,17 @@
 exports[`Home should render correctly 1`] = `
 <DocumentFragment>
   <div
-    class="flex flex-row gap-4 text-2xl color-black"
+    class="flex flex-row gap-4 text-2xl bg-white color-black"
   >
     <nav
-      class="p-4 w-[240px]"
+      class="bg-white h-screen absolute md:relative p-4 w-[240px] left-[-200px] md:left-0"
     >
+      <div
+        class="absolute top-4 right-4 md:hidden"
+        role="button"
+      >
+        Ⅲ
+      </div>
       <ul>
         <li>
           <a
@@ -29,7 +35,7 @@ exports[`Home should render correctly 1`] = `
       class="p-4 space-y-4 w-full"
     >
       <h1
-        class="text-5xl "
+        class="text-5xl text-success-2 font-bold "
       >
         UtilsHub
       </h1>
@@ -39,7 +45,20 @@ exports[`Home should render correctly 1`] = `
       <p>
         The platform is constantly evolving, with new utilities added regularly to meet the ever-changing demands of our users. We are committed to excellence, offering reliable and accurate tools that you can count on.
       </p>
+      <p>
+        For now we only have a few 
+        <a
+          class="text-highlight-1 hover:text-highlight-2 active:text-highlight-3 "
+          href="/utils/list"
+        >
+          list utilities
+        </a>
+        .
+      </p>
     </div>
+    <div
+      class="w-[280px] hidden md:block"
+    />
   </div>
 </DocumentFragment>
 `;

@@ -3,11 +3,17 @@
 exports[`ScreenWithSideNavigation should render ScreenWithSideNavigation 1`] = `
 <DocumentFragment>
   <div
-    class="flex flex-row gap-4 text-2xl color-black"
+    class="flex flex-row gap-4 text-2xl bg-white color-black"
   >
     <nav
-      class="p-4 w-[240px]"
+      class="bg-white h-screen absolute md:relative p-4 w-[240px] left-[-200px] md:left-0"
     >
+      <div
+        class="absolute top-4 right-4 md:hidden"
+        role="button"
+      >
+        Ⅲ
+      </div>
       <ul>
         <li>
           <a
@@ -27,6 +33,9 @@ exports[`ScreenWithSideNavigation should render ScreenWithSideNavigation 1`] = `
     </nav>
     <div
       class="p-4 space-y-4 w-full"
+    />
+    <div
+      class="w-[280px] hidden md:block"
     />
   </div>
 </DocumentFragment>

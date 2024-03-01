@@ -3,8 +3,14 @@
 exports[`NavigationColumn should render NavigationColumn 1`] = `
 <DocumentFragment>
   <nav
-    class="p-4 w-[240px]"
+    class="bg-white h-screen absolute md:relative p-4 w-[240px] left-[-200px] md:left-0"
   >
+    <div
+      class="absolute top-4 right-4 md:hidden"
+      role="button"
+    >
+      Ⅲ
+    </div>
     <ul>
       <li>
         <a
