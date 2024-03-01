@@ -8,10 +8,11 @@ import { sortASC } from '../../utils/array/sortASC'
 import { sortDESC } from '../../utils/array/sortDESC'
 import { unique } from '../../utils/array/unique'
 
+const DEFAULT_VALUE = 'L\nI\nS\nT\nU\nT\nI\nL\nS'
 type SortingFunction = (a: string | number, b: string | number) => -1 | 0 | 1
 
 export const ListUtils = () => {
-  const [rawList, setRawList] = useState('')
+  const [rawList, setRawList] = useState(DEFAULT_VALUE)
   const [sorter, setSorter] = useState<SortingFunction>(() => sortASC)
 
   const sortList = () => {
@@ -25,7 +26,11 @@ export const ListUtils = () => {
   return (
     <ScreenWithSideNavigation>
       <Headline>ListUtils</Headline>
-      <TextArea aria-label="enter your list" onChange={(e) => setRawList(e.currentTarget.value)} value={rawList} />
+      <TextArea
+        aria-label="enter your list"
+        onChange={(e) => setRawList(e.currentTarget.value)}
+        value={rawList || undefined}
+      />
       <div className="grid grid-cols-4 gap-4">
         <Button onClick={sortList}>sort</Button>
         <Button onClick={reverseList}>reverse</Button>
