@@ -1,13 +1,16 @@
 import { useState } from 'react'
-import { Button } from '../components/Button'
-import { TextArea } from '../components/TextArea'
-import { shuffle } from '../utils/array/shuffle'
-import { sortASC } from '../utils/array/sortASC'
-import { sortDESC } from '../utils/array/sortDESC'
-import { unique } from '../utils/array/unique'
+import { Button } from '../../components/Button'
+import { Headline } from '../../components/Headline'
+import { TextArea } from '../../components/TextArea'
+import { ScreenWithSideNavigation } from '../../templates/ScreenWithSideNavigation'
+import { shuffle } from '../../utils/array/shuffle'
+import { sortASC } from '../../utils/array/sortASC'
+import { sortDESC } from '../../utils/array/sortDESC'
+import { unique } from '../../utils/array/unique'
 
 type SortingFunction = (a: string | number, b: string | number) => -1 | 0 | 1
-export const ListSorter = () => {
+
+export const ListUtils = () => {
   const [rawList, setRawList] = useState('')
   const [sorter, setSorter] = useState<SortingFunction>(() => sortASC)
 
@@ -20,8 +23,8 @@ export const ListSorter = () => {
   const uniqueList = () => setRawList((list) => list.split('\n').filter(unique).join('\n'))
 
   return (
-    <div className="h-full">
-      <h1 className="text-xl uppercase">List</h1>
+    <ScreenWithSideNavigation>
+      <Headline>ListUtils</Headline>
       <TextArea aria-label="enter your list" onChange={(e) => setRawList(e.currentTarget.value)} value={rawList} />
       <div className="grid grid-cols-4 gap-4">
         <Button onClick={sortList}>sort</Button>
@@ -29,6 +32,6 @@ export const ListSorter = () => {
         <Button onClick={shuffleList}>shuffle</Button>
         <Button onClick={uniqueList}>unique</Button>
       </div>
-    </div>
+    </ScreenWithSideNavigation>
   )
 }

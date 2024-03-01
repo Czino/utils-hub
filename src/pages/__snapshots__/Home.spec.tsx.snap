@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-row gap-4 text-2xl color-black"
+  >
+    <nav
+      class="p-4 w-[240px]"
+    >
+      <ul>
+        <li>
+          <a
+            href="/"
+          >
+            Utils Hub
+          </a>
+        </li>
+        <li>
+          <a
+            href="/utils/list"
+          >
+            Lists
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="p-4 space-y-4 w-full"
+    >
+      <h1
+        class="text-5xl "
+      >
+        UtilsHub
+      </h1>
+      <p>
+        Welcome to UtilsHub, your premier online destination for a vast array of digital utilities designed to enhance efficiency and streamline your workflow.
+      </p>
+      <p>
+        The platform is constantly evolving, with new utilities added regularly to meet the ever-changing demands of our users. We are committed to excellence, offering reliable and accurate tools that you can count on.
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

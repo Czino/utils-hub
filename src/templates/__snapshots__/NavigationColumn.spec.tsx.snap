@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationColumn should render NavigationColumn 1`] = `
+<DocumentFragment>
+  <nav
+    class="p-4 w-[240px]"
+  >
+    <ul>
+      <li>
+        <a
+          href="/"
+        >
+          Utils Hub
+        </a>
+      </li>
+      <li>
+        <a
+          href="/utils/list"
+        >
+          Lists
+        </a>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;

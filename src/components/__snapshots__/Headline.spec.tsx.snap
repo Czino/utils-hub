@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Headline should render Headline with styles 1`] = `
+<DocumentFragment>
+  <h1
+    class="text-5xl mt-4"
+  >
+    Test
+  </h1>
+</DocumentFragment>
+`;

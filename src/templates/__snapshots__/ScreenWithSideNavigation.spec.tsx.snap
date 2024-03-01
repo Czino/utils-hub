@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScreenWithSideNavigation should render ScreenWithSideNavigation 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-row gap-4 text-2xl color-black"
+  >
+    <nav
+      class="p-4 w-[240px]"
+    >
+      <ul>
+        <li>
+          <a
+            href="/"
+          >
+            Utils Hub
+          </a>
+        </li>
+        <li>
+          <a
+            href="/utils/list"
+          >
+            Lists
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="p-4 space-y-4 w-full"
+    />
+  </div>
+</DocumentFragment>
+`;

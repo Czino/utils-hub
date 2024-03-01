@@ -3,7 +3,7 @@
 exports[`Button should render Button with styles 1`] = `
 <DocumentFragment>
   <button
-    class="p-4 uppercase bg-orange-600 text-yellow-100 mt-4"
+    class="p-4 font-bold text-white uppercase rounded bg-success-1 hover:bg-success-2 active:bg-success-3 mt-4"
   >
     Test
   </button>
