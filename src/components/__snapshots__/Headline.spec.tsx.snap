@@ -3,7 +3,7 @@
 exports[`Headline should render Headline with styles 1`] = `
 <DocumentFragment>
   <h1
-    class="text-5xl mt-4"
+    class="text-5xl text-success-2 font-bold mt-4"
   >
     Test
   </h1>

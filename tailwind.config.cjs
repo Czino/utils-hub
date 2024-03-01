@@ -8,7 +8,11 @@ export default {
         white: '#F8FAFF',
         black: '#4c5454',
         dark: '#523f38',
-        highlight: '#ff715b',
+        highlight: {
+          1: '#ff715b',
+          2: '#FF381A',
+          3: '#D11C00',
+        },
         success: {
           1: '#1ea896',
           2: '#198F7F',
