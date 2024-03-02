@@ -6,7 +6,7 @@ describe('Button', () => {
     const { asFragment } = render(
       <Button className="mt-4" onClick={jest.fn()}>
         Test
-      </Button>
+      </Button>,
     )
     expect(asFragment()).toMatchSnapshot()
   })

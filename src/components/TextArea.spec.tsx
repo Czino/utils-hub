@@ -6,7 +6,7 @@ describe('TextArea', () => {
     const { asFragment } = render(
       <TextArea className="mt-4" value="text">
         Test
-      </TextArea>
+      </TextArea>,
     )
     expect(asFragment()).toMatchSnapshot()
   })

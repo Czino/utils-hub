@@ -6,7 +6,7 @@ describe('Link', () => {
     const { asFragment } = render(
       <Link className="mt-4" href="/link">
         Test
-      </Link>
+      </Link>,
     )
     expect(asFragment()).toMatchSnapshot()
   })
