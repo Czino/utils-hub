@@ -6,5 +6,8 @@ import { defineConfig } from 'astro/config'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://utils-hub.com',
+  vite: {
+    optimizeDeps: { exclude: ['fsevents'] },
+  },
   integrations: [react(), tailwind(), sitemap()],
 })

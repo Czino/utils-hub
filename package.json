@@ -1,7 +1,7 @@
 {
   "name": "utils-hub",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -19,7 +19,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@types/react": "^18.2.58",
     "@types/react-dom": "^18.2.19",
-    "astro": "^4.4.5",
+    "astro": "^4.4.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
