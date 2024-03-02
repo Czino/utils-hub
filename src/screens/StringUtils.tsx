@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { Button } from '../../components/Button'
-import { Headline } from '../../components/Headline'
-import { TextArea } from '../../components/TextArea'
-import { ScreenWithSideNavigation } from '../../templates/ScreenWithSideNavigation'
+import { Button } from '../components/Button'
+import { Headline } from '../components/Headline'
+import { TextArea } from '../components/TextArea'
+import { ScreenWithSideNavigation } from '../templates/ScreenWithSideNavigation'
 
 const DEFAULT_VALUE = 'transform me'
 
@@ -16,6 +16,11 @@ export const StringUtils = () => {
   return (
     <ScreenWithSideNavigation>
       <Headline>Text utilities</Headline>
+      <p>
+        Time to play with your words! Whether you want to SHOUT OUT your text in uppercase, bring it down to a whisper
+        in lowercase, or perform other fun text tricks like swapping cases or capitalizing the first letter of each
+        word, this page has got you covered.
+      </p>
       <TextArea
         aria-label="enter your text"
         onChange={(e) => setText(e.currentTarget.value)}
