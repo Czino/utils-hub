@@ -25,7 +25,7 @@ export const ListUtils = () => {
 
   return (
     <ScreenWithSideNavigation>
-      <Headline>ListUtils</Headline>
+      <Headline>List utilities</Headline>
       <TextArea
         aria-label="enter your list"
         onChange={(e) => setRawList(e.currentTarget.value)}

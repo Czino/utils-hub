@@ -23,7 +23,15 @@ exports[`Home should render correctly 1`] = `
             class=""
             href="/utils/list"
           >
-            Lists
+            List
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/text"
+          >
+            Text
           </a>
         </li>
       </ul>
@@ -33,6 +41,7 @@ exports[`Home should render correctly 1`] = `
       role="button"
     >
       <svg
+        aria-label="open navigation"
         fill="none"
         height="1em"
         stroke="currentColor"
@@ -85,7 +94,14 @@ exports[`Home should render correctly 1`] = `
         >
           list utilities
         </a>
-        .
+         and 
+        <a
+          class="text-highlight-1 hover:text-highlight-2 active:text-highlight-3 "
+          href="/utils/text"
+        >
+          text utilities
+        </a>
+         but more is to come!
       </p>
     </div>
     <div

@@ -14,7 +14,8 @@ export const Home = () => (
       users. We are committed to excellence, offering reliable and accurate tools that you can count on.
     </p>
     <p>
-      For now we only have a few <Link href="/utils/list">list utilities</Link>.
+      For now we only have a few <Link href="/utils/list">list utilities</Link> and{' '}
+      <Link href="/utils/text">text utilities</Link> but more is to come!
     </p>
   </ScreenWithSideNavigation>
 )
