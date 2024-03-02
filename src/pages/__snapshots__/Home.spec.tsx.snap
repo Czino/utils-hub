@@ -37,10 +37,10 @@ exports[`Home should render correctly 1`] = `
       <h1
         class="text-5xl text-success-2 font-bold "
       >
-        UtilsHub
+        UtilityHub
       </h1>
       <p>
-        Welcome to UtilsHub, your premier online destination for a vast array of digital utilities designed to enhance efficiency and streamline your workflow.
+        Welcome to UtilityHub, your premier online destination for a vast array of digital utilities designed to enhance efficiency and streamline your workflow.
       </p>
       <p>
         The platform is constantly evolving, with new utilities added regularly to meet the ever-changing demands of our users. We are committed to excellence, offering reliable and accurate tools that you can count on.

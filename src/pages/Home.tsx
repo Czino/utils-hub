@@ -4,9 +4,9 @@ import { ScreenWithSideNavigation } from '../templates/ScreenWithSideNavigation'
 
 export const Home = () => (
   <ScreenWithSideNavigation>
-    <Headline>UtilsHub</Headline>
+    <Headline>UtilityHub</Headline>
     <p>
-      Welcome to UtilsHub, your premier online destination for a vast array of digital utilities designed to enhance
+      Welcome to UtilityHub, your premier online destination for a vast array of digital utilities designed to enhance
       efficiency and streamline your workflow.
     </p>
     <p>
