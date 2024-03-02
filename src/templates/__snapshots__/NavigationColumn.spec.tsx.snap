@@ -20,7 +20,15 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
           class=""
           href="/utils/list"
         >
-          Lists
+          List
+        </a>
+      </li>
+      <li>
+        <a
+          class=""
+          href="/utils/text"
+        >
+          Text
         </a>
       </li>
     </ul>
@@ -30,6 +38,7 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
     role="button"
   >
     <svg
+      aria-label="open navigation"
       fill="none"
       height="1em"
       stroke="currentColor"
@@ -61,4 +70,81 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
     </svg>
   </div>
 </DocumentFragment>
+`;
+
+exports[`NavigationColumn should show NavigationColumn when clicking on menu icon 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+- <DocumentFragment />
++ <DocumentFragment>
++   <nav
++     class="bg-white absolute p-4 transition-[top] w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px]"
++   >
++     <ul>
++       <li
++         class="font-bold"
++       >
++         <a
++           href="/"
++         >
++           UtilityHub
++         </a>
++       </li>
++       <li>
++         <a
++           class=""
++           href="/utils/list"
++         >
++           List
++         </a>
++       </li>
++       <li>
++         <a
++           class=""
++           href="/utils/text"
++         >
++           Text
++         </a>
++       </li>
++     </ul>
++   </nav>
++   <div
++     class="flex absolute right-0 bottom-0 justify-end p-4 w-full bg-white md:hidden"
++     role="button"
++   >
++     <svg
++       aria-label="open navigation"
++       fill="none"
++       height="1em"
++       stroke="currentColor"
++       stroke-linecap="round"
++       stroke-linejoin="round"
++       stroke-width="2"
++       viewBox="0 0 24 24"
++       width="1em"
++       xmlns="http://www.w3.org/2000/svg"
++     >
++       <line
++         x1="3"
++         x2="21"
++         y1="12"
++         y2="12"
++       />
++       <line
++         x1="3"
++         x2="21"
++         y1="6"
++         y2="6"
++       />
++       <line
++         x1="3"
++         x2="21"
++         y1="18"
++         y2="18"
++       />
++     </svg>
++   </div>
++ </DocumentFragment>"
 `;

@@ -2,7 +2,11 @@ import { useEffect, useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { useToggle } from '../hooks/useToggle'
 
-const navigation = [{ path: '/utils/list', title: 'Lists' }]
+export const navigation = [
+  { path: '/utils/list', title: 'List' },
+  { path: '/utils/text', title: 'Text' },
+] as const
+
 export const NavigationColumn = () => {
   const [isVisible, toggleIsVisible] = useToggle()
   const [current, setCurrent] = useState('')
@@ -27,7 +31,7 @@ export const NavigationColumn = () => {
           </li>
           {navigation.map(({ path, title }) => (
             <li key={path}>
-              <a href={path} className={path === current ? 'text-highlight-1' : ''}>
+              <a href={path} className={current.includes(path) ? 'text-highlight-1' : ''}>
                 {title}
               </a>
             </li>
@@ -39,7 +43,7 @@ export const NavigationColumn = () => {
         role="button"
         onClick={toggleIsVisible}
       >
-        {isVisible ? <FiX /> : <FiMenu />}
+        {isVisible ? <FiX aria-label="close navigation" /> : <FiMenu aria-label="open navigation" />}
       </div>
     </>
   )

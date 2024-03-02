@@ -23,7 +23,15 @@ exports[`ScreenWithSideNavigation should render ScreenWithSideNavigation 1`] = `
             class=""
             href="/utils/list"
           >
-            Lists
+            List
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/text"
+          >
+            Text
           </a>
         </li>
       </ul>
@@ -33,6 +41,7 @@ exports[`ScreenWithSideNavigation should render ScreenWithSideNavigation 1`] = `
       role="button"
     >
       <svg
+        aria-label="open navigation"
         fill="none"
         height="1em"
         stroke="currentColor"
