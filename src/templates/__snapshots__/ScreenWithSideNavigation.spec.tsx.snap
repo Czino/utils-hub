@@ -6,24 +6,21 @@ exports[`ScreenWithSideNavigation should render ScreenWithSideNavigation 1`] = `
     class="flex flex-row gap-4 text-2xl bg-white color-black"
   >
     <nav
-      class="bg-white h-screen absolute md:relative p-4 w-[240px] left-[-200px] md:left-0"
+      class="bg-white absolute p-4 transition-[top] w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px]"
     >
-      <div
-        class="absolute top-4 right-4 md:hidden"
-        role="button"
-      >
-        Ⅲ
-      </div>
       <ul>
-        <li>
+        <li
+          class="font-bold"
+        >
           <a
             href="/"
           >
-            Utils Hub
+            UtilityHub
           </a>
         </li>
         <li>
           <a
+            class=""
             href="/utils/list"
           >
             Lists
@@ -31,6 +28,41 @@ exports[`ScreenWithSideNavigation should render ScreenWithSideNavigation 1`] = `
         </li>
       </ul>
     </nav>
+    <div
+      class="flex absolute right-0 bottom-0 justify-end p-4 w-full bg-white md:hidden"
+      role="button"
+    >
+      <svg
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="3"
+          x2="21"
+          y1="12"
+          y2="12"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="6"
+          y2="6"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="18"
+          y2="18"
+        />
+      </svg>
+    </div>
     <div
       class="p-4 space-y-4 w-full"
     />

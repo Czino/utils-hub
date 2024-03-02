@@ -31,7 +31,7 @@ export const ListUtils = () => {
         onChange={(e) => setRawList(e.currentTarget.value)}
         value={rawList || undefined}
       />
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid gap-4 md:grid-cols-4">
         <Button onClick={sortList}>sort</Button>
         <Button onClick={reverseList}>reverse</Button>
         <Button onClick={shuffleList}>shuffle</Button>
