@@ -10,12 +10,12 @@ describe('useToggle', () => {
     const { result } = renderHook(useToggle, { initialProps: true })
     expect(result.current[0]).toBeTruthy()
   })
-  it('should toggle value', async () => {
+  it('should toggle value', () => {
     const { result } = renderHook(useToggle)
     expect(result.current[0]).toBeFalsy()
-    await act(result.current[1])
+    act(result.current[1])
     expect(result.current[0]).toBeTruthy()
-    await act(result.current[1])
+    act(result.current[1])
     expect(result.current[0]).toBeFalsy()
   })
 })
