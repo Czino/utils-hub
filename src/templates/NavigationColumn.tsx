@@ -5,6 +5,7 @@ import { useToggle } from '../hooks/useToggle'
 export const navigation = [
   { path: '/utils/list', title: 'List' },
   { path: '/utils/text', title: 'Text' },
+  { path: '/utils/units', title: 'Units' },
 ] as const
 
 export const NavigationColumn = () => {
