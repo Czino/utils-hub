@@ -34,6 +34,14 @@ exports[`Home should render correctly 1`] = `
             Text
           </a>
         </li>
+        <li>
+          <a
+            class=""
+            href="/utils/units"
+          >
+            Units
+          </a>
+        </li>
       </ul>
     </nav>
     <div
