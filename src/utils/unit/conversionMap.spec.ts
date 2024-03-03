@@ -1,3 +1,4 @@
+/* eslint-disable max-statements */
 import { ABSOLUTE_ZERO_ºC } from './constants'
 import { conversionMap } from './conversionMap'
 
@@ -25,6 +26,11 @@ describe('conversionMap.DISTANCE', () => {
     expect(conversionMap.DISTANCE.m.mm(1000)).toEqual(1000000)
     expect(conversionMap.DISTANCE.m.µm(1000)).toEqual(1000000000)
     expect(conversionMap.DISTANCE.m.nm(1000)).toEqual(1000000000000)
+    expect(conversionMap.DISTANCE.m.in(1000)).toEqual(39370.079)
+    expect(conversionMap.DISTANCE.m.ft(1000)).toEqual(3280.84)
+    expect(conversionMap.DISTANCE.m.yd(1000)).toEqual(1093.613)
+    expect(conversionMap.DISTANCE.m.mi(1000)).toEqual(0.621)
+    expect(conversionMap.DISTANCE.m.nmi(1000)).toEqual(0.54)
 
     expect(conversionMap.DISTANCE.km.m(1000)).toEqual(1000000)
     expect(conversionMap.DISTANCE.dm.m(1000)).toEqual(100)
@@ -32,6 +38,11 @@ describe('conversionMap.DISTANCE', () => {
     expect(conversionMap.DISTANCE.mm.m(1000)).toEqual(1)
     expect(conversionMap.DISTANCE.µm.m(1000)).toEqual(0.001)
     expect(conversionMap.DISTANCE.nm.m(1000)).toEqual(0.000001)
+    expect(conversionMap.DISTANCE.in.m(1)).toEqual(0.0254)
+    expect(conversionMap.DISTANCE.ft.m(1)).toEqual(0.3048)
+    expect(conversionMap.DISTANCE.yd.m(1)).toEqual(0.9144)
+    expect(conversionMap.DISTANCE.mi.m(1)).toEqual(1609.344)
+    expect(conversionMap.DISTANCE.nmi.m(1)).toEqual(1852)
 
     expect(conversionMap.DISTANCE.km.km(1000)).toEqual(1000)
     expect(conversionMap.DISTANCE.dm.km(1000)).toEqual(0.1)
@@ -39,6 +50,8 @@ describe('conversionMap.DISTANCE', () => {
     expect(conversionMap.DISTANCE.mm.cm(10)).toEqual(1)
     expect(conversionMap.DISTANCE.µm.cm(1000)).toEqual(0.1)
     expect(conversionMap.DISTANCE.nm.mm(1000)).toEqual(0.001)
+    expect(conversionMap.DISTANCE.in.cm(1)).toEqual(2.54)
+    expect(conversionMap.DISTANCE.ft.cm(1)).toEqual(30.48)
   })
 })
 describe('conversionMap.WEIGHT', () => {
@@ -48,16 +61,23 @@ describe('conversionMap.WEIGHT', () => {
     expect(conversionMap.WEIGHT.g.t(1000)).toEqual(0.001)
     expect(conversionMap.WEIGHT.g.mg(1)).toEqual(1000)
     expect(conversionMap.WEIGHT.g.µg(1)).toEqual(1000000)
+    expect(conversionMap.WEIGHT.g.oz(1)).toEqual(0.035)
+    expect(conversionMap.WEIGHT.g.lb(1)).toEqual(0.002)
+    expect(conversionMap.WEIGHT.g.st(1000)).toEqual(0.157)
 
     expect(conversionMap.WEIGHT.kg.g(1)).toEqual(1000)
     expect(conversionMap.WEIGHT.t.g(1)).toEqual(1000000)
     expect(conversionMap.WEIGHT.mg.g(1000)).toEqual(1)
     expect(conversionMap.WEIGHT.µg.g(1000)).toEqual(0.001)
+    expect(conversionMap.WEIGHT.oz.g(1)).toEqual(28.349523125)
+    expect(conversionMap.WEIGHT.lb.g(1)).toEqual(453.59237)
+    expect(conversionMap.WEIGHT.st.g(1)).toEqual(6350.29318)
 
     expect(conversionMap.WEIGHT.kg.t(1000)).toEqual(1)
     expect(conversionMap.WEIGHT.t.kg(1)).toEqual(1000)
     expect(conversionMap.WEIGHT.mg.µg(1)).toEqual(1000)
     expect(conversionMap.WEIGHT.µg.g(1000000)).toEqual(1)
+    expect(conversionMap.WEIGHT.oz.lb(16)).toEqual(1)
   })
 })
 describe('conversionMap.VOLUME', () => {

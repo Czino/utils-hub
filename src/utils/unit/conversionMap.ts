@@ -1,13 +1,28 @@
 import { round } from '../math/round'
 import { keys } from '../object/keys'
 import { celsiusToKelvin } from './celsiusToKelvin'
-import { CENT, CUBED, DEZI, GIGA, KILO, MEGA } from './constants'
+import {
+  CENT,
+  CUBED,
+  DEZI,
+  GIGA,
+  KILO,
+  MEGA,
+  METER_PER_FEET,
+  METER_PER_INCH,
+  METER_PER_MILES,
+  METER_PER_NAUTICAL_MILES,
+  METER_PER_YARD,
+} from './constants'
 import { fahrenheitToKelvin } from './fahrenheitToKelvin'
 import { kelvinToCelsius } from './kelvinToCelsius'
 import { kelvinToFahrenheit } from './kelvinToFahrenheit'
 
 const PRECISION = 3
 
+const GRAMS_PER_OUNCE = 28.349523125
+const GRAMS_PER_POUND = 453.59237
+const GRAMS_PER_STONE = 6350.29318
 export const baseMap = {
   TEMPERATURE: {
     K: {
@@ -18,7 +33,6 @@ export const baseMap = {
     ºC: { K: celsiusToKelvin },
     ºF: { K: fahrenheitToKelvin },
   },
-  // TODO add freedom units
   DISTANCE: {
     m: {
       m: (m: number) => m,
@@ -28,6 +42,11 @@ export const baseMap = {
       mm: (m: number) => round(m * KILO, PRECISION),
       µm: (m: number) => round(m * MEGA, PRECISION),
       nm: (m: number) => round(m * GIGA, PRECISION),
+      in: (m: number) => round(m / METER_PER_INCH, PRECISION),
+      ft: (m: number) => round(m / METER_PER_FEET, PRECISION),
+      yd: (m: number) => round(m / METER_PER_YARD, PRECISION),
+      mi: (m: number) => round(m / METER_PER_MILES, PRECISION),
+      nmi: (m: number) => round(m / METER_PER_NAUTICAL_MILES, PRECISION),
     },
     km: { m: (km: number) => km * KILO },
     dm: { m: (dm: number) => dm / DEZI },
@@ -35,8 +54,12 @@ export const baseMap = {
     mm: { m: (mm: number) => mm / KILO },
     µm: { m: (µm: number) => µm / MEGA },
     nm: { m: (nm: number) => nm / GIGA },
+    in: { m: (inch: number) => inch * METER_PER_INCH },
+    ft: { m: (ft: number) => ft * METER_PER_FEET },
+    yd: { m: (yd: number) => yd * METER_PER_YARD },
+    mi: { m: (mi: number) => mi * METER_PER_MILES },
+    nmi: { m: (nmi: number) => nmi * METER_PER_NAUTICAL_MILES },
   },
-  // TODO add freedom units
   WEIGHT: {
     g: {
       g: (g: number) => g,
@@ -44,11 +67,17 @@ export const baseMap = {
       t: (g: number) => round(g / MEGA, PRECISION),
       mg: (g: number) => round(g * KILO, PRECISION),
       µg: (g: number) => round(g * MEGA, PRECISION),
+      oz: (g: number) => round(g / GRAMS_PER_OUNCE, PRECISION),
+      lb: (g: number) => round(g / GRAMS_PER_POUND, PRECISION),
+      st: (g: number) => round(g / GRAMS_PER_STONE, PRECISION),
     },
     kg: { g: (kg: number) => kg * KILO },
     t: { g: (t: number) => t * MEGA },
     mg: { g: (mg: number) => mg / KILO },
     µg: { g: (µg: number) => µg / MEGA },
+    oz: { g: (oz: number) => oz * GRAMS_PER_OUNCE },
+    lb: { g: (lb: number) => lb * GRAMS_PER_POUND },
+    st: { g: (st: number) => st * GRAMS_PER_STONE },
   },
   VOLUME: {
     'm³': {
