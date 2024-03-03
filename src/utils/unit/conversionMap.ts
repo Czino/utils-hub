@@ -1,7 +1,7 @@
 import { round } from '../math/round'
 import { keys } from '../object/keys'
 import { celsiusToKelvin } from './celsiusToKelvin'
-import { CENT, DEZI, GIGA, KILO, MEGA } from './constants'
+import { CENT, CUBED, DEZI, GIGA, KILO, MEGA } from './constants'
 import { fahrenheitToKelvin } from './fahrenheitToKelvin'
 import { kelvinToCelsius } from './kelvinToCelsius'
 import { kelvinToFahrenheit } from './kelvinToFahrenheit'
@@ -50,6 +50,25 @@ export const baseMap = {
     mg: { g: (mg: number) => mg / KILO },
     µg: { g: (µg: number) => µg / MEGA },
   },
+  VOLUME: {
+    'm³': {
+      'm³': (m3: number) => m3,
+      'dm³': (m3: number) => round(m3 * DEZI ** CUBED, PRECISION),
+      'cm³': (m3: number) => round(m3 * CENT ** CUBED, PRECISION),
+      'mm³': (m3: number) => round(m3 * KILO ** CUBED, PRECISION),
+      'µm³': (m3: number) => round(m3 * MEGA ** CUBED, PRECISION),
+      'nm³': (m3: number) => round(m3 * GIGA ** CUBED, PRECISION),
+      'km³': (m3: number) => round(m3 / KILO ** CUBED, PRECISION),
+      L: (m3: number) => round(m3 * DEZI ** CUBED, PRECISION),
+    },
+    'dm³': { 'm³': (cm3: number) => cm3 / DEZI ** CUBED },
+    'cm³': { 'm³': (cm3: number) => cm3 / CENT ** CUBED },
+    'mm³': { 'm³': (mm3: number) => mm3 / KILO ** CUBED },
+    'µm³': { 'm³': (µm3: number) => µm3 / MEGA ** CUBED },
+    'nm³': { 'm³': (nm3: number) => nm3 / GIGA ** CUBED },
+    'km³': { 'm³': (km3: number) => km3 * KILO ** CUBED },
+    L: { 'm³': (km3: number) => km3 / DEZI ** CUBED },
+  },
 }
 
 export type UnitType = keyof typeof baseMap
@@ -57,7 +76,8 @@ export const TYPES: UnitType[] = keys(baseMap)
 export type TemperatureUnit = keyof typeof baseMap.TEMPERATURE
 export type DistanceUnit = keyof typeof baseMap.DISTANCE
 export type WeightUnit = keyof typeof baseMap.WEIGHT
-export type Unit = TemperatureUnit | DistanceUnit | WeightUnit
+export type VolumeUnit = keyof typeof baseMap.VOLUME
+export type Unit = TemperatureUnit | DistanceUnit | WeightUnit | VolumeUnit
 
 type PartialConversionInfo = Record<string, Record<string, (value: number) => number>>
 type ConversionInfo<U extends string> = Record<U, Record<U, (value: number) => number>>
@@ -83,4 +103,5 @@ export const conversionMap = {
   TEMPERATURE: mapConverters<TemperatureUnit>('K', baseMap.TEMPERATURE),
   DISTANCE: mapConverters<DistanceUnit>('m', baseMap.DISTANCE),
   WEIGHT: mapConverters<WeightUnit>('g', baseMap.WEIGHT),
+  VOLUME: mapConverters<VolumeUnit>('m³', baseMap.VOLUME),
 }
