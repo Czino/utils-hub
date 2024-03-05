@@ -9,7 +9,7 @@ const mapChildToOption = (child: ReactElement) => {
   const val = child.props.value || label
   return { value: val, label }
 }
-type Props = Omit<React.ComponentProps<'select'>, 'onChange'> & {
+type Props = Omit<React.ComponentProps<'input'>, 'onChange'> & {
   onChange?: (value: string) => void
 }
 export const Select = ({ className, children, value, defaultValue, onChange, ...props }: Props) => {
