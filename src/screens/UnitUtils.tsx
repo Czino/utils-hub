@@ -56,11 +56,7 @@ export const UnitUtils = () => {
         cold.
       </p>
       <div className="w-[180px]">
-        <Select
-          aria-label="select unit type"
-          value={type}
-          onChange={(e) => updateType(e.currentTarget.value as UnitType)}
-        >
+        <Select aria-label="select unit type" value={type} onChange={(value) => updateType(value as UnitType)}>
           {TYPES.map((t) => (
             <option key={t} value={t}>
               {t.toLowerCase()}
@@ -77,7 +73,7 @@ export const UnitUtils = () => {
           onChange={(e) => updateValue1(Number(e.currentTarget.value))}
         />
         <div className="col-span-2 md:col-span-1">
-          <Select aria-label="select unit 1" value={unit1} onChange={(e) => updateUnit1(e.currentTarget.value as Unit)}>
+          <Select aria-label="select unit 1" value={unit1} onChange={(value) => updateUnit1(value as Unit)}>
             {keys(conversionMap[type]).map((unit) => (
               <option key={unit}>{unit}</option>
             ))}
@@ -94,7 +90,7 @@ export const UnitUtils = () => {
           onChange={(e) => updateValue2(Number(e.currentTarget.value))}
         />
         <div className="col-span-2 md:col-span-1">
-          <Select aria-label="select unit 2" value={unit2} onChange={(e) => updateUnit2(e.currentTarget.value as Unit)}>
+          <Select aria-label="select unit 2" value={unit2} onChange={(value) => updateUnit2(value as Unit)}>
             {keys(conversionMap[type]).map((unit) => (
               <option key={unit}>{unit}</option>
             ))}

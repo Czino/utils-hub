@@ -1,12 +1,103 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Select should render Select with styles 1`] = `
+exports[`Select filters search and displays all options when search term is empty 1`] = `
+"Snapshot Diff:
+Compared values have no visual difference."
+`;
+
+exports[`Select filters search and displays all options when search term is empty 2`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -4,11 +4,11 @@
+    >
+      <input
+        aria-label="label"
+        class="p-2 w-full bg-transparent rounded border border-dark"
+        type="text"
+-       value=""
++       value="2"
+      />
+      <svg
+        class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+        fill="none"
+        height="1em"
+@@ -24,17 +24,11 @@
+          points="6 9 12 15 18 9"
+        />
+      </svg>
+      <ul
+        class="overflow-auto absolute z-10 mt-1 w-full max-h-60 bg-white rounded border border-dark"
+-     >
+-       <li
+-         aria-label="option 1"
+-         class="p-2 cursor-pointer hover:bg-gray-100"
+      >
+-         1
+-       </li>
+        <li
+          aria-label="option 2"
+          class="p-2 cursor-pointer hover:bg-gray-100"
+        >
+          2"
+`;
+
+exports[`Select should open options when focus 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -1,11 +1,10 @@
+  <DocumentFragment>
+    <div
+      class="relative mt-4"
+    >
+      <input
+-       aria-label="label"
+        class="p-2 w-full bg-transparent rounded border border-dark"
+        type="text"
+        value=""
+      />
+      <svg
+@@ -22,23 +21,7 @@
+      >
+        <polyline
+          points="6 9 12 15 18 9"
+        />
+      </svg>
+-     <ul
+-       class="overflow-auto absolute z-10 mt-1 w-full max-h-60 bg-white rounded border border-dark"
+-     >
+-       <li
+-         aria-label="option 1"
+-         class="p-2 cursor-pointer hover:bg-gray-100"
+-       >
+-         1
+-       </li>
+-       <li
+-         aria-label="option 2"
+-         class="p-2 cursor-pointer hover:bg-gray-100"
+-       >
+-         2
+-       </li>
+-     </ul>
+    </div>
+  </DocumentFragment>"
+`;
+
+exports[`Select should render Select 1`] = `
 <DocumentFragment>
   <div
-    class="grid"
+    class="relative mt-4"
   >
+    <input
+      class="p-2 w-full bg-transparent rounded border border-dark"
+      type="text"
+      value=""
+    />
     <svg
-      class="relative right-1 z-10 col-start-1 row-start-1 justify-self-end self-center w-6 h-6 pointer-events-none"
+      class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
       fill="none"
       height="1em"
       stroke="currentColor"
@@ -21,16 +112,36 @@ exports[`Select should render Select with styles 1`] = `
         points="6 9 12 15 18 9"
       />
     </svg>
-    <select
-      class="row-start-1 col-start-1 appearance-none bg-transparent text-dark p-2 border border-dark rounded mt-4"
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Select should render Select without options 1`] = `
+<DocumentFragment>
+  <div
+    class="relative mt-4"
+  >
+    <input
+      class="p-2 w-full bg-transparent rounded border border-dark"
+      type="text"
+      value=""
+    />
+    <svg
+      class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+      fill="none"
+      height="1em"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <option>
-        1
-      </option>
-      <option>
-        2
-      </option>
-    </select>
+      <polyline
+        points="6 9 12 15 18 9"
+      />
+    </svg>
   </div>
 </DocumentFragment>
 `;

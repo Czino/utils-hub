@@ -7,6 +7,7 @@ export const navigation = [
   { path: '/utils/text', title: 'Text' },
   { path: '/utils/units', title: 'Units' },
   { path: '/utils/fractions', title: 'Fractions' },
+  { path: '/utils/date', title: 'Dates' },
 ] as const
 
 export const NavigationColumn = () => {

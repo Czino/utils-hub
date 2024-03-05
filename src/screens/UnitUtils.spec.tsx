@@ -34,7 +34,9 @@ describe('UnitUtils', () => {
     const input1Label = 'input value for unit ºF'
     const { getByLabelText } = render(<UnitUtils />)
     const $select1 = getByLabelText(select1Label)
-    await userEvent.selectOptions($select1, value)
+    await userEvent.clear($select1)
+    await userEvent.type($select1, value)
+    await userEvent.click(getByLabelText(`option ${value}`))
     const $input1 = getByLabelText(input1Label)
     expect($select1).toHaveValue(value)
     expect($input1).toHaveValue(-461.4)
@@ -45,13 +47,15 @@ describe('UnitUtils', () => {
     const input2Label = 'input value for unit ºF'
     const { getByLabelText } = render(<UnitUtils />)
     const $select2 = getByLabelText(select2Label)
-    await userEvent.selectOptions($select2, value)
+    await userEvent.clear($select2)
+    await userEvent.type($select2, value)
+    await userEvent.click(getByLabelText(`option ${value}`))
     const $input2 = getByLabelText(input2Label)
     expect($select2).toHaveValue(value)
     expect($input2).toHaveValue(-461.5)
   })
   it('selects unit type and updates units', async () => {
-    const value = 'DISTANCE'
+    const value = 'distance'
     const typeLabel = 'select unit type'
     const input1Label = 'input value for unit m'
     const select1Label = 'select unit 1'
@@ -59,7 +63,9 @@ describe('UnitUtils', () => {
     const select2Label = 'select unit 2'
     const { getByLabelText } = render(<UnitUtils />)
     const $type = getByLabelText(typeLabel)
-    await userEvent.selectOptions($type, value)
+    await userEvent.clear($type)
+    await userEvent.type($type, value)
+    await userEvent.click(getByLabelText(`option ${value}`))
     const $select1 = getByLabelText(select1Label)
     const $input1 = getByLabelText(input1Label)
     const $select2 = getByLabelText(select2Label)

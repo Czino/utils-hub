@@ -42,6 +42,22 @@ exports[`Home should render correctly 1`] = `
             Units
           </a>
         </li>
+        <li>
+          <a
+            class=""
+            href="/utils/fractions"
+          >
+            Fractions
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/date"
+          >
+            Dates
+          </a>
+        </li>
       </ul>
     </nav>
     <div

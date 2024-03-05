@@ -1,0 +1,306 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateUtils renders default 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-row gap-4 text-2xl bg-white color-black"
+  >
+    <nav
+      class="bg-white absolute p-4 transition-[top] w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px]"
+    >
+      <ul>
+        <li
+          class="font-bold"
+        >
+          <a
+            href="/"
+          >
+            UtilityHub
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/list"
+          >
+            List
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/text"
+          >
+            Text
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/units"
+          >
+            Units
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/fractions"
+          >
+            Fractions
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/date"
+          >
+            Dates
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="flex absolute right-0 bottom-0 justify-end p-4 w-full bg-white md:hidden"
+      role="button"
+    >
+      <svg
+        aria-label="open navigation"
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="3"
+          x2="21"
+          y1="12"
+          y2="12"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="6"
+          y2="6"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="18"
+          y2="18"
+        />
+      </svg>
+    </div>
+    <div
+      class="p-4 space-y-4 w-full"
+    >
+      <h1
+        class="text-5xl text-success-2 font-bold "
+      >
+        Date format converter
+      </h1>
+      <p>
+        Whether you're a developer wrestling with date formats between systems, a professional managing international projects, or a student dealing with diverse date formats in research, our tool is designed to cater to your needs. Instantly convert dates between different formats, including ISO, US, European, and more, with ease and precision. Save time and eliminate errors in your work with our user-friendly date conversion tool.
+      </p>
+      <div
+        class="grid grid-cols-3 gap-4 items-center md:grid-cols-9"
+      >
+        <input
+          aria-label="input date"
+          class="appearance-none bg-transparent text-dark p-2 border border-dark rounded col-span-3"
+          type="datetime-local"
+          value="2022-05-03 12:59"
+        />
+        <div
+          class="relative col-span-3 md:col-span-2"
+        >
+          <input
+            aria-label="select locale"
+            class="p-2 w-full bg-transparent rounded border border-dark"
+            type="text"
+            value="en (English)"
+          />
+          <svg
+            class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="6 9 12 15 18 9"
+            />
+          </svg>
+        </div>
+        <div
+          class="grid col-span-3 justify-center items-center self-center h-full md:col-span-1"
+        >
+          <svg
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+            <polyline
+              points="12 5 19 12 12 19"
+            />
+          </svg>
+        </div>
+        <div
+          class="col-span-3"
+        >
+          <ul>
+            <li>
+              2022-05-03T10:59:00.000Z
+            </li>
+            <li>
+              05/03/2022
+            </li>
+            <li>
+              May 3, 2022
+            </li>
+            <li>
+              May 3, 2022 12:59 PM
+            </li>
+            <li>
+              Tuesday, May 3, 2022 12:59 PM
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-[280px] hidden md:block"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateUtils updates date and displays in given format 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -109,11 +109,11 @@
+        >
+          <input
+            aria-label="input date"
+            class="appearance-none bg-transparent text-dark p-2 border border-dark rounded col-span-3"
+            type="datetime-local"
+-           value="2023-01-04T19:32"
++           value="2022-05-03 12:59"
+          />
+          <div
+            class="relative col-span-3 md:col-span-2"
+          >
+            <input
+@@ -167,23 +167,23 @@
+          <div
+            class="col-span-3"
+          >
+            <ul>
+              <li>
+-               2023-01-04T18:32:00.000Z
++               2022-05-03T10:59:00.000Z
+              </li>
+              <li>
+-               01/04/2023
++               05/03/2022
+              </li>
+              <li>
+-               January 4, 2023
++               May 3, 2022
+              </li>
+              <li>
+-               January 4, 2023 7:32 PM
++               May 3, 2022 12:59 PM
+              </li>
+              <li>
+-               Wednesday, January 4, 2023 7:32 PM
++               Tuesday, May 3, 2022 12:59 PM
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>"
+`;
+
+exports[`DateUtils updates locale and displays localized format 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -109,20 +109,20 @@
+        >
+          <input
+            aria-label="input date"
+            class="appearance-none bg-transparent text-dark p-2 border border-dark rounded col-span-3"
+            type="datetime-local"
+-           value="2023-01-04T19:32"
++           value="2022-05-03 12:59"
+          />
+          <div
+            class="relative col-span-3 md:col-span-2"
+          >
+            <input
+              aria-label="select locale"
+              class="p-2 w-full bg-transparent rounded border border-dark"
+              type="text"
+-             value="de (German)"
++             value="en (English)"
+            />
+            <svg
+              class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+              fill="none"
+              height="1em"
+@@ -167,23 +167,23 @@
+          <div
+            class="col-span-3"
+          >
+            <ul>
+              <li>
+-               2023-01-04T18:32:00.000Z
++               2022-05-03T10:59:00.000Z
+              </li>
+              <li>
+-               04.01.2023
++               05/03/2022
+              </li>
+              <li>
+-               4. Januar 2023
++               May 3, 2022
+              </li>
+              <li>
+-               4. Januar 2023 19:32
++               May 3, 2022 12:59 PM
+              </li>
+              <li>
+-               Mittwoch, 4. Januar 2023 19:32
++               Tuesday, May 3, 2022 12:59 PM
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>"
+`;

@@ -47,6 +47,14 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
           Fractions
         </a>
       </li>
+      <li>
+        <a
+          class=""
+          href="/utils/date"
+        >
+          Dates
+        </a>
+      </li>
     </ul>
   </nav>
   <div
@@ -138,6 +146,14 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 +           href="/utils/fractions"
 +         >
 +           Fractions
++         </a>
++       </li>
++       <li>
++         <a
++           class=""
++           href="/utils/date"
++         >
++           Dates
 +         </a>
 +       </li>
 +     </ul>
