@@ -1,4 +1,5 @@
 ---
+import en from '../../i18n/en/index';
 import { DateUtils } from '../../screens/DateUtils.jsx';
 import Head from '../../templates/head.astro';
 ---
@@ -6,8 +7,8 @@ import Head from '../../templates/head.astro';
 <html lang="en">
   <head>
     <Head />
-    <title>Date Format Converter - Transform Your Dates Instantly – UtilityHub</title>
-    <meta name="description" content="Easily convert date formats.">
+    <title>{en.date.title} - {en.date.subtitle} – {en.home.title}</title>
+    <meta name="description" content={en.date.shortDescription}>
   </head>
 
   <body>

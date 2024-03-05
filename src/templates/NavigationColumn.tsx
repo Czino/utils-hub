@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { useToggle } from '../hooks/useToggle'
+import en from '../i18n/en'
 
 export const navigation = [
-  { path: '/utils/list', title: 'List' },
-  { path: '/utils/text', title: 'Text' },
-  { path: '/utils/units', title: 'Units' },
-  { path: '/utils/fractions', title: 'Fractions' },
-  { path: '/utils/date', title: 'Dates' },
+  { path: '/utils/list', title: en.list.shortTitle },
+  { path: '/utils/text', title: en.text.shortTitle },
+  { path: '/utils/units', title: en.units.shortTitle },
+  { path: '/utils/fractions', title: en.fractions.shortTitle },
+  { path: '/utils/date', title: en.date.shortTitle },
 ] as const
 
 export const NavigationColumn = () => {
@@ -30,7 +31,7 @@ export const NavigationColumn = () => {
       >
         <ul>
           <li className="font-bold">
-            <a href="/">UtilityHub</a>
+            <a href="/">{en.home.title}</a>
           </li>
           {navigation.map(({ path, title }) => (
             <li key={path}>
@@ -46,7 +47,11 @@ export const NavigationColumn = () => {
         role="button"
         onClick={toggleIsVisible}
       >
-        {isVisible ? <FiX aria-label="close navigation" /> : <FiMenu aria-label="open navigation" />}
+        {isVisible ? (
+          <FiX aria-label={en.navigation.closeNavigation} />
+        ) : (
+          <FiMenu aria-label={en.navigation.openNavigation} />
+        )}
       </div>
     </>
   )

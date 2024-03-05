@@ -3,6 +3,7 @@ import { FiShuffle } from 'react-icons/fi'
 import { Headline } from '../components/Headline'
 import { Input } from '../components/Input'
 import { Select } from '../components/Select'
+import en from '../i18n/en'
 import { ScreenWithSideNavigation } from '../templates/ScreenWithSideNavigation'
 import { keys } from '../utils/object/keys'
 import { TYPES, conversionMap, type Unit, type UnitType } from '../utils/unit/conversionMap'
@@ -49,17 +50,13 @@ export const UnitUtils = () => {
   }
   return (
     <ScreenWithSideNavigation>
-      <Headline>Unit utilities</Headline>
-      <p>
-        Tired of scratching your head over converting units? Say goodbye to confusion! This page lets you effortlessly
-        switch between different units, like turning chilly Celsius into toasty Fahrenheit, so you're never left in the
-        cold.
-      </p>
+      <Headline>{en.units.title}</Headline>
+      <p>{en.units.description}</p>
       <div className="w-[180px]">
-        <Select aria-label="select unit type" value={type} onChange={(value) => updateType(value as UnitType)}>
+        <Select aria-label={en.units.selectUnitType} value={type} onChange={(value) => updateType(value as UnitType)}>
           {TYPES.map((t) => (
             <option key={t} value={t}>
-              {t.toLowerCase()}
+              {en.units[t]}
             </option>
           ))}
         </Select>
@@ -68,12 +65,12 @@ export const UnitUtils = () => {
         <Input
           className="col-span-2"
           type="number"
-          aria-label={`input value for unit ${unit1}`}
+          aria-label={`input value for unit ${unit1}`} // TODO localize me with placeholder
           value={value1}
           onChange={(e) => updateValue1(Number(e.currentTarget.value))}
         />
         <div className="col-span-2 md:col-span-1">
-          <Select aria-label="select unit 1" value={unit1} onChange={(value) => updateUnit1(value as Unit)}>
+          <Select aria-label={en.units.selectUnit1} value={unit1} onChange={(value) => updateUnit1(value as Unit)}>
             {keys(conversionMap[type]).map((unit) => (
               <option key={unit}>{unit}</option>
             ))}
@@ -85,12 +82,12 @@ export const UnitUtils = () => {
         <Input
           className="col-span-2"
           type="number"
-          aria-label={`input value for unit ${unit2}`}
+          aria-label={`input value for unit ${unit2}`} // TODO localize me with placeholder
           value={value2}
           onChange={(e) => updateValue2(Number(e.currentTarget.value))}
         />
         <div className="col-span-2 md:col-span-1">
-          <Select aria-label="select unit 2" value={unit2} onChange={(value) => updateUnit2(value as Unit)}>
+          <Select aria-label={en.units.selectUnit1} value={unit2} onChange={(value) => updateUnit2(value as Unit)}>
             {keys(conversionMap[type]).map((unit) => (
               <option key={unit}>{unit}</option>
             ))}

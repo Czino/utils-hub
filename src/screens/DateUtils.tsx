@@ -19,24 +19,19 @@ export const DateUtils = () => {
   const localizedDate = dayjs(date).locale(locale)
   return (
     <ScreenWithSideNavigation>
-      <Headline>Date format converter</Headline>
-      <p>
-        Whether you're a developer wrestling with date formats between systems, a professional managing international
-        projects, or a student dealing with diverse date formats in research, our tool is designed to cater to your
-        needs. Instantly convert dates between different formats, including ISO, US, European, and more, with ease and
-        precision. Save time and eliminate errors in your work with our user-friendly date conversion tool.
-      </p>
+      <Headline>{en.date.title}</Headline>
+      <p>{en.date.description}</p>
       <div className="grid grid-cols-3 gap-4 items-center md:grid-cols-9">
         <Input
           className="col-span-3"
           type="datetime-local"
-          aria-label="input date"
+          aria-label={en.form.date}
           value={date}
           onChange={(e) => setDate(e.currentTarget.value)}
         />
         <Select
           className="col-span-3 md:col-span-2"
-          aria-label="select locale"
+          aria-label={en.form.locale}
           value={locale}
           onChange={(value) => setLocale(value.replace('_', '-'))}
         >

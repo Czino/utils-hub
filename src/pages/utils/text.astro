@@ -1,4 +1,5 @@
 ---
+import en from '../../i18n/en';
 import { StringUtils } from '../../screens/StringUtils.jsx';
 import Head from '../../templates/head.astro';
 ---
@@ -6,8 +7,8 @@ import Head from '../../templates/head.astro';
 <html lang="en">
   <head>
     <Head />
-    <title>Text utilities – Transform texts to UPPERCASE or lowercase and other features – UtilityHub</title>
-    <meta name="description" content="Time to play with your words! Whether you want to SHOUT OUT your text in uppercase, bring it down to a whisper in lowercase, or perform other fun text tricks like swapping cases or capitalizing the first letter of each word, this page has got you covered.">
+    <title>{en.text.title} – {en.text.subtitle} – {en.home.title}</title>
+    <meta name="description" content={en.text.shortDescription}>
   </head>
 
   <body>

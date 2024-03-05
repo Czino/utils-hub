@@ -1,10 +1,12 @@
 import { Headline } from '../components/Headline'
 import { Link } from '../components/Link'
+import en from '../i18n/en'
 import { ScreenWithSideNavigation } from '../templates/ScreenWithSideNavigation'
 
 export const Home = () => (
   <ScreenWithSideNavigation>
-    <Headline>UtilityHub</Headline>
+    <Headline>{en.home.title}</Headline>
+    {/* TODO localize me */}
     <p>
       Welcome to UtilityHub, your premier online destination for a vast array of digital utilities designed to enhance
       efficiency and streamline your workflow.

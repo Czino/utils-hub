@@ -1,4 +1,5 @@
 ---
+import en from '../../i18n/en';
 import { ListUtils } from '../../screens/ListUtils.jsx';
 import Head from '../../templates/head.astro';
 ---
@@ -6,9 +7,8 @@ import Head from '../../templates/head.astro';
 <html lang="en">
   <head>
     <Head />
-    <title>List utilities – Manipulate lists with a click on a button – UtilityHub</title>
-    <meta name="description" content="Think of this like your handy toolbox for lists! You can tidy up your lists by sorting them alphabetically, mix
-    things up with a randomizer, or even filter out duplicate lines to keep things unique and tidy." />
+    <title>{en.list.title} – {en.list.subtitle} – {en.home.title}</title>
+    <meta name="description" content={en.list.shortDescription} />
   </head>
 
   <body>

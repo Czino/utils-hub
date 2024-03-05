@@ -1,4 +1,5 @@
 ---
+import en from '../../i18n/en';
 import { UnitUtils } from '../../screens/UnitUtils.jsx';
 import Head from '../../templates/head.astro';
 ---
@@ -6,8 +7,8 @@ import Head from '../../templates/head.astro';
 <html lang="en">
   <head>
     <Head />
-    <title>Unit utilities – Quickly convert from one unit to another – UtilityHub</title>
-    <meta name="description" content="Tired of scratching your head over converting units? Say goodbye to confusion! This page lets you effortlessly switch between different units, like turning chilly Celsius into toasty Fahrenheit, so you're never left in the cold.">
+    <title>{en.units.title} – {en.units.subtitle} – {en.home.title}</title>
+    <meta name="description" content={en.units.shortDescription}>
   </head>
 
   <body>

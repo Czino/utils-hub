@@ -265,6 +265,14 @@ module.exports = {
       },
     },
     {
+      files: ['src/i18n/**/*.ts'],
+      rules: {
+        'max-len': 'off',
+        'max-lines-per-function': 'off',
+        'max-statements': 'off',
+      },
+    },
+    {
       files: ['*.spec.tsx', '*.spec.ts'],
       rules: {
         'no-magic-numbers': 'off',

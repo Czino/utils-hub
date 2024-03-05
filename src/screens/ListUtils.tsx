@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button } from '../components/Button'
 import { Headline } from '../components/Headline'
 import { TextArea } from '../components/TextArea'
+import en from '../i18n/en'
 import { ScreenWithSideNavigation } from '../templates/ScreenWithSideNavigation'
 import { shuffle } from '../utils/array/shuffle'
 import { sortASC } from '../utils/array/sortASC'
@@ -25,21 +26,18 @@ export const ListUtils = () => {
 
   return (
     <ScreenWithSideNavigation>
-      <Headline>List utilities</Headline>
-      <p>
-        Think of this like your handy toolbox for lists! You can tidy up your lists by sorting them alphabetically, mix
-        things up with a randomizer, or even filter out duplicate lines to keep things unique and tidy.
-      </p>
+      <Headline>{en.list.title}</Headline>
+      <p>{en.list.description}</p>
       <TextArea
-        aria-label="enter your list"
+        aria-label={en.list.enterList}
         onChange={(e) => setRawList(e.currentTarget.value)}
         value={rawList || undefined}
       />
       <div className="grid gap-4 md:grid-cols-4">
-        <Button onClick={sortList}>sort</Button>
-        <Button onClick={reverseList}>reverse</Button>
-        <Button onClick={shuffleList}>shuffle</Button>
-        <Button onClick={uniqueList}>unique</Button>
+        <Button onClick={sortList}>{en.list.sort}</Button>
+        <Button onClick={reverseList}>{en.list.reverse}</Button>
+        <Button onClick={shuffleList}>{en.list.shuffle}</Button>
+        <Button onClick={uniqueList}>{en.list.unique}</Button>
       </div>
     </ScreenWithSideNavigation>
   )
