@@ -24,9 +24,15 @@ export const NavigationColumn = () => {
 
   return (
     <>
+      <div
+        className={[
+          'fixed inset-0 transition-[opacity] bg-black pointer-events-none',
+          isVisible ? 'opacity-50' : 'opacity-0',
+        ].join(' ')}
+      ></div>
       <nav
         className={[
-          'bg-white fixed z-10 p-4 transition-[top]',
+          'bg-white fixed z-10 p-4 transition-[top] overflow-auto pb-32',
           'w-full h-full',
           isVisible ? 'top-12' : 'top-full',
           'md:h-screen md:relative md:left-0 md:w-[240px]',

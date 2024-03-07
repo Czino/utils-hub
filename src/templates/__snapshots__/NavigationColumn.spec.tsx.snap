@@ -2,8 +2,11 @@
 
 exports[`NavigationColumn should render NavigationColumn 1`] = `
 <DocumentFragment>
+  <div
+    class="fixed inset-0 transition-[opacity] bg-black pointer-events-none opacity-0"
+  />
   <nav
-    class="bg-white fixed z-10 p-4 transition-[top] w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px]"
+    class="bg-white fixed z-10 p-4 transition-[top] overflow-auto pb-32 w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px]"
   >
     <ul>
       <li
@@ -111,8 +114,11 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 
 - <DocumentFragment />
 + <DocumentFragment>
++   <div
++     class="fixed inset-0 transition-[opacity] bg-black pointer-events-none opacity-0"
++   />
 +   <nav
-+     class="bg-white fixed z-10 p-4 transition-[top] w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px]"
++     class="bg-white fixed z-10 p-4 transition-[top] overflow-auto pb-32 w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px]"
 +   >
 +     <ul>
 +       <li

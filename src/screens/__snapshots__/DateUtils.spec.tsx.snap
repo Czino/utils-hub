@@ -5,8 +5,11 @@ exports[`DateUtils renders default 1`] = `
   <div
     class="flex flex-row gap-4 text-2xl bg-white color-black"
   >
+    <div
+      class="fixed inset-0 transition-[opacity] bg-black pointer-events-none opacity-0"
+    />
     <nav
-      class="bg-white fixed z-10 p-4 transition-[top] w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px]"
+      class="bg-white fixed z-10 p-4 transition-[top] overflow-auto pb-32 w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px]"
     >
       <ul>
         <li
@@ -210,7 +213,7 @@ exports[`DateUtils updates date and displays in given format 1`] = `
 - First value
 + Second value
 
-@@ -117,11 +117,11 @@
+@@ -120,11 +120,11 @@
         >
           <input
             aria-label="input date"
@@ -223,7 +226,7 @@ exports[`DateUtils updates date and displays in given format 1`] = `
             class="relative col-span-3 md:col-span-2"
           >
             <input
-@@ -175,23 +175,23 @@
+@@ -178,23 +178,23 @@
           <div
             class="col-span-3"
           >
@@ -259,7 +262,7 @@ exports[`DateUtils updates locale and displays localized format 1`] = `
 - First value
 + Second value
 
-@@ -117,20 +117,20 @@
+@@ -120,20 +120,20 @@
         >
           <input
             aria-label="input date"
@@ -282,7 +285,7 @@ exports[`DateUtils updates locale and displays localized format 1`] = `
               class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
               fill="none"
               height="1em"
-@@ -175,23 +175,23 @@
+@@ -178,23 +178,23 @@
           <div
             class="col-span-3"
           >
