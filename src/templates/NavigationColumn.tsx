@@ -26,7 +26,7 @@ export const NavigationColumn = () => {
     <>
       <nav
         className={[
-          'bg-white absolute p-4 transition-[top]',
+          'bg-white fixed z-10 p-4 transition-[top]',
           'w-full h-full',
           isVisible ? 'top-12' : 'top-full',
           'md:h-screen md:relative md:left-0 md:w-[240px]',
@@ -46,7 +46,7 @@ export const NavigationColumn = () => {
         </ul>
       </nav>
       <div
-        className="flex absolute right-0 bottom-0 justify-end p-4 w-full bg-white md:hidden"
+        className="flex fixed right-0 bottom-0 z-20 justify-end p-4 w-full bg-white md:hidden"
         role="button"
         onClick={toggleIsVisible}
       >
