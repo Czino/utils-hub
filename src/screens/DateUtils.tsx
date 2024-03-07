@@ -6,6 +6,7 @@ import { Headline } from '../components/Headline'
 import { Input } from '../components/Input'
 import { Select } from '../components/Select'
 import en from '../i18n/en'
+import { i18n } from '../i18n/i18n'
 import { ScreenWithSideNavigation } from '../templates/ScreenWithSideNavigation'
 import allLocales from '../utils/locale/allLocales'
 import { keys } from '../utils/object/keys'
@@ -19,25 +20,25 @@ export const DateUtils = () => {
   const localizedDate = dayjs(date).locale(locale)
   return (
     <ScreenWithSideNavigation>
-      <Headline>{en.date.title}</Headline>
-      <p>{en.date.description}</p>
+      <Headline>{i18n(en.date.title)}</Headline>
+      <p>{i18n(en.date.description)}</p>
       <div className="grid grid-cols-3 gap-4 items-center md:grid-cols-9">
         <Input
           className="col-span-3"
           type="datetime-local"
-          aria-label={en.form.date}
+          aria-label={i18n(en.form.date)}
           value={date}
           onChange={(e) => setDate(e.currentTarget.value)}
         />
         <Select
           className="col-span-3 md:col-span-2"
-          aria-label={en.form.locale}
+          aria-label={i18n(en.form.locale)}
           value={locale}
           onChange={(value) => setLocale(value.replace('_', '-'))}
         >
           {locales.map((l) => (
             <option value={l}>
-              {allLocales[l].name} ({en.language[l]})
+              {allLocales[l].name} ({i18n(en.language[l])})
             </option>
           ))}
         </Select>

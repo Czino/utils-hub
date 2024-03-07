@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`i18nElement should return the resolved localized text element from key with args: this is a localized $foo $bar 1`] = `
+[
+  <React.Fragment>
+    this is a localized
+    <br />
+  </React.Fragment>,
+  <React.Fragment>
+    $foo
+    <br />
+  </React.Fragment>,
+  <React.Fragment>
+    $bar
+    <br />
+  </React.Fragment>,
+]
+`;

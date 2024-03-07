@@ -285,4 +285,5 @@ module.exports = {
       },
     },
   ],
+  ignorePatterns: ['dist'],
 }

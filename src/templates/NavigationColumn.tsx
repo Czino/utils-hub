@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { useToggle } from '../hooks/useToggle'
 import en from '../i18n/en'
+import { i18n } from '../i18n/i18n'
 
 export const navigation = [
   { path: '/utils/list', title: en.list.shortTitle },
@@ -40,7 +41,7 @@ export const NavigationColumn = () => {
       >
         <ul>
           <li className="font-bold">
-            <a href="/">{en.home.title}</a>
+            <a href="/">{i18n(en.home.title)}</a>
           </li>
           {navigation.map(({ path, title }) => (
             <li key={path}>
@@ -57,9 +58,9 @@ export const NavigationColumn = () => {
         onClick={toggleIsVisible}
       >
         {isVisible ? (
-          <FiX aria-label={en.navigation.closeNavigation} />
+          <FiX aria-label={i18n(en.navigation.closeNavigation)} />
         ) : (
-          <FiMenu aria-label={en.navigation.openNavigation} />
+          <FiMenu aria-label={i18n(en.navigation.openNavigation)} />
         )}
       </div>
     </>

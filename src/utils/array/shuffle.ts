@@ -1,1 +1,2 @@
-export const shuffle = () => (Math.random() > 0.5 ? 1 : -1)
+const MID_POINT = 0.5
+export const shuffle = () => (Math.random() > MID_POINT ? 1 : -1)

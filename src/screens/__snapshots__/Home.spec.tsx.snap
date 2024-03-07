@@ -117,9 +117,8 @@ exports[`Home should render correctly 1`] = `
       </h1>
       <p>
         Welcome to UtilityHub, your premier online destination for a vast array of digital utilities designed to enhance efficiency and streamline your workflow.
-      </p>
-      <p>
-        The platform is constantly evolving, with new utilities added regularly to meet the ever-changing demands of our users. I are committed to excellence, offering reliable and accurate tools that you can count on.
+
+The platform is constantly evolving, with new utilities added regularly to meet the ever-changing demands of our users. I are committed to excellence, offering reliable and accurate tools that you can count on.
       </p>
     </div>
     <div

@@ -1,7 +1,7 @@
 import React, { useState, type ReactElement } from 'react'
 import { FiChevronDown } from 'react-icons/fi'
 
-type Option = { value: string; label: string }
+type Option<T> = { value: T; label: string }
 
 const mapChildToOption = (child: ReactElement) => {
   const children = child.props.children
@@ -13,7 +13,7 @@ type Props<T> = Omit<React.ComponentProps<'input'>, 'value' | 'onChange'> & {
   value: T
   onChange?: (value: T) => void
 }
-export const Select = <T,>({ className, children, value, defaultValue, onChange, ...props }: Props<T>) => {
+export const Select = <T, >({ className, children, value, defaultValue, onChange, ...props }: Props<T>) => {
   const options = Array.isArray(children) ? children.map(mapChildToOption) : []
   const display = options.find((o) => o.value === value)?.label
   const [isOpen, setIsOpen] = useState(false)
@@ -35,7 +35,7 @@ export const Select = <T,>({ className, children, value, defaultValue, onChange,
       setFilteredOptions(filtered)
     }
   }
-  const handleSelect = (option: Option) => {
+  const handleSelect = (option: Option<T>) => {
     setIsOpen(false)
     setSearchTerm(undefined)
     setFilteredOptions(options)

@@ -1,5 +1,6 @@
 ---
 import en from '../i18n/en';
+import { i18n } from '../i18n/i18n';
 import { Home } from '../screens/Home.tsx';
 import Head from '../templates/head.astro';
 ---
@@ -7,8 +8,8 @@ import Head from '../templates/head.astro';
 <html lang="en">
   <head>
     <Head />
-    <title>{en.home.title}</title>
-    <meta name="description" content={en.home.shortDescription}>
+    <title>{i18n(en.home.title)}</title>
+    <meta name="description" content={i18n(en.home.shortDescription)}>
   </head>
 
   <body>
