@@ -9,10 +9,11 @@ const mapChildToOption = (child: ReactElement) => {
   const val = child.props.value || label
   return { value: val, label }
 }
-type Props = Omit<React.ComponentProps<'input'>, 'onChange'> & {
-  onChange?: (value: string) => void
+type Props<T> = Omit<React.ComponentProps<'input'>, 'value' | 'onChange'> & {
+  value: T
+  onChange?: (value: T) => void
 }
-export const Select = ({ className, children, value, defaultValue, onChange, ...props }: Props) => {
+export const Select = <T,>({ className, children, value, defaultValue, onChange, ...props }: Props<T>) => {
   const options = Array.isArray(children) ? children.map(mapChildToOption) : []
   const display = options.find((o) => o.value === value)?.label
   const [isOpen, setIsOpen] = useState(false)

@@ -10,6 +10,7 @@
     "astro": "astro",
     "lint": "eslint './**/*.{js,ts,jsx,tsx}'",
     "test": "jest",
+    "test:ci": "jest --ci",
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "@types/react": "^18.2.58",
     "@types/react-dom": "^18.2.19",
     "astro": "^4.4.9",
+    "buffer": "^6.0.3",
     "dayjs": "^1.11.10",
     "fraction.js": "^4.3.7",
     "react": "^18.2.0",

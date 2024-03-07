@@ -1,0 +1,17 @@
+---
+import en from '../../i18n/en/index';
+import { EncodingUtils } from '../../screens/EncodingUtils.jsx';
+import Head from '../../templates/head.astro';
+---
+
+<html lang="en">
+  <head>
+    <Head />
+    <title>{en.encoding.title} - {en.encoding.subtitle} – {en.home.title}</title>
+    <meta name="description" content={en.encoding.shortDescription}>
+  </head>
+
+  <body>
+    <EncodingUtils client:visible />
+  </body>
+</html>

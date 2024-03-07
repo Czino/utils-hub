@@ -1,4 +1,5 @@
 import date from './date'
+import encoding from './encoding'
 import form from './form'
 import fractions from './fractions'
 import home from './home'
@@ -10,6 +11,7 @@ import units from './units'
 
 export default {
   date,
+  encoding,
   navigation,
   form,
   fractions,
