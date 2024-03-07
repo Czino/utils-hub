@@ -8,6 +8,7 @@ import { ScreenWithSideNavigation } from '../templates/ScreenWithSideNavigation'
 import { keys } from '../utils/object/keys'
 import { TYPES, conversionMap, type Unit, type UnitType } from '../utils/unit/conversionMap'
 
+// TODO create separate page for each unit type
 export const UnitUtils = () => {
   const [type, setType] = useState<UnitType>('TEMPERATURE')
   const converters = conversionMap[type]
@@ -87,7 +88,7 @@ export const UnitUtils = () => {
           onChange={(e) => updateValue2(Number(e.currentTarget.value))}
         />
         <div className="col-span-2 md:col-span-1">
-          <Select aria-label={en.units.selectUnit1} value={unit2} onChange={(value) => updateUnit2(value as Unit)}>
+          <Select aria-label={en.units.selectUnit2} value={unit2} onChange={(value) => updateUnit2(value as Unit)}>
             {keys(conversionMap[type]).map((unit) => (
               <option key={unit}>{unit}</option>
             ))}

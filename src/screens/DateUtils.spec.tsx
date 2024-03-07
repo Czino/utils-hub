@@ -2,6 +2,7 @@ import '@testing-library/jest-dom'
 import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { toMatchDiffSnapshot } from 'snapshot-diff'
+import { selectValue } from '../../test/helpers/selectValue'
 import { DateUtils } from './DateUtils'
 expect.extend({ toMatchDiffSnapshot })
 
@@ -35,9 +36,7 @@ describe('DateUtils', () => {
     const $locale = getByLabelText(localeLabel)
     await userEvent.clear($date)
     await userEvent.type($date, value)
-    await userEvent.clear($locale)
-    await userEvent.type($locale, 'de')
-    await userEvent.click(getByLabelText('option de (German)'))
+    await selectValue($locale, 'de (German)')
     expect($locale).toHaveValue('de (German)')
     expect(asFragment()).toMatchDiffSnapshot(base)
   })

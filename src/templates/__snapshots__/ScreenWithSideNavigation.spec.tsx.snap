@@ -23,7 +23,7 @@ exports[`ScreenWithSideNavigation should render ScreenWithSideNavigation 1`] = `
             class=""
             href="/utils/list"
           >
-            List
+            Lists
           </a>
         </li>
         <li>
@@ -56,6 +56,14 @@ exports[`ScreenWithSideNavigation should render ScreenWithSideNavigation 1`] = `
             href="/utils/date"
           >
             Dates
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/encoding"
+          >
+            Encoding Utilities
           </a>
         </li>
       </ul>

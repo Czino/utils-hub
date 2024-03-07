@@ -23,7 +23,7 @@ exports[`Home should render correctly 1`] = `
             class=""
             href="/utils/list"
           >
-            List
+            Lists
           </a>
         </li>
         <li>
@@ -56,6 +56,14 @@ exports[`Home should render correctly 1`] = `
             href="/utils/date"
           >
             Dates
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/encoding"
+          >
+            Encoding Utilities
           </a>
         </li>
       </ul>
@@ -108,24 +116,7 @@ exports[`Home should render correctly 1`] = `
         Welcome to UtilityHub, your premier online destination for a vast array of digital utilities designed to enhance efficiency and streamline your workflow.
       </p>
       <p>
-        The platform is constantly evolving, with new utilities added regularly to meet the ever-changing demands of our users. We are committed to excellence, offering reliable and accurate tools that you can count on.
-      </p>
-      <p>
-        For now we only have a few 
-        <a
-          class="text-highlight-1 hover:text-highlight-2 active:text-highlight-3 "
-          href="/utils/list"
-        >
-          list utilities
-        </a>
-         and 
-        <a
-          class="text-highlight-1 hover:text-highlight-2 active:text-highlight-3 "
-          href="/utils/text"
-        >
-          text utilities
-        </a>
-         but more is to come!
+        The platform is constantly evolving, with new utilities added regularly to meet the ever-changing demands of our users. I are committed to excellence, offering reliable and accurate tools that you can count on.
       </p>
     </div>
     <div

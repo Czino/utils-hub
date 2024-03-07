@@ -20,7 +20,7 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
           class=""
           href="/utils/list"
         >
-          List
+          Lists
         </a>
       </li>
       <li>
@@ -53,6 +53,14 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
           href="/utils/date"
         >
           Dates
+        </a>
+      </li>
+      <li>
+        <a
+          class=""
+          href="/utils/encoding"
+        >
+          Encoding Utilities
         </a>
       </li>
     </ul>
@@ -121,7 +129,7 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 +           class=""
 +           href="/utils/list"
 +         >
-+           List
++           Lists
 +         </a>
 +       </li>
 +       <li>
@@ -154,6 +162,14 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 +           href="/utils/date"
 +         >
 +           Dates
++         </a>
++       </li>
++       <li>
++         <a
++           class=""
++           href="/utils/encoding"
++         >
++           Encoding Utilities
 +         </a>
 +       </li>
 +     </ul>

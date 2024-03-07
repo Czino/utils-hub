@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom'
 import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { selectValue } from '../../test/helpers/selectValue'
 import { UnitUtils } from './UnitUtils'
 
 describe('UnitUtils', () => {
@@ -34,9 +35,7 @@ describe('UnitUtils', () => {
     const input1Label = 'input value for unit ºF'
     const { getByLabelText } = render(<UnitUtils />)
     const $select1 = getByLabelText(select1Label)
-    await userEvent.clear($select1)
-    await userEvent.type($select1, value)
-    await userEvent.click(getByLabelText(`option ${value}`))
+    await selectValue($select1, value)
     const $input1 = getByLabelText(input1Label)
     expect($select1).toHaveValue(value)
     expect($input1).toHaveValue(-461.4)
@@ -47,9 +46,7 @@ describe('UnitUtils', () => {
     const input2Label = 'input value for unit ºF'
     const { getByLabelText } = render(<UnitUtils />)
     const $select2 = getByLabelText(select2Label)
-    await userEvent.clear($select2)
-    await userEvent.type($select2, value)
-    await userEvent.click(getByLabelText(`option ${value}`))
+    await selectValue($select2, value)
     const $input2 = getByLabelText(input2Label)
     expect($select2).toHaveValue(value)
     expect($input2).toHaveValue(-461.5)
@@ -63,9 +60,7 @@ describe('UnitUtils', () => {
     const select2Label = 'select unit 2'
     const { getByLabelText } = render(<UnitUtils />)
     const $type = getByLabelText(typeLabel)
-    await userEvent.clear($type)
-    await userEvent.type($type, value)
-    await userEvent.click(getByLabelText(`option ${value}`))
+    await selectValue($type, value)
     const $select1 = getByLabelText(select1Label)
     const $input1 = getByLabelText(input1Label)
     const $select2 = getByLabelText(select2Label)

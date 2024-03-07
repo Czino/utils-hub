@@ -9,6 +9,9 @@ export const navigation = [
   { path: '/utils/units', title: en.units.shortTitle },
   { path: '/utils/fractions', title: en.fractions.shortTitle },
   { path: '/utils/date', title: en.date.shortTitle },
+  { path: '/utils/encoding', title: en.encoding.shortTitle },
+  // { path: '/utils/hashing', title: en.hashing.shortTitle },
+  // { path: '/utils/numbers', title: en.numbers.shortTitle },
 ] as const
 
 export const NavigationColumn = () => {
