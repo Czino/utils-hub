@@ -69,20 +69,21 @@ export const UnitUtils = () => {
       </div>
       <div className="grid grid-cols-4 gap-4 md:grid-cols-8">
         <Input
-          className="col-span-2"
           type="number"
           aria-label={i18n(en.units.inputUnit, { unit: unit1 })}
           value={value1}
           onChange={(e) => updateValue1(Number(e.currentTarget.value))}
         />
-        <div className="col-span-2 md:col-span-1">
+        <div className="col-span-2">
           <Select
             aria-label={i18n(en.units.selectUnit1)}
             value={unit1}
             onChange={(value) => updateUnit1(value as Unit)}
           >
             {keys(conversionMap[type]).map((unit) => (
-              <option key={unit}>{unit}</option>
+              <option key={unit} value={unit}>
+                {unit} ({i18n(en.units[`${unit}.name`])})
+              </option>
             ))}
           </Select>
         </div>
@@ -90,20 +91,21 @@ export const UnitUtils = () => {
           <FiShuffle />
         </div>
         <Input
-          className="col-span-2"
           type="number"
           aria-label={i18n(en.units.inputUnit, { unit: unit2 })}
           value={value2}
           onChange={(e) => updateValue2(Number(e.currentTarget.value))}
         />
-        <div className="col-span-2 md:col-span-1">
+        <div className="col-span-2">
           <Select
             aria-label={i18n(en.units.selectUnit2)}
             value={unit2}
             onChange={(value) => updateUnit2(value as Unit)}
           >
             {keys(conversionMap[type]).map((unit) => (
-              <option key={unit}>{unit}</option>
+              <option key={unit} value={unit}>
+                {unit} ({i18n(en.units[`${unit}.name`])})
+              </option>
             ))}
           </Select>
         </div>

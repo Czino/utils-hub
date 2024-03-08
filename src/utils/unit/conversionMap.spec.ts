@@ -6,10 +6,14 @@ describe('conversionMap.TEMPERATURE', () => {
   it('should convert temperature units', () => {
     expect(conversionMap.TEMPERATURE.K.K(0)).toEqual(0)
     expect(conversionMap.TEMPERATURE.K.ºC(0)).toBeCloseTo(ABSOLUTE_ZERO_ºC, 1)
-    expect(conversionMap.TEMPERATURE.K.ºF(0)).toEqual(-461.5)
+    expect(conversionMap.TEMPERATURE.K.ºF(0)).toEqual(-459.7)
+    expect(conversionMap.TEMPERATURE.K.ºR(0)).toEqual(0)
+    expect(conversionMap.TEMPERATURE.K.ºRe(0)).toEqual(-218.5)
+    expect(conversionMap.TEMPERATURE.K.ºD(0)).toEqual(-509.7)
+    expect(conversionMap.TEMPERATURE.K.ºN(0)).toEqual(-90.1)
 
     expect(conversionMap.TEMPERATURE.ºC.K(ABSOLUTE_ZERO_ºC)).toEqual(0)
-    expect(conversionMap.TEMPERATURE.ºF.K(-461.5)).toBeCloseTo(0, 1)
+    expect(conversionMap.TEMPERATURE.ºF.K(-459.67)).toBeCloseTo(0, 1)
 
     expect(conversionMap.TEMPERATURE.ºC.ºF(0)).toEqual(32)
     expect(conversionMap.TEMPERATURE.ºC.ºF(100)).toEqual(212)

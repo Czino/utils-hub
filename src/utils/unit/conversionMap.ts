@@ -14,24 +14,44 @@ import {
   METER_PER_NAUTICAL_MILES,
   METER_PER_YARD,
 } from './constants'
+import { delisleToKelvin } from './delisleToKelvin'
 import { fahrenheitToKelvin } from './fahrenheitToKelvin'
 import { kelvinToCelsius } from './kelvinToCelsius'
+import { kelvinToDelisle } from './kelvinToDelisle'
 import { kelvinToFahrenheit } from './kelvinToFahrenheit'
+import { kelvinToNewton } from './kelvinToNewton'
+import { kelvinToRankine } from './kelvinToRankine'
+import { kelvinToReaumur } from './kelvinToReaumur'
+import { newtonToKelvin } from './newtonToKelvin'
+import { rankineToKelvin } from './rankineToKelvin'
+import { reaumurToKelvin } from './reaumurToKelvin'
 
 const PRECISION = 3
 
 const GRAMS_PER_OUNCE = 28.349523125
 const GRAMS_PER_POUND = 453.59237
 const GRAMS_PER_STONE = 6350.29318
+
+// TODO add velocity
+// TODO add area
+// TODO add energy
 export const baseMap = {
   TEMPERATURE: {
     K: {
       K: (K: number) => K,
       ºC: (C: number) => round(kelvinToCelsius(C), 1),
       ºF: (F: number) => round(kelvinToFahrenheit(F), 1),
+      ºR: (R: number) => round(kelvinToRankine(R), 1),
+      ºRe: (R: number) => round(kelvinToReaumur(R), 1),
+      ºD: (D: number) => round(kelvinToDelisle(D), 1),
+      ºN: (N: number) => round(kelvinToNewton(N), 1),
     },
     ºC: { K: celsiusToKelvin },
     ºF: { K: fahrenheitToKelvin },
+    ºR: { K: rankineToKelvin },
+    ºRe: { K: reaumurToKelvin },
+    ºD: { K: delisleToKelvin },
+    ºN: { K: newtonToKelvin },
   },
   DISTANCE: {
     m: {

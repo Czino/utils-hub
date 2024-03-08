@@ -15,7 +15,7 @@ describe('UnitUtils', () => {
     await userEvent.clear($input1)
     await userEvent.type($input1, String(value))
     expect($input1).toHaveValue(value)
-    expect($input2).toHaveValue(-174.1)
+    expect($input2).toHaveValue(-173.1)
   })
   it('update value of unit 2 and calculate value for unit 1', async () => {
     const input1Label = 'input value for unit K'
@@ -27,10 +27,10 @@ describe('UnitUtils', () => {
     await userEvent.clear($input2)
     await userEvent.type($input2, String(value))
     expect($input2).toHaveValue(value)
-    expect($input1).toHaveValue(374.15)
+    expect($input1).toHaveValue(373.15)
   })
   it('selects unit 1 and calculate value for unit 1', async () => {
-    const value = 'ºF'
+    const value = 'ºF (Fahrenheit)'
     const select1Label = 'select unit 1'
     const input1Label = 'input value for unit ºF'
     const { getByLabelText } = render(<UnitUtils />)
@@ -38,10 +38,10 @@ describe('UnitUtils', () => {
     await selectValue($select1, value)
     const $input1 = getByLabelText(input1Label)
     expect($select1).toHaveValue(value)
-    expect($input1).toHaveValue(-461.4)
+    expect($input1).toHaveValue(-459.6)
   })
   it('selects unit 2 and calculate value for unit 2', async () => {
-    const value = 'ºF'
+    const value = 'ºF (Fahrenheit)'
     const select2Label = 'select unit 2'
     const input2Label = 'input value for unit ºF'
     const { getByLabelText } = render(<UnitUtils />)
@@ -49,7 +49,7 @@ describe('UnitUtils', () => {
     await selectValue($select2, value)
     const $input2 = getByLabelText(input2Label)
     expect($select2).toHaveValue(value)
-    expect($input2).toHaveValue(-461.5)
+    expect($input2).toHaveValue(-459.7)
   })
   it('selects unit type and updates units', async () => {
     const value = 'distance'
@@ -66,8 +66,8 @@ describe('UnitUtils', () => {
     const $select2 = getByLabelText(select2Label)
     const $input2 = getByLabelText(input2Label)
     expect($input1).toHaveValue(0)
-    expect($select1).toHaveValue('m')
+    expect($select1).toHaveValue('m (meter)')
     expect($input2).toHaveValue(0)
-    expect($select2).toHaveValue('km')
+    expect($select2).toHaveValue('km (kilometer)')
   })
 })
