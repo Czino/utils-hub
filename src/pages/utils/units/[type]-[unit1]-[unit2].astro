@@ -1,0 +1,33 @@
+---
+import en from '../../../i18n/en/index.js';
+import { i18n } from '../../../i18n/i18n.jsx';
+import { UnitUtils } from '../../../screens/UnitUtils.jsx';
+import Head from '../../../templates/head.astro';
+import { keys } from '../../../utils/object/keys';
+import { conversionMap } from '../../../utils/unit/conversionMap';
+
+export function getStaticPaths() {
+  const types = keys(conversionMap)
+  return types.map(type => {
+    const converters = conversionMap[type]
+    const units = keys(converters)
+    return units.map(unit1 =>
+      units.map(unit2 => ({ params: {type, unit1: unit1, unit2}}))
+    )
+  }).flat(3)
+}
+
+const { type, unit1, unit2 } = Astro.params;
+---
+
+<html lang="en">
+  <head>
+    <Head />
+    <title>{i18n(en.units.title)} – {i18n(en.units.subtitle)} – {i18n(en.home.title)}</title>
+    <meta name="description" content={i18n(en.units.shortDescription)}>
+  </head>
+
+  <body>
+    <UnitUtils {...{ type: type, unit1, unit2 } } client:visible />
+  </body>
+</html>

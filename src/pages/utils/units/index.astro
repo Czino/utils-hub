@@ -1,0 +1,18 @@
+---
+import en from '../../../i18n/en/index.js';
+import { i18n } from '../../../i18n/i18n.jsx';
+import { UnitUtils } from '../../../screens/UnitUtils.jsx';
+import Head from '../../../templates/head.astro';
+---
+
+<html lang="en">
+  <head>
+    <Head />
+    <title>{i18n(en.units.title)} – {i18n(en.units.subtitle)} – {i18n(en.home.title)}</title>
+    <meta name="description" content={i18n(en.units.shortDescription)}>
+  </head>
+
+  <body>
+    <UnitUtils {...{ type: 'temperature', unit1: 'K', unit2: 'ºC' } } client:visible />
+  </body>
+</html>

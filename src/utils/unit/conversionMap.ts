@@ -36,7 +36,7 @@ const GRAMS_PER_STONE = 6350.29318
 // TODO add area
 // TODO add energy
 export const baseMap = {
-  TEMPERATURE: {
+  temperature: {
     K: {
       K: (K: number) => K,
       ºC: (C: number) => round(kelvinToCelsius(C), 1),
@@ -53,7 +53,7 @@ export const baseMap = {
     ºD: { K: delisleToKelvin },
     ºN: { K: newtonToKelvin },
   },
-  DISTANCE: {
+  distance: {
     m: {
       m: (m: number) => m,
       km: (m: number) => round(m / KILO, PRECISION),
@@ -80,7 +80,7 @@ export const baseMap = {
     mi: { m: (mi: number) => mi * METER_PER_MILES },
     nmi: { m: (nmi: number) => nmi * METER_PER_NAUTICAL_MILES },
   },
-  WEIGHT: {
+  weight: {
     g: {
       g: (g: number) => g,
       kg: (g: number) => round(g / KILO, PRECISION),
@@ -99,7 +99,7 @@ export const baseMap = {
     lb: { g: (lb: number) => lb * GRAMS_PER_POUND },
     st: { g: (st: number) => st * GRAMS_PER_STONE },
   },
-  VOLUME: {
+  volume: {
     'm³': {
       'm³': (m3: number) => m3,
       'dm³': (m3: number) => round(m3 * DEZI ** CUBED, PRECISION),
@@ -122,11 +122,11 @@ export const baseMap = {
 
 export type UnitType = keyof typeof baseMap
 export const TYPES: UnitType[] = keys(baseMap)
-export type TemperatureUnit = keyof typeof baseMap.TEMPERATURE
-export type DistanceUnit = keyof typeof baseMap.DISTANCE
-export type WeightUnit = keyof typeof baseMap.WEIGHT
-export type VolumeUnit = keyof typeof baseMap.VOLUME
-export type Unit = TemperatureUnit | DistanceUnit | WeightUnit | VolumeUnit
+export type TemperatureUnit = keyof typeof baseMap.temperature
+export type distanceUnit = keyof typeof baseMap.distance
+export type WeightUnit = keyof typeof baseMap.weight
+export type volumeUnit = keyof typeof baseMap.volume
+export type Unit = TemperatureUnit | distanceUnit | WeightUnit | volumeUnit
 
 type PartialConversionInfo = Record<string, Record<string, (value: number) => number>>
 type ConversionInfo<U extends string> = Record<U, Record<U, (value: number) => number>>
@@ -149,8 +149,8 @@ const mapConverters = <U extends string>(base: string, converters: PartialConver
 }
 
 export const conversionMap = {
-  TEMPERATURE: mapConverters<TemperatureUnit>('K', baseMap.TEMPERATURE),
-  DISTANCE: mapConverters<DistanceUnit>('m', baseMap.DISTANCE),
-  WEIGHT: mapConverters<WeightUnit>('g', baseMap.WEIGHT),
-  VOLUME: mapConverters<VolumeUnit>('m³', baseMap.VOLUME),
+  temperature: mapConverters<TemperatureUnit>('K', baseMap.temperature),
+  distance: mapConverters<distanceUnit>('m', baseMap.distance),
+  weight: mapConverters<WeightUnit>('g', baseMap.weight),
+  volume: mapConverters<volumeUnit>('m³', baseMap.volume),
 }
