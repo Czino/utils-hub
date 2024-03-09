@@ -19,9 +19,11 @@ import { fahrenheitToKelvin } from './fahrenheitToKelvin'
 import { kelvinToCelsius } from './kelvinToCelsius'
 import { kelvinToDelisle } from './kelvinToDelisle'
 import { kelvinToFahrenheit } from './kelvinToFahrenheit'
+import { kelvinToLeiden } from './kelvinToLeiden'
 import { kelvinToNewton } from './kelvinToNewton'
 import { kelvinToRankine } from './kelvinToRankine'
 import { kelvinToReaumur } from './kelvinToReaumur'
+import { leidenToKelvin } from './leidenToKelvin'
 import { newtonToKelvin } from './newtonToKelvin'
 import { rankineToKelvin } from './rankineToKelvin'
 import { reaumurToKelvin } from './reaumurToKelvin'
@@ -39,12 +41,13 @@ export const baseMap = {
   temperature: {
     K: {
       K: (K: number) => K,
-      ºC: (C: number) => round(kelvinToCelsius(C), 1),
-      ºF: (F: number) => round(kelvinToFahrenheit(F), 1),
-      ºR: (R: number) => round(kelvinToRankine(R), 1),
-      ºRe: (R: number) => round(kelvinToReaumur(R), 1),
-      ºD: (D: number) => round(kelvinToDelisle(D), 1),
-      ºN: (N: number) => round(kelvinToNewton(N), 1),
+      ºC: (K: number) => round(kelvinToCelsius(K), 1),
+      ºF: (K: number) => round(kelvinToFahrenheit(K), 1),
+      ºR: (K: number) => round(kelvinToRankine(K), 1),
+      ºRe: (K: number) => round(kelvinToReaumur(K), 1),
+      ºD: (K: number) => round(kelvinToDelisle(K), 1),
+      ºN: (K: number) => round(kelvinToNewton(K), 1),
+      ºL: (K: number) => round(kelvinToLeiden(K), 1),
     },
     ºC: { K: celsiusToKelvin },
     ºF: { K: fahrenheitToKelvin },
@@ -52,6 +55,7 @@ export const baseMap = {
     ºRe: { K: reaumurToKelvin },
     ºD: { K: delisleToKelvin },
     ºN: { K: newtonToKelvin },
+    ºL: { K: leidenToKelvin },
   },
   distance: {
     m: {
@@ -109,6 +113,7 @@ export const baseMap = {
       'nm³': (m3: number) => round(m3 * GIGA ** CUBED, PRECISION),
       'km³': (m3: number) => round(m3 / KILO ** CUBED, PRECISION),
       L: (m3: number) => round(m3 * DEZI ** CUBED, PRECISION),
+      mL: (m3: number) => round(m3 * CENT ** CUBED, PRECISION),
     },
     'dm³': { 'm³': (cm3: number) => cm3 / DEZI ** CUBED },
     'cm³': { 'm³': (cm3: number) => cm3 / CENT ** CUBED },
@@ -116,7 +121,8 @@ export const baseMap = {
     'µm³': { 'm³': (µm3: number) => µm3 / MEGA ** CUBED },
     'nm³': { 'm³': (nm3: number) => nm3 / GIGA ** CUBED },
     'km³': { 'm³': (km3: number) => km3 * KILO ** CUBED },
-    L: { 'm³': (km3: number) => km3 / DEZI ** CUBED },
+    L: { 'm³': (L: number) => L / DEZI ** CUBED },
+    mL: { 'm³': (mL: number) => mL / CENT ** CUBED },
   },
 }
 

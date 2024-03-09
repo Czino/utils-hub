@@ -1,19 +1,27 @@
 import '@testing-library/jest-dom'
 import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { toMatchDiffSnapshot } from 'snapshot-diff'
 import { selectValue } from '../../../test/helpers/selectValue'
-import type { Unit, UnitType } from '../../utils/unit/conversionMap'
 import { UnitUtils } from './UnitUtils'
+expect.extend({ toMatchDiffSnapshot })
 
 describe('UnitUtils', () => {
   const props = {
-    type: 'temperature' satisfies UnitType,
-    unit1: 'ºC' satisfies Unit,
-    unit2: 'ºF' satisfies Unit,
+    type: 'temperature',
+    unit1: 'ºC',
+    unit2: 'ºF',
   } as const
   const select1Label = 'select unit 1'
   const select2Label = 'select unit 2'
 
+  it('renders correctly', () => {
+    const base = render(<UnitUtils {...props} />).asFragment()
+    expect(base).toMatchSnapshot()
+    expect(render(<UnitUtils {...{ type: 'weight', unit1: 'g', unit2: 'st' }} />).asFragment()).toMatchDiffSnapshot(
+      base,
+    )
+  })
   it('update value of unit 1 and calculate value for unit 2', async () => {
     const input1Label = 'input value for unit ºC'
     const input2Label = 'input value for unit ºF'

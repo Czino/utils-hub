@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Headline2 should render Headline2 with styles 1`] = `
+<DocumentFragment>
+  <h2
+    class="text-3xl font-bold text-success-2 mt-4"
+  >
+    Test
+  </h2>
+</DocumentFragment>
+`;

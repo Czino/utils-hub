@@ -6,15 +6,8 @@ import en from '../../../i18n/en'
 import { i18n } from '../../../i18n/i18n'
 import { keys } from '../../../utils/object/keys'
 import { TYPES, conversionMap, type Unit, type UnitType } from '../../../utils/unit/conversionMap'
+import { updateURLPath } from '../helpers/updateURLPath'
 
-type Props = {
-  type: UnitType
-  unit1: Unit
-  unit2: Unit
-}
-const updateURLPath = (args: Props) => {
-  window.history.replaceState(null, document.title, `/utils/units/${args.type}-${args.unit1}-${args.unit2}`)
-}
 const getUnitWithName = (unit: Unit) => `${unit} (${i18n(en.units[`${unit}.name`])})`
 type UnitConverterProps = {
   type: UnitType
@@ -71,6 +64,7 @@ export const UnitConverter = ({ type, setType, unit1, setUnit1, unit2, setUnit2 
     setValue2(value1)
     setUnit1(unit2)
     setUnit2(unit1)
+    updateURLPath({ type, unit1: unit2, unit2: unit1 })
   }
 
   return (

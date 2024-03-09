@@ -1,0 +1,1464 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UnitUtils renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-row gap-4 text-2xl bg-white color-black"
+  >
+    <div
+      class="fixed inset-0 transition-[opacity] bg-black pointer-events-none opacity-0"
+    />
+    <nav
+      class="bg-white fixed z-10 p-4 transition-[top] overflow-auto pb-32 w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px]"
+    >
+      <ul>
+        <li
+          class="font-bold"
+        >
+          <a
+            href="/"
+          >
+            UtilityHub
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/list"
+          >
+            Lists
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/text"
+          >
+            Text
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/units"
+          >
+            Units
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/fractions"
+          >
+            Fractions
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/date"
+          >
+            Dates
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/encoding"
+          >
+            Encoding Utilities
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="flex fixed right-0 bottom-0 z-20 justify-end p-4 w-full bg-white md:hidden"
+      role="button"
+    >
+      <svg
+        aria-label="open navigation"
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="3"
+          x2="21"
+          y1="12"
+          y2="12"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="6"
+          y2="6"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="18"
+          y2="18"
+        />
+      </svg>
+    </div>
+    <div
+      class="p-4 space-y-4 w-full"
+    >
+      <h1
+        class="text-5xl text-success-2 font-bold "
+      >
+        Unit Utilities
+      </h1>
+      <p>
+        Tired of scratching your head over converting units? Say goodbye to confusion! This page lets you effortlessly switch between different units, like turning chilly Celsius into toasty Fahrenheit, so you're never left in the cold.
+      </p>
+      <div
+        class="w-[180px]"
+      >
+        <div
+          class="relative undefined"
+        >
+          <input
+            aria-label="select unit type"
+            class="p-2 w-full bg-transparent rounded border border-dark"
+            type="text"
+            value="temperature"
+          />
+          <svg
+            class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="6 9 12 15 18 9"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-4 gap-4 md:grid-cols-8"
+      >
+        <input
+          aria-label="input value for unit ºC"
+          class="appearance-none bg-transparent text-dark p-2 border border-dark rounded "
+          type="number"
+          value="0"
+        />
+        <div
+          class="col-span-2"
+        >
+          <div
+            class="relative undefined"
+          >
+            <input
+              aria-label="select unit 1"
+              class="p-2 w-full bg-transparent rounded border border-dark"
+              type="text"
+              value="ºC (Celsius)"
+            />
+            <svg
+              class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="6 9 12 15 18 9"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          aria-label="swap units"
+          class="grid col-span-4 justify-center items-center md:col-span-1"
+        >
+          <svg
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="16 3 21 3 21 8"
+            />
+            <line
+              x1="4"
+              x2="21"
+              y1="20"
+              y2="3"
+            />
+            <polyline
+              points="21 16 21 21 16 21"
+            />
+            <line
+              x1="15"
+              x2="21"
+              y1="15"
+              y2="21"
+            />
+            <line
+              x1="4"
+              x2="9"
+              y1="4"
+              y2="9"
+            />
+          </svg>
+        </div>
+        <input
+          aria-label="input value for unit ºF"
+          class="appearance-none bg-transparent text-dark p-2 border border-dark rounded "
+          type="number"
+          value="32"
+        />
+        <div
+          class="col-span-2"
+        >
+          <div
+            class="relative undefined"
+          >
+            <input
+              aria-label="select unit 2"
+              class="p-2 w-full bg-transparent rounded border border-dark"
+              type="text"
+              value="ºF (Fahrenheit)"
+            />
+            <svg
+              class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="6 9 12 15 18 9"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div
+        class="grid gap-4 md:grid-cols-2"
+      >
+        <div>
+          <h2
+            class="text-3xl font-bold text-success-2 "
+          >
+            About Celsius (ºC)
+          </h2>
+          <p>
+            Celsius is a commonly used temperature scale in which the freezing point of water at sea level is defined as 0 degrees Celsius (0 ºC) and the boiling point of water at sea level is defined as 100 degrees Celsius (100 ºC). It is widely used in everyday contexts and scientific applications.
+          </p>
+        </div>
+        <div>
+          <h2
+            class="text-3xl font-bold text-success-2 "
+          >
+            About Fahrenheit (ºF)
+          </h2>
+          <p>
+            Fahrenheit is a temperature scale commonly used in the United States and a few other countries. In this scale, the freezing point of water is defined as 32 degrees Fahrenheit (32 ºF) and the boiling point of water is defined as 212 degrees Fahrenheit (212 ºF). It's less common in scientific applications but still widely used in everyday settings in some regions.
+          </p>
+        </div>
+      </div>
+      <hr />
+      <h2
+        class="text-3xl font-bold text-success-2 "
+      >
+        All temperature conversions
+      </h2>
+      <div
+        class="grid grid-cols-2 gap-4 text-sm md:grid-cols-3 lg:grid-cols-4"
+      >
+        <ul>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-K-ºC"
+            >
+              K to ºC
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-K-ºF"
+            >
+              K to ºF
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-K-ºR"
+            >
+              K to ºR
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-K-ºRe"
+            >
+              K to ºRe
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-K-ºD"
+            >
+              K to ºD
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-K-ºN"
+            >
+              K to ºN
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-K-ºL"
+            >
+              K to ºL
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºC-K"
+            >
+              ºC to K
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºC-ºF"
+            >
+              ºC to ºF
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºC-ºR"
+            >
+              ºC to ºR
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºC-ºRe"
+            >
+              ºC to ºRe
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºC-ºD"
+            >
+              ºC to ºD
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºC-ºN"
+            >
+              ºC to ºN
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºC-ºL"
+            >
+              ºC to ºL
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºF-K"
+            >
+              ºF to K
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºF-ºC"
+            >
+              ºF to ºC
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºF-ºR"
+            >
+              ºF to ºR
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºF-ºRe"
+            >
+              ºF to ºRe
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºF-ºD"
+            >
+              ºF to ºD
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºF-ºN"
+            >
+              ºF to ºN
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºF-ºL"
+            >
+              ºF to ºL
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºR-K"
+            >
+              ºR to K
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºR-ºC"
+            >
+              ºR to ºC
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºR-ºF"
+            >
+              ºR to ºF
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºR-ºRe"
+            >
+              ºR to ºRe
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºR-ºD"
+            >
+              ºR to ºD
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºR-ºN"
+            >
+              ºR to ºN
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºR-ºL"
+            >
+              ºR to ºL
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºRe-K"
+            >
+              ºRe to K
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºRe-ºC"
+            >
+              ºRe to ºC
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºRe-ºF"
+            >
+              ºRe to ºF
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºRe-ºR"
+            >
+              ºRe to ºR
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºRe-ºD"
+            >
+              ºRe to ºD
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºRe-ºN"
+            >
+              ºRe to ºN
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºRe-ºL"
+            >
+              ºRe to ºL
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºD-K"
+            >
+              ºD to K
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºD-ºC"
+            >
+              ºD to ºC
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºD-ºF"
+            >
+              ºD to ºF
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºD-ºR"
+            >
+              ºD to ºR
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºD-ºRe"
+            >
+              ºD to ºRe
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºD-ºN"
+            >
+              ºD to ºN
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºD-ºL"
+            >
+              ºD to ºL
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºN-K"
+            >
+              ºN to K
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºN-ºC"
+            >
+              ºN to ºC
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºN-ºF"
+            >
+              ºN to ºF
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºN-ºR"
+            >
+              ºN to ºR
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºN-ºRe"
+            >
+              ºN to ºRe
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºN-ºD"
+            >
+              ºN to ºD
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºN-ºL"
+            >
+              ºN to ºL
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºL-K"
+            >
+              ºL to K
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºL-ºC"
+            >
+              ºL to ºC
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºL-ºF"
+            >
+              ºL to ºF
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºL-ºR"
+            >
+              ºL to ºR
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºL-ºRe"
+            >
+              ºL to ºRe
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºL-ºD"
+            >
+              ºL to ºD
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+              href="/utils/units/temperature-ºL-ºN"
+            >
+              ºL to ºN
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="w-[280px] hidden md:block"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`UnitUtils renders correctly 2`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -123,11 +123,11 @@
+          >
+            <input
+              aria-label="select unit type"
+              class="p-2 w-full bg-transparent rounded border border-dark"
+              type="text"
+-             value="weight"
++             value="temperature"
+            />
+            <svg
+              class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+              fill="none"
+              height="1em"
+@@ -147,11 +147,11 @@
+        </div>
+        <div
+          class="grid grid-cols-4 gap-4 md:grid-cols-8"
+        >
+          <input
+-           aria-label="input value for unit g"
++           aria-label="input value for unit ºC"
+            class="appearance-none bg-transparent text-dark p-2 border border-dark rounded "
+            type="number"
+            value="0"
+          />
+          <div
+@@ -162,11 +162,11 @@
+            >
+              <input
+                aria-label="select unit 1"
+                class="p-2 w-full bg-transparent rounded border border-dark"
+                type="text"
+-               value="g (gram)"
++               value="ºC (Celsius)"
+              />
+              <svg
+                class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+                fill="none"
+                height="1em"
+@@ -224,14 +224,14 @@
+                y2="9"
+              />
+            </svg>
+          </div>
+          <input
+-           aria-label="input value for unit st"
++           aria-label="input value for unit ºF"
+            class="appearance-none bg-transparent text-dark p-2 border border-dark rounded "
+            type="number"
+-           value="0"
++           value="32"
+          />
+          <div
+            class="col-span-2"
+          >
+            <div
+@@ -239,11 +239,11 @@
+            >
+              <input
+                aria-label="select unit 2"
+                class="p-2 w-full bg-transparent rounded border border-dark"
+                type="text"
+-               value="st (stone)"
++               value="ºF (Fahrenheit)"
+              />
+              <svg
+                class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+                fill="none"
+                height="1em"
+@@ -268,497 +268,497 @@
+        >
+          <div>
+            <h2
+              class="text-3xl font-bold text-success-2 "
+            >
+-             About gram (g)
++             About Celsius (ºC)
+            </h2>
+            <p>
+-             The gram is the base unit of mass in the International System of Units (SI). It is defined as one-thousandth of a kilogram (0.001 kg). Grams are commonly used for measuring small quantities of mass, such as food ingredients or small objects.
++             Celsius is a commonly used temperature scale in which the freezing point of water at sea level is defined as 0 degrees Celsius (0 ºC) and the boiling point of water at sea level is defined as 100 degrees Celsius (100 ºC). It is widely used in everyday contexts and scientific applications.
+            </p>
+          </div>
+          <div>
+            <h2
+              class="text-3xl font-bold text-success-2 "
+            >
+-             About stone (st)
++             About Fahrenheit (ºF)
+            </h2>
+            <p>
+-             The stone is a unit of mass commonly used in the United Kingdom and Ireland. It is equal to 14 pounds or approximately 6.35029 kilograms. Stones are used for measuring the mass of people, particularly in discussions of body weight or in medical contexts.
++             Fahrenheit is a temperature scale commonly used in the United States and a few other countries. In this scale, the freezing point of water is defined as 32 degrees Fahrenheit (32 ºF) and the boiling point of water is defined as 212 degrees Fahrenheit (212 ºF). It's less common in scientific applications but still widely used in everyday settings in some regions.
+            </p>
+          </div>
+        </div>
+        <hr />
+        <h2
+          class="text-3xl font-bold text-success-2 "
+        >
+-         All weight conversions
++         All temperature conversions
+        </h2>
+        <div
+          class="grid grid-cols-2 gap-4 text-sm md:grid-cols-3 lg:grid-cols-4"
+        >
+          <ul>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-g-kg"
++               href="/utils/units/temperature-K-ºC"
+              >
+-               g to kg
++               K to ºC
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-g-t"
++               href="/utils/units/temperature-K-ºF"
+              >
+-               g to t
++               K to ºF
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-g-mg"
++               href="/utils/units/temperature-K-ºR"
+              >
+-               g to mg
++               K to ºR
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-g-µg"
++               href="/utils/units/temperature-K-ºRe"
+              >
+-               g to µg
++               K to ºRe
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-g-oz"
++               href="/utils/units/temperature-K-ºD"
+              >
+-               g to oz
++               K to ºD
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-g-lb"
++               href="/utils/units/temperature-K-ºN"
+              >
+-               g to lb
++               K to ºN
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-g-st"
++               href="/utils/units/temperature-K-ºL"
+              >
+-               g to st
++               K to ºL
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-kg-g"
++               href="/utils/units/temperature-ºC-K"
+              >
+-               kg to g
++               ºC to K
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-kg-t"
++               href="/utils/units/temperature-ºC-ºF"
+              >
+-               kg to t
++               ºC to ºF
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-kg-mg"
++               href="/utils/units/temperature-ºC-ºR"
+              >
+-               kg to mg
++               ºC to ºR
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-kg-µg"
++               href="/utils/units/temperature-ºC-ºRe"
+              >
+-               kg to µg
++               ºC to ºRe
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-kg-oz"
++               href="/utils/units/temperature-ºC-ºD"
+              >
+-               kg to oz
++               ºC to ºD
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-kg-lb"
++               href="/utils/units/temperature-ºC-ºN"
+              >
+-               kg to lb
++               ºC to ºN
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-kg-st"
++               href="/utils/units/temperature-ºC-ºL"
+              >
+-               kg to st
++               ºC to ºL
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-t-g"
++               href="/utils/units/temperature-ºF-K"
+              >
+-               t to g
++               ºF to K
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-t-kg"
++               href="/utils/units/temperature-ºF-ºC"
+              >
+-               t to kg
++               ºF to ºC
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-t-mg"
++               href="/utils/units/temperature-ºF-ºR"
+              >
+-               t to mg
++               ºF to ºR
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-t-µg"
++               href="/utils/units/temperature-ºF-ºRe"
+              >
+-               t to µg
++               ºF to ºRe
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-t-oz"
++               href="/utils/units/temperature-ºF-ºD"
+              >
+-               t to oz
++               ºF to ºD
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-t-lb"
++               href="/utils/units/temperature-ºF-ºN"
+              >
+-               t to lb
++               ºF to ºN
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-t-st"
++               href="/utils/units/temperature-ºF-ºL"
+              >
+-               t to st
++               ºF to ºL
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-mg-g"
++               href="/utils/units/temperature-ºR-K"
+              >
+-               mg to g
++               ºR to K
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-mg-kg"
++               href="/utils/units/temperature-ºR-ºC"
+              >
+-               mg to kg
++               ºR to ºC
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-mg-t"
++               href="/utils/units/temperature-ºR-ºF"
+              >
+-               mg to t
++               ºR to ºF
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-mg-µg"
++               href="/utils/units/temperature-ºR-ºRe"
+              >
+-               mg to µg
++               ºR to ºRe
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-mg-oz"
++               href="/utils/units/temperature-ºR-ºD"
+              >
+-               mg to oz
++               ºR to ºD
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-mg-lb"
++               href="/utils/units/temperature-ºR-ºN"
+              >
+-               mg to lb
++               ºR to ºN
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-mg-st"
++               href="/utils/units/temperature-ºR-ºL"
+              >
+-               mg to st
++               ºR to ºL
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-µg-g"
++               href="/utils/units/temperature-ºRe-K"
+              >
+-               µg to g
++               ºRe to K
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-µg-kg"
++               href="/utils/units/temperature-ºRe-ºC"
+              >
+-               µg to kg
++               ºRe to ºC
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-µg-t"
++               href="/utils/units/temperature-ºRe-ºF"
+              >
+-               µg to t
++               ºRe to ºF
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-µg-mg"
++               href="/utils/units/temperature-ºRe-ºR"
+              >
+-               µg to mg
++               ºRe to ºR
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-µg-oz"
++               href="/utils/units/temperature-ºRe-ºD"
+              >
+-               µg to oz
++               ºRe to ºD
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-µg-lb"
++               href="/utils/units/temperature-ºRe-ºN"
+              >
+-               µg to lb
++               ºRe to ºN
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-µg-st"
++               href="/utils/units/temperature-ºRe-ºL"
+              >
+-               µg to st
++               ºRe to ºL
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-oz-g"
++               href="/utils/units/temperature-ºD-K"
+              >
+-               oz to g
++               ºD to K
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-oz-kg"
++               href="/utils/units/temperature-ºD-ºC"
+              >
+-               oz to kg
++               ºD to ºC
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-oz-t"
++               href="/utils/units/temperature-ºD-ºF"
+              >
+-               oz to t
++               ºD to ºF
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-oz-mg"
++               href="/utils/units/temperature-ºD-ºR"
+              >
+-               oz to mg
++               ºD to ºR
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-oz-µg"
++               href="/utils/units/temperature-ºD-ºRe"
+              >
+-               oz to µg
++               ºD to ºRe
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-oz-lb"
++               href="/utils/units/temperature-ºD-ºN"
+              >
+-               oz to lb
++               ºD to ºN
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-oz-st"
++               href="/utils/units/temperature-ºD-ºL"
+              >
+-               oz to st
++               ºD to ºL
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-lb-g"
++               href="/utils/units/temperature-ºN-K"
+              >
+-               lb to g
++               ºN to K
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-lb-kg"
++               href="/utils/units/temperature-ºN-ºC"
+              >
+-               lb to kg
++               ºN to ºC
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-lb-t"
++               href="/utils/units/temperature-ºN-ºF"
+              >
+-               lb to t
++               ºN to ºF
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-lb-mg"
++               href="/utils/units/temperature-ºN-ºR"
+              >
+-               lb to mg
++               ºN to ºR
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-lb-µg"
++               href="/utils/units/temperature-ºN-ºRe"
+              >
+-               lb to µg
++               ºN to ºRe
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-lb-oz"
++               href="/utils/units/temperature-ºN-ºD"
+              >
+-               lb to oz
++               ºN to ºD
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-lb-st"
++               href="/utils/units/temperature-ºN-ºL"
+              >
+-               lb to st
++               ºN to ºL
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-st-g"
++               href="/utils/units/temperature-ºL-K"
+              >
+-               st to g
++               ºL to K
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-st-kg"
++               href="/utils/units/temperature-ºL-ºC"
+              >
+-               st to kg
++               ºL to ºC
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-st-t"
++               href="/utils/units/temperature-ºL-ºF"
+              >
+-               st to t
++               ºL to ºF
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-st-mg"
++               href="/utils/units/temperature-ºL-ºR"
+              >
+-               st to mg
++               ºL to ºR
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-st-µg"
++               href="/utils/units/temperature-ºL-ºRe"
+              >
+-               st to µg
++               ºL to ºRe
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-st-oz"
++               href="/utils/units/temperature-ºL-ºD"
+              >
+-               st to oz
++               ºL to ºD
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
+-               href="/utils/units/weight-st-lb"
++               href="/utils/units/temperature-ºL-ºN"
+              >
+-               st to lb
++               ºL to ºN
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>"
+`;
