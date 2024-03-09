@@ -1,5 +1,5 @@
 /* eslint-disable max-statements */
-import { ABSOLUTE_ZERO_ºC } from './constants'
+import { ABSOLUTE_ZERO_ºC, KILO, MEGA } from './constants'
 import { conversionMap } from './conversionMap'
 
 describe('conversionMap.temperature', () => {
@@ -11,6 +11,7 @@ describe('conversionMap.temperature', () => {
     expect(conversionMap.temperature.K.ºRe(0)).toEqual(-218.5)
     expect(conversionMap.temperature.K.ºD(0)).toEqual(-509.7)
     expect(conversionMap.temperature.K.ºN(0)).toEqual(-90.1)
+    expect(conversionMap.temperature.K.ºL(0)).toEqual(-20.1)
 
     expect(conversionMap.temperature.ºC.K(ABSOLUTE_ZERO_ºC)).toEqual(0)
     expect(conversionMap.temperature.ºF.K(-459.67)).toBeCloseTo(0, 1)
@@ -94,6 +95,7 @@ describe('conversionMap.volume', () => {
     expect(conversionMap.volume['m³']['nm³'](1)).toEqual(1e27)
     expect(conversionMap.volume['m³']['km³'](1e9)).toEqual(1)
     expect(conversionMap.volume['m³'].L(1)).toEqual(1000)
+    expect(conversionMap.volume['m³'].mL(1)).toEqual(1000000)
 
     expect(conversionMap.volume['m³']['m³'](1000)).toEqual(1000)
     expect(conversionMap.volume['dm³']['m³'](1000)).toEqual(1)
@@ -103,8 +105,36 @@ describe('conversionMap.volume', () => {
     expect(conversionMap.volume['nm³']['m³'](1e27)).toEqual(1)
     expect(conversionMap.volume['km³']['m³'](1)).toEqual(1e9)
     expect(conversionMap.volume.L['m³'](1000)).toEqual(1)
+    expect(conversionMap.volume.mL['m³'](1000000)).toEqual(1)
 
     expect(conversionMap.volume.L['dm³'](1)).toEqual(1)
     expect(conversionMap.volume['cm³']['mm³'](1)).toEqual(1000)
+  })
+})
+describe('conversionMap.pressure', () => {
+  it('should convert pressure units', () => {
+    expect(conversionMap.pressure.Pa.Pa(1000)).toEqual(1000)
+    expect(conversionMap.pressure.Pa.kPa(KILO)).toEqual(1)
+    expect(conversionMap.pressure.Pa.MPa(MEGA)).toEqual(1)
+    expect(conversionMap.pressure.Pa.bar(MEGA)).toEqual(10)
+    expect(conversionMap.pressure.Pa.atm(MEGA)).toEqual(9.869)
+    expect(conversionMap.pressure.Pa.mmHg(MEGA)).toEqual(7500.638)
+    expect(conversionMap.pressure.Pa.psi(MEGA)).toEqual(145.038)
+    expect(conversionMap.pressure.Pa.torr(MEGA)).toEqual(7500.638)
+    expect(conversionMap.pressure.Pa.at(MEGA)).toEqual(10.197)
+    expect(conversionMap.pressure.Pa.psf(MEGA)).toEqual(20885.416)
+
+    expect(conversionMap.pressure.kPa.Pa(1)).toEqual(KILO)
+    expect(conversionMap.pressure.MPa.Pa(1)).toEqual(MEGA)
+    expect(conversionMap.pressure.bar.Pa(1)).toEqual(100000)
+    expect(conversionMap.pressure.atm.Pa(1)).toEqual(101325)
+    expect(conversionMap.pressure.mmHg.Pa(1)).toEqual(133.322)
+    expect(conversionMap.pressure.psi.Pa(1)).toEqual(6894.76)
+    expect(conversionMap.pressure.torr.Pa(1)).toEqual(133.322)
+    expect(conversionMap.pressure.at.Pa(1)).toEqual(98066.5)
+    expect(conversionMap.pressure.psf.Pa(1)).toEqual(47.8803)
+
+    expect(conversionMap.pressure.mmHg.torr(1)).toEqual(1)
+    expect(conversionMap.pressure.mmHg.atm(760)).toEqual(1)
   })
 })
