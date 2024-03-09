@@ -72,25 +72,29 @@ export const UnitConverter = ({ type, setType, unit1, setUnit1, unit2, setUnit2 
   return (
     <div className="grid gap-8">
       <div className="flex flex-row gap-4">
-        {TYPES.map((t, i) => (
-          <div className="flex flex-row gap-4">
-            {i !== 0 && <div className="w-px h-full bg-dark" />}
-            <TextLink
-              className={[
-                'text-2xl font-bold capitalize',
-                t === type ? 'text-highlight-1 visited:text-highlight-1' : 'text-success-1 visited:text-success-1',
-              ].join(' ')}
-              href={getURLPath({ type: t, unit1, unit2 })}
-              key={t}
-              onClick={(e) => {
-                e.preventDefault()
-                updateType(t)
-              }}
-            >
-              {i18n(en.units[t])}
-            </TextLink>
-          </div>
-        ))}
+        {TYPES.map((t, i) => {
+          const newUnits = keys(conversionMap[t])
+          return (
+            <div className="flex flex-row gap-4">
+              {i !== 0 && <div className="w-px h-full bg-dark" />}
+              <TextLink
+                className={[
+                  'text-2xl font-bold capitalize',
+                  t === type ? 'text-highlight-1 visited:text-highlight-1' : 'text-success-1 visited:text-success-1',
+                ].join(' ')}
+                // @ts-ignore unit should be a key of converter
+                href={getURLPath({ type: t, unit1: newUnits[0], unit2: newUnits[1] })}
+                key={t}
+                onClick={(e) => {
+                  e.preventDefault()
+                  updateType(t)
+                }}
+              >
+                {i18n(en.units[t])}
+              </TextLink>
+            </div>
+          )
+        })}
       </div>
       <div className="grid grid-cols-4 gap-4 md:grid-cols-8">
         <Input

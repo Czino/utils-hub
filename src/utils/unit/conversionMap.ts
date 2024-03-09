@@ -1,5 +1,7 @@
 import { round } from '../math/round'
 import { keys } from '../object/keys'
+import { atmosphereToPascal } from './atmosphereToPascal'
+import { barToPascal } from './barToPascal'
 import { celsiusToKelvin } from './celsiusToKelvin'
 import {
   CENT,
@@ -24,9 +26,21 @@ import { kelvinToNewton } from './kelvinToNewton'
 import { kelvinToRankine } from './kelvinToRankine'
 import { kelvinToReaumur } from './kelvinToReaumur'
 import { leidenToKelvin } from './leidenToKelvin'
+import { mmHgToPascal } from './mmHgToPascal'
 import { newtonToKelvin } from './newtonToKelvin'
+import { pascalToAtmosphere } from './pascalToAtmosphere'
+import { pascalToBar } from './pascalToBar'
+import { pascalToMMHG } from './pascalToMMHG'
+import { pascalToPSF } from './pascalToPSF'
+import { pascalToPSI } from './pascalToPSI'
+import { pascalToTechnicalAtmosphere } from './pascalToTechnicalAtmosphere'
+import { pascalToTorr } from './pascalToTorr'
+import { psfToPascal } from './psfToPascal'
+import { psiToPascal } from './psiToPascal'
 import { rankineToKelvin } from './rankineToKelvin'
 import { reaumurToKelvin } from './reaumurToKelvin'
+import { technicalAtmosphereToPascal } from './technicalAtmosphereToPascal'
+import { torrToPascal } from './torrToPascal'
 
 const PRECISION = 3
 
@@ -37,6 +51,7 @@ const GRAMS_PER_STONE = 6350.29318
 // TODO add velocity
 // TODO add area
 // TODO add energy
+// TODO add data size
 export const baseMap = {
   temperature: {
     K: {
@@ -124,6 +139,29 @@ export const baseMap = {
     L: { 'm³': (L: number) => L / DEZI ** CUBED },
     mL: { 'm³': (mL: number) => mL / CENT ** CUBED },
   },
+  pressure: {
+    Pa: {
+      Pa: (Pa: number) => Pa,
+      kPa: (Pa: number) => round(Pa / KILO, PRECISION),
+      MPa: (Pa: number) => round(Pa / MEGA, PRECISION),
+      bar: (Pa: number) => round(pascalToBar(Pa), PRECISION),
+      atm: (Pa: number) => round(pascalToAtmosphere(Pa), PRECISION),
+      mmHg: (Pa: number) => round(pascalToMMHG(Pa), PRECISION),
+      psi: (Pa: number) => round(pascalToPSI(Pa), PRECISION),
+      torr: (Pa: number) => round(pascalToTorr(Pa), PRECISION),
+      at: (Pa: number) => round(pascalToTechnicalAtmosphere(Pa), PRECISION),
+      psf: (Pa: number) => round(pascalToPSF(Pa), PRECISION),
+    },
+    kPa: { Pa: (kPa: number) => kPa * KILO },
+    MPa: { Pa: (MPa: number) => MPa * MEGA },
+    bar: { Pa: barToPascal },
+    atm: { Pa: atmosphereToPascal },
+    mmHg: { Pa: mmHgToPascal },
+    psi: { Pa: psiToPascal },
+    torr: { Pa: torrToPascal },
+    at: { Pa: technicalAtmosphereToPascal },
+    psf: { Pa: psfToPascal },
+  },
 }
 
 export type UnitType = keyof typeof baseMap
@@ -131,8 +169,9 @@ export const TYPES: UnitType[] = keys(baseMap)
 export type TemperatureUnit = keyof typeof baseMap.temperature
 export type distanceUnit = keyof typeof baseMap.distance
 export type WeightUnit = keyof typeof baseMap.weight
-export type volumeUnit = keyof typeof baseMap.volume
-export type Unit = TemperatureUnit | distanceUnit | WeightUnit | volumeUnit
+export type VolumeUnit = keyof typeof baseMap.volume
+export type PressureUnit = keyof typeof baseMap.pressure
+export type Unit = TemperatureUnit | distanceUnit | WeightUnit | VolumeUnit | PressureUnit
 
 type PartialConversionInfo = Record<string, Record<string, (value: number) => number>>
 type ConversionInfo<U extends string> = Record<U, Record<U, (value: number) => number>>
@@ -158,5 +197,6 @@ export const conversionMap = {
   temperature: mapConverters<TemperatureUnit>('K', baseMap.temperature),
   distance: mapConverters<distanceUnit>('m', baseMap.distance),
   weight: mapConverters<WeightUnit>('g', baseMap.weight),
-  volume: mapConverters<volumeUnit>('m³', baseMap.volume),
+  volume: mapConverters<VolumeUnit>('m³', baseMap.volume),
+  pressure: mapConverters<PressureUnit>('Pa', baseMap.pressure),
 }

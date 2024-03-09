@@ -129,7 +129,7 @@ exports[`UnitUtils renders correctly 1`] = `
           >
             <a
               class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-highlight-1 visited:text-highlight-1"
-              href="/utils/units/temperature-ºC-ºF"
+              href="/utils/units/temperature-K-ºC"
             >
               temperature
             </a>
@@ -142,7 +142,7 @@ exports[`UnitUtils renders correctly 1`] = `
             />
             <a
               class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-success-1 visited:text-success-1"
-              href="/utils/units/distance-ºC-ºF"
+              href="/utils/units/distance-m-km"
             >
               distance
             </a>
@@ -155,7 +155,7 @@ exports[`UnitUtils renders correctly 1`] = `
             />
             <a
               class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-success-1 visited:text-success-1"
-              href="/utils/units/weight-ºC-ºF"
+              href="/utils/units/weight-g-kg"
             >
               weight
             </a>
@@ -168,9 +168,22 @@ exports[`UnitUtils renders correctly 1`] = `
             />
             <a
               class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-success-1 visited:text-success-1"
-              href="/utils/units/volume-ºC-ºF"
+              href="/utils/units/volume-m³-dm³"
             >
               volume
+            </a>
+          </div>
+          <div
+            class="flex flex-row gap-4"
+          >
+            <div
+              class="w-px h-full bg-dark"
+            />
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-success-1 visited:text-success-1"
+              href="/utils/units/pressure-Pa-kPa"
+            >
+              pressure
             </a>
           </div>
         </div>
@@ -804,61 +817,33 @@ exports[`UnitUtils renders correctly 2`] = `
 - First value
 + Second value
 
-@@ -123,12 +123,12 @@
+@@ -123,11 +123,11 @@
           >
             <div
               class="flex flex-row gap-4"
             >
               <a
 -               class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-success-1 visited:text-success-1"
--               href="/utils/units/temperature-g-st"
 +               class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-highlight-1 visited:text-highlight-1"
-+               href="/utils/units/temperature-ºC-ºF"
+                href="/utils/units/temperature-K-ºC"
               >
                 temperature
               </a>
             </div>
-            <div
-@@ -137,11 +137,11 @@
-              <div
-                class="w-px h-full bg-dark"
-              />
-              <a
-                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-success-1 visited:text-success-1"
--               href="/utils/units/distance-g-st"
-+               href="/utils/units/distance-ºC-ºF"
-              >
-                distance
-              </a>
-            </div>
-            <div
-@@ -149,12 +149,12 @@
+@@ -149,11 +149,11 @@
             >
               <div
                 class="w-px h-full bg-dark"
               />
               <a
 -               class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-highlight-1 visited:text-highlight-1"
--               href="/utils/units/weight-g-st"
 +               class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-success-1 visited:text-success-1"
-+               href="/utils/units/weight-ºC-ºF"
+                href="/utils/units/weight-g-kg"
               >
                 weight
               </a>
             </div>
-            <div
-@@ -163,21 +163,21 @@
-              <div
-                class="w-px h-full bg-dark"
-              />
-              <a
-                class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-success-1 visited:text-success-1"
--               href="/utils/units/volume-g-st"
-+               href="/utils/units/volume-ºC-ºF"
-              >
-                volume
-              </a>
-            </div>
+@@ -186,11 +186,11 @@
           </div>
           <div
             class="grid grid-cols-4 gap-4 md:grid-cols-8"
@@ -871,7 +856,7 @@ exports[`UnitUtils renders correctly 2`] = `
               value="0"
             />
             <div
-@@ -188,11 +188,11 @@
+@@ -201,11 +201,11 @@
               >
                 <input
                   aria-label="select unit 1"
@@ -884,7 +869,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
                   fill="none"
                   height="1em"
-@@ -250,14 +250,14 @@
+@@ -263,14 +263,14 @@
                   y2="9"
                 />
               </svg>
@@ -901,7 +886,7 @@ exports[`UnitUtils renders correctly 2`] = `
               class="col-span-2"
             >
               <div
-@@ -265,11 +265,11 @@
+@@ -278,11 +278,11 @@
               >
                 <input
                   aria-label="select unit 2"
@@ -914,7 +899,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
                   fill="none"
                   height="1em"
-@@ -295,497 +295,497 @@
+@@ -308,497 +308,497 @@
         >
           <div>
             <h2

@@ -88,10 +88,31 @@ export default {
     'The liter is a unit of volume equal to one cubic decimeter (1 dm³) or one-thousandth of a cubic meter (0.001 m³). It is widely used for measuring the volume of liquids in everyday contexts, such as beverages, fuel, and household products.',
   'about.mL':
     'The milliliter is a unit of volume in the metric system, commonly used for measuring small volumes of liquids. It is equal to one-thousandth of a liter (0.001 L). Milliliters are widely utilized in various fields, including medicine, cooking, chemistry, beverages, and cosmetics. They provide a convenient and precise way to measure and dispense liquids accurately, making them valuable in both scientific and everyday contexts.',
+  'about.Pa':
+    "The Pascal is the SI unit of pressure. It is defined as one newton per square meter (N/m²). It's commonly used in scientific and engineering contexts.",
+  'about.kPa':
+    "The kilopascal is equal to 1,000 Pascals. It's often used in situations where pressures are relatively low but still significant, such as in weather reports.",
+  'about.MPa':
+    "The megapascal is equal to 1,000,000 Pascals or one million Pascals. It's commonly used in engineering and materials science, particularly in discussions of material strength.",
+  'about.bar':
+    "The bar is a unit of pressure equal to 100,000 Pascals or 100 kilopascals. It's frequently used in meteorology and for expressing atmospheric pressure.",
+  'about.atm':
+    "The atmosphere is a unit of pressure approximately equal to the average atmospheric pressure at sea level on Earth, which is about 101,325 Pascals or 101.325 kilopascals. It's often used in weather reports and discussions of atmospheric pressure.",
+  'about.mmHg':
+    "The millimeter of mercury is a unit of pressure equal to the pressure exerted by a column of mercury one millimeter high at standard gravity and temperature conditions. It's commonly used in barometric pressure measurements.",
+  'about.psi':
+    'The pound per square inch is a unit of pressure commonly used in the United States and other countries using the imperial system. It is the pressure resulting from a force of one pound-force applied to an area of one square inch.',
+  'about.torr':
+    "The torr is a unit of pressure approximately equal to 1/760 of standard atmospheric pressure, or 1 millimeter of mercury (mmHg). It's commonly used in vacuum and low-pressure measurements, particularly in chemistry and physics.",
+  'about.at':
+    'The technical atmosphere is a unit of pressure equal to 1 kilogram-force per square centimeter, approximately equal to standard atmospheric pressure.',
+  'about.psf':
+    'The pounds per square foot is a unit of pressure used primarily in engineering and construction, particularly in discussions of soil pressure and building loads.',
   temperature: 'temperature',
   distance: 'distance',
   weight: 'weight',
   volume: 'volume',
+  pressure: 'pressure',
   'K.name': 'Kelvin',
   'ºF.name': 'Fahrenheit',
   'ºC.name': 'Celsius',
@@ -129,4 +150,14 @@ export default {
   'km³.name': 'cubic kilometer',
   'L.name': 'liter',
   'mL.name': 'Milliliter',
+  'Pa.name': 'Pascal',
+  'kPa.name': 'Kilopascal',
+  'MPa.name': 'Megapascal',
+  'bar.name': 'Bar',
+  'atm.name': 'Atmosphere',
+  'mmHg.name': 'Millimeter of Mercury',
+  'psi.name': 'Pound per Square Inch',
+  'torr.name': 'Torr',
+  'at.name': 'Technical Atmosphere',
+  'psf.name': 'Pounds per Square Foot',
 }

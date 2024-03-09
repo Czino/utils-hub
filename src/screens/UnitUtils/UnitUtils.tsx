@@ -23,7 +23,7 @@ type Props = {
   unit2: Unit
 }
 
-// TODO add little explainer of the formula for each conversion
+// TODO localize description of each measurement type
 export const UnitUtils = (props: Props) => {
   const [type, setType] = useState<UnitType>(props.type)
   const [unit1, setUnit1] = useState(props.unit1)
