@@ -2,10 +2,12 @@ import { useState, type Dispatch, type SetStateAction } from 'react'
 import { FiShuffle } from 'react-icons/fi'
 import { Input } from '../../../components/Input'
 import { Select } from '../../../components/Select'
+import { TextLink } from '../../../components/TextLink'
 import en from '../../../i18n/en'
 import { i18n } from '../../../i18n/i18n'
 import { keys } from '../../../utils/object/keys'
 import { TYPES, conversionMap, type Unit, type UnitType } from '../../../utils/unit/conversionMap'
+import { getURLPath } from '../helpers/getURLPath'
 import { updateURLPath } from '../helpers/updateURLPath'
 
 const getUnitWithName = (unit: Unit) => `${unit} (${i18n(en.units[`${unit}.name`])})`
@@ -68,19 +70,27 @@ export const UnitConverter = ({ type, setType, unit1, setUnit1, unit2, setUnit2 
   }
 
   return (
-    <>
-      <div className="w-[180px]">
-        <Select
-          aria-label={i18n(en.units.selectUnitType)}
-          value={type}
-          onChange={(value) => updateType(value as UnitType)}
-        >
-          {TYPES.map((t) => (
-            <option key={t} value={t}>
+    <div className="grid gap-8">
+      <div className="flex flex-row gap-4">
+        {TYPES.map((t, i) => (
+          <div className="flex flex-row gap-4">
+            {i !== 0 && <div className="w-px h-full bg-dark" />}
+            <TextLink
+              className={[
+                'text-2xl font-bold capitalize',
+                t === type ? 'text-highlight-1 visited:text-highlight-1' : 'text-success-1 visited:text-success-1',
+              ].join(' ')}
+              href={getURLPath({ type: t, unit1, unit2 })}
+              key={t}
+              onClick={(e) => {
+                e.preventDefault()
+                updateType(t)
+              }}
+            >
               {i18n(en.units[t])}
-            </option>
-          ))}
-        </Select>
+            </TextLink>
+          </div>
+        ))}
       </div>
       <div className="grid grid-cols-4 gap-4 md:grid-cols-8">
         <Input
@@ -129,6 +139,6 @@ export const UnitConverter = ({ type, setType, unit1, setUnit1, unit2, setUnit2 
           </Select>
         </div>
       </div>
-    </>
+    </div>
   )
 }

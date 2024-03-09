@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Headline } from '../../components/Headline'
 import { Headline2 } from '../../components/Headline2'
+import { TextLink } from '../../components/TextLink'
 import en from '../../i18n/en'
 import { i18n } from '../../i18n/i18n'
 import { ScreenWithSideNavigation } from '../../templates/ScreenWithSideNavigation'
@@ -61,12 +62,9 @@ export const UnitUtils = (props: Props) => {
             <ul>
               {otherUnits.map((otherUnit) => (
                 <li>
-                  <a
-                    className="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2"
-                    href={getURLPath({ type, unit1: unit, unit2: otherUnit })}
-                  >
+                  <TextLink href={getURLPath({ type, unit1: unit, unit2: otherUnit })}>
                     {i18n(en.units.conversionFromXToY, { x: unit, y: otherUnit })}
-                  </a>
+                  </TextLink>
                 </li>
               ))}
             </ul>

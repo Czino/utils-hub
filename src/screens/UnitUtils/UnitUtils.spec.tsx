@@ -67,13 +67,10 @@ describe('UnitUtils', () => {
     expect($input2).toHaveValue(273.15)
   })
   it('selects unit type and updates units', async () => {
-    const value = 'distance'
-    const typeLabel = 'select unit type'
     const input1Label = 'input value for unit m'
     const input2Label = 'input value for unit km'
-    const { getByLabelText } = render(<UnitUtils {...props} />)
-    const $type = getByLabelText(typeLabel)
-    await selectValue($type, value)
+    const { getByLabelText, getByText } = render(<UnitUtils {...props} />)
+    await userEvent.click(getByText('distance'))
     const $select1 = getByLabelText(select1Label)
     const $input1 = getByLabelText(input1Label)
     const $select2 = getByLabelText(select2Label)

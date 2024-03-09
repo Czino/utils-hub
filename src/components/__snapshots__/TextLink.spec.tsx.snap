@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextLink should render TextLink 1`] = `
+<DocumentFragment>
+  <a
+    class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 mt-4"
+    href="/test"
+  >
+    Test
+  </a>
+</DocumentFragment>
+`;
