@@ -16,11 +16,11 @@ type Props = {
 }
 // TODO add little explainer of the formula for each conversion
 export const UnitUtils = (props: Props) => {
-  const [type, setType] = useState<UnitType>(props.type || 'temperature')
+  const [type, setType] = useState<UnitType>(props.type)
   const converters = conversionMap[type]
   const units = keys(converters)
-  const [unit1, setUnit1] = useState(props.unit1 || units[0] || 'ºC')
-  const [unit2, setUnit2] = useState(props.unit2 || units[1] || 'ºF')
+  const [unit1, setUnit1] = useState(props.unit1)
+  const [unit2, setUnit2] = useState(props.unit2)
   // @ts-ignore unit should be a key of converters
   const fromUnit1 = converters[unit1]
   // @ts-ignore unit should be a key of converters
