@@ -1,5 +1,5 @@
 import { useState, type Dispatch, type SetStateAction } from 'react'
-import { FiShuffle } from 'react-icons/fi'
+import { HiOutlineArrowsRightLeft } from 'react-icons/hi2'
 import { Input } from '../../../components/Input'
 import { Select } from '../../../components/Select'
 import { TextLink } from '../../../components/TextLink'
@@ -71,7 +71,7 @@ export const UnitConverter = ({ type, setType, unit1, setUnit1, unit2, setUnit2 
 
   return (
     <div className="grid gap-8">
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row flex-wrap gap-4">
         {TYPES.map((t, i) => {
           const newUnits = keys(conversionMap[t])
           return (
@@ -96,14 +96,14 @@ export const UnitConverter = ({ type, setType, unit1, setUnit1, unit2, setUnit2 
           )
         })}
       </div>
-      <div className="grid grid-cols-4 gap-4 md:grid-cols-8">
-        <Input
-          type="number"
-          aria-label={i18n(en.units.inputUnit, { unit: unit1 })}
-          value={value1}
-          onChange={(e) => updateValue1(Number(e.currentTarget.value))}
-        />
-        <div className="col-span-2">
+      <div className="grid grid-cols-9 gap-4">
+        <div className="grid col-span-4 gap-4">
+          <Input
+            type="number"
+            aria-label={i18n(en.units.inputUnit, { unit: unit1 })}
+            value={value1}
+            onChange={(e) => updateValue1(Number(e.currentTarget.value))}
+          />
           <Select
             aria-label={i18n(en.units.selectUnit1)}
             value={unit1}
@@ -117,19 +117,19 @@ export const UnitConverter = ({ type, setType, unit1, setUnit1, unit2, setUnit2 
           </Select>
         </div>
         <div
-          className="grid col-span-4 justify-center items-center md:col-span-1"
+          className="grid col-span-1 justify-center items-center cursor-pointer"
           onClick={swapUnits}
           aria-label={i18n(en.units.swapUnits)}
         >
-          <FiShuffle />
+          <HiOutlineArrowsRightLeft />
         </div>
-        <Input
-          type="number"
-          aria-label={i18n(en.units.inputUnit, { unit: unit2 })}
-          value={value2}
-          onChange={(e) => updateValue2(Number(e.currentTarget.value))}
-        />
-        <div className="col-span-2">
+        <div className="grid col-span-4 gap-4">
+          <Input
+            type="number"
+            aria-label={i18n(en.units.inputUnit, { unit: unit2 })}
+            value={value2}
+            onChange={(e) => updateValue2(Number(e.currentTarget.value))}
+          />
           <Select
             aria-label={i18n(en.units.selectUnit2)}
             value={unit2}

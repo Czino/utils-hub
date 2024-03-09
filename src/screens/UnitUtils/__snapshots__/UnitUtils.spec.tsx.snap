@@ -122,7 +122,7 @@ exports[`UnitUtils renders correctly 1`] = `
         class="grid gap-8"
       >
         <div
-          class="flex flex-row gap-4"
+          class="flex flex-row flex-wrap gap-4"
         >
           <div
             class="flex flex-row gap-4"
@@ -188,23 +188,23 @@ exports[`UnitUtils renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="grid grid-cols-4 gap-4 md:grid-cols-8"
+          class="grid grid-cols-9 gap-4"
         >
-          <input
-            aria-label="input value for unit ºC"
-            class="appearance-none bg-transparent text-dark p-2 border border-dark rounded "
-            type="number"
-            value="0"
-          />
           <div
-            class="col-span-2"
+            class="grid col-span-4 gap-4"
           >
+            <input
+              aria-label="input value for unit ºC"
+              class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded "
+              type="number"
+              value="0"
+            />
             <div
               class="relative undefined"
             >
               <input
                 aria-label="select unit 1"
-                class="p-2 w-full bg-transparent rounded border border-dark"
+                class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
                 type="text"
                 value="ºC (Celsius)"
               />
@@ -228,60 +228,40 @@ exports[`UnitUtils renders correctly 1`] = `
           </div>
           <div
             aria-label="swap units"
-            class="grid col-span-4 justify-center items-center md:col-span-1"
+            class="grid col-span-1 justify-center items-center cursor-pointer"
           >
             <svg
+              aria-hidden="true"
               fill="none"
               height="1em"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              stroke-width="1.5"
               viewBox="0 0 24 24"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <polyline
-                points="16 3 21 3 21 8"
-              />
-              <line
-                x1="4"
-                x2="21"
-                y1="20"
-                y2="3"
-              />
-              <polyline
-                points="21 16 21 21 16 21"
-              />
-              <line
-                x1="15"
-                x2="21"
-                y1="15"
-                y2="21"
-              />
-              <line
-                x1="4"
-                x2="9"
-                y1="4"
-                y2="9"
+              <path
+                d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
             </svg>
           </div>
-          <input
-            aria-label="input value for unit ºF"
-            class="appearance-none bg-transparent text-dark p-2 border border-dark rounded "
-            type="number"
-            value="32"
-          />
           <div
-            class="col-span-2"
+            class="grid col-span-4 gap-4"
           >
+            <input
+              aria-label="input value for unit ºF"
+              class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded "
+              type="number"
+              value="32"
+            />
             <div
               class="relative undefined"
             >
               <input
                 aria-label="select unit 2"
-                class="p-2 w-full bg-transparent rounded border border-dark"
+                class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
                 type="text"
                 value="ºF (Fahrenheit)"
               />
@@ -306,30 +286,22 @@ exports[`UnitUtils renders correctly 1`] = `
         </div>
       </div>
       <hr />
-      <div
-        class="grid gap-4 md:grid-cols-2"
+      <h2
+        class="text-3xl font-bold text-success-2 "
       >
-        <div>
-          <h2
-            class="text-3xl font-bold text-success-2 "
-          >
-            About Celsius (ºC)
-          </h2>
-          <p>
-            Celsius is a commonly used temperature scale in which the freezing point of water at sea level is defined as 0 degrees Celsius (0 ºC) and the boiling point of water at sea level is defined as 100 degrees Celsius (100 ºC). It is widely used in everyday contexts and scientific applications.
-          </p>
-        </div>
-        <div>
-          <h2
-            class="text-3xl font-bold text-success-2 "
-          >
-            About Fahrenheit (ºF)
-          </h2>
-          <p>
-            Fahrenheit is a temperature scale commonly used in the United States and a few other countries. In this scale, the freezing point of water is defined as 32 degrees Fahrenheit (32 ºF) and the boiling point of water is defined as 212 degrees Fahrenheit (212 ºF). It's less common in scientific applications but still widely used in everyday settings in some regions.
-          </p>
-        </div>
-      </div>
+        About Celsius (ºC)
+      </h2>
+      <p>
+        Celsius is a commonly used temperature scale in which the freezing point of water at sea level is defined as 0 degrees Celsius (0 ºC) and the boiling point of water at sea level is defined as 100 degrees Celsius (100 ºC). It is widely used in everyday contexts and scientific applications.
+      </p>
+      <h2
+        class="text-3xl font-bold text-success-2 "
+      >
+        About Fahrenheit (ºF)
+      </h2>
+      <p>
+        Fahrenheit is a temperature scale commonly used in the United States and a few other countries. In this scale, the freezing point of water is defined as 32 degrees Fahrenheit (32 ºF) and the boiling point of water is defined as 212 degrees Fahrenheit (212 ºF). It's less common in scientific applications but still widely used in everyday settings in some regions.
+      </p>
       <hr />
       <h2
         class="text-3xl font-bold text-success-2 "
@@ -843,24 +815,24 @@ exports[`UnitUtils renders correctly 2`] = `
                 weight
               </a>
             </div>
-@@ -186,11 +186,11 @@
-          </div>
-          <div
-            class="grid grid-cols-4 gap-4 md:grid-cols-8"
+@@ -189,11 +189,11 @@
           >
-            <input
--             aria-label="input value for unit g"
-+             aria-label="input value for unit ºC"
-              class="appearance-none bg-transparent text-dark p-2 border border-dark rounded "
-              type="number"
-              value="0"
-            />
             <div
+              class="grid col-span-4 gap-4"
+            >
+              <input
+-               aria-label="input value for unit g"
++               aria-label="input value for unit ºC"
+                class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded "
+                type="number"
+                value="0"
+              />
+              <div
 @@ -201,11 +201,11 @@
               >
                 <input
                   aria-label="select unit 1"
-                  class="p-2 w-full bg-transparent rounded border border-dark"
+                  class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
                   type="text"
 -                 value="g (gram)"
 +                 value="ºC (Celsius)"
@@ -869,28 +841,25 @@ exports[`UnitUtils renders correctly 2`] = `
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
                   fill="none"
                   height="1em"
-@@ -263,14 +263,14 @@
-                  y2="9"
-                />
-              </svg>
+@@ -246,23 +246,23 @@
             </div>
-            <input
--             aria-label="input value for unit st"
-+             aria-label="input value for unit ºF"
-              class="appearance-none bg-transparent text-dark p-2 border border-dark rounded "
-              type="number"
--             value="0"
-+             value="32"
-            />
             <div
-              class="col-span-2"
+              class="grid col-span-4 gap-4"
             >
+              <input
+-               aria-label="input value for unit st"
++               aria-label="input value for unit ºF"
+                class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded "
+                type="number"
+-               value="0"
++               value="32"
+              />
               <div
-@@ -278,11 +278,11 @@
+                class="relative undefined"
               >
                 <input
                   aria-label="select unit 2"
-                  class="p-2 w-full bg-transparent rounded border border-dark"
+                  class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
                   type="text"
 -                 value="st (stone)"
 +                 value="ºF (Fahrenheit)"
@@ -899,33 +868,29 @@ exports[`UnitUtils renders correctly 2`] = `
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
                   fill="none"
                   height="1em"
-@@ -308,497 +308,497 @@
-        >
-          <div>
-            <h2
-              class="text-3xl font-bold text-success-2 "
-            >
--             About gram (g)
-+             About Celsius (ºC)
-            </h2>
-            <p>
--             The gram is the base unit of mass in the International System of Units (SI). It is defined as one-thousandth of a kilogram (0.001 kg). Grams are commonly used for measuring small quantities of mass, such as food ingredients or small objects.
-+             Celsius is a commonly used temperature scale in which the freezing point of water at sea level is defined as 0 degrees Celsius (0 ºC) and the boiling point of water at sea level is defined as 100 degrees Celsius (100 ºC). It is widely used in everyday contexts and scientific applications.
-            </p>
-          </div>
-          <div>
-            <h2
-              class="text-3xl font-bold text-success-2 "
-            >
--             About stone (st)
-+             About Fahrenheit (ºF)
-            </h2>
-            <p>
--             The stone is a unit of mass commonly used in the United Kingdom and Ireland. It is equal to 14 pounds or approximately 6.35029 kilograms. Stones are used for measuring the mass of people, particularly in discussions of body weight or in medical contexts.
-+             Fahrenheit is a temperature scale commonly used in the United States and a few other countries. In this scale, the freezing point of water is defined as 32 degrees Fahrenheit (32 ºF) and the boiling point of water is defined as 212 degrees Fahrenheit (212 ºF). It's less common in scientific applications but still widely used in everyday settings in some regions.
-            </p>
-          </div>
+@@ -284,493 +284,493 @@
         </div>
+        <hr />
+        <h2
+          class="text-3xl font-bold text-success-2 "
+        >
+-         About gram (g)
++         About Celsius (ºC)
+        </h2>
+        <p>
+-         The gram is the base unit of mass in the International System of Units (SI). It is defined as one-thousandth of a kilogram (0.001 kg). Grams are commonly used for measuring small quantities of mass, such as food ingredients or small objects.
++         Celsius is a commonly used temperature scale in which the freezing point of water at sea level is defined as 0 degrees Celsius (0 ºC) and the boiling point of water at sea level is defined as 100 degrees Celsius (100 ºC). It is widely used in everyday contexts and scientific applications.
+        </p>
+        <h2
+          class="text-3xl font-bold text-success-2 "
+        >
+-         About stone (st)
++         About Fahrenheit (ºF)
+        </h2>
+        <p>
+-         The stone is a unit of mass commonly used in the United Kingdom and Ireland. It is equal to 14 pounds or approximately 6.35029 kilograms. Stones are used for measuring the mass of people, particularly in discussions of body weight or in medical contexts.
++         Fahrenheit is a temperature scale commonly used in the United States and a few other countries. In this scale, the freezing point of water is defined as 32 degrees Fahrenheit (32 ºF) and the boiling point of water is defined as 212 degrees Fahrenheit (212 ºF). It's less common in scientific applications but still widely used in everyday settings in some regions.
+        </p>
         <hr />
         <h2
           class="text-3xl font-bold text-success-2 "

@@ -45,14 +45,8 @@ export const UnitUtils = (props: Props) => {
         }}
       />
       <hr />
-      <div className="grid gap-4 md:grid-cols-2">
-        <div>
-          <UnitDescription unit={unit1} />
-        </div>
-        <div>
-          <UnitDescription unit={unit2} />
-        </div>
-      </div>
+      <UnitDescription unit={unit1} />
+      <UnitDescription unit={unit2} />
       <hr />
       <Headline2>{i18n(en.units.allConversions, { type })}</Headline2>
       <div className="grid grid-cols-2 gap-4 text-sm md:grid-cols-3 lg:grid-cols-4">

@@ -3,7 +3,7 @@
 exports[`Input should render Input with styles 1`] = `
 <DocumentFragment>
   <input
-    class="appearance-none bg-transparent text-dark p-2 border border-dark rounded mt-4"
+    class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded mt-4"
     value="text"
   />
 </DocumentFragment>

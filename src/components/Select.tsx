@@ -55,7 +55,7 @@ export const Select = <T,>({ className, children, value, defaultValue, onChange,
         onChange={(e) => onSearch(e.currentTarget.value)}
         onKeyDown={(e) => selectFirst(e.code)}
         onFocus={onFocus}
-        className="p-2 w-full bg-transparent rounded border border-dark"
+        className="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
         {...props}
       />
       <FiChevronDown className="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none" />
@@ -65,7 +65,7 @@ export const Select = <T,>({ className, children, value, defaultValue, onChange,
             <li
               key={option.value}
               aria-label={`option ${option.label}`}
-              className="p-2 cursor-pointer hover:bg-gray-100"
+              className="p-2 text-xs cursor-pointer md:text-xl hover:bg-gray-100"
               onClick={() => handleSelect(option)}
             >
               {option.label}
