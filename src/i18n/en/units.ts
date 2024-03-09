@@ -96,6 +96,8 @@ export default {
     "The megapascal is equal to 1,000,000 Pascals or one million Pascals. It's commonly used in engineering and materials science, particularly in discussions of material strength.",
   'about.bar':
     "The bar is a unit of pressure equal to 100,000 Pascals or 100 kilopascals. It's frequently used in meteorology and for expressing atmospheric pressure.",
+  'about.mb':
+    "The millibar is a unit of pressure equal to 100 Pascals. It's frequently used in meteorology and for expressing atmospheric pressure.",
   'about.atm':
     "The atmosphere is a unit of pressure approximately equal to the average atmospheric pressure at sea level on Earth, which is about 101,325 Pascals or 101.325 kilopascals. It's often used in weather reports and discussions of atmospheric pressure.",
   'about.mmHg':
@@ -154,6 +156,7 @@ export default {
   'kPa.name': 'Kilopascal',
   'MPa.name': 'Megapascal',
   'bar.name': 'Bar',
+  'mb.name': 'Millibar',
   'atm.name': 'Atmosphere',
   'mmHg.name': 'Millimeter of Mercury',
   'psi.name': 'Pound per Square Inch',

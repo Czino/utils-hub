@@ -117,6 +117,7 @@ describe('conversionMap.pressure', () => {
     expect(conversionMap.pressure.Pa.kPa(KILO)).toEqual(1)
     expect(conversionMap.pressure.Pa.MPa(MEGA)).toEqual(1)
     expect(conversionMap.pressure.Pa.bar(MEGA)).toEqual(10)
+    expect(conversionMap.pressure.Pa.mb(MEGA)).toEqual(10000)
     expect(conversionMap.pressure.Pa.atm(MEGA)).toEqual(9.869)
     expect(conversionMap.pressure.Pa.mmHg(MEGA)).toEqual(7500.638)
     expect(conversionMap.pressure.Pa.psi(MEGA)).toEqual(145.038)
@@ -127,6 +128,7 @@ describe('conversionMap.pressure', () => {
     expect(conversionMap.pressure.kPa.Pa(1)).toEqual(KILO)
     expect(conversionMap.pressure.MPa.Pa(1)).toEqual(MEGA)
     expect(conversionMap.pressure.bar.Pa(1)).toEqual(100000)
+    expect(conversionMap.pressure.mb.Pa(1)).toEqual(100)
     expect(conversionMap.pressure.atm.Pa(1)).toEqual(101325)
     expect(conversionMap.pressure.mmHg.Pa(1)).toEqual(133.322)
     expect(conversionMap.pressure.psi.Pa(1)).toEqual(6894.76)
@@ -136,5 +138,6 @@ describe('conversionMap.pressure', () => {
 
     expect(conversionMap.pressure.mmHg.torr(1)).toEqual(1)
     expect(conversionMap.pressure.mmHg.atm(760)).toEqual(1)
+    expect(conversionMap.pressure.bar.mb(1)).toEqual(KILO)
   })
 })
