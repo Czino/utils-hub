@@ -194,7 +194,7 @@ exports[`UnitUtils renders correctly 1`] = `
             class="grid col-span-4 gap-4"
           >
             <input
-              aria-label="input value for unit ºC"
+              aria-label="input value for unit K"
               class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded "
               type="number"
               value="0"
@@ -206,7 +206,7 @@ exports[`UnitUtils renders correctly 1`] = `
                 aria-label="select unit 1"
                 class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
                 type="text"
-                value="ºC (Celsius)"
+                value="K (Kelvin)"
               />
               <svg
                 class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
@@ -251,10 +251,10 @@ exports[`UnitUtils renders correctly 1`] = `
             class="grid col-span-4 gap-4"
           >
             <input
-              aria-label="input value for unit ºF"
+              aria-label="input value for unit ºC"
               class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded "
               type="number"
-              value="32"
+              value="-273.1"
             />
             <div
               class="relative undefined"
@@ -263,7 +263,7 @@ exports[`UnitUtils renders correctly 1`] = `
                 aria-label="select unit 2"
                 class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
                 type="text"
-                value="ºF (Fahrenheit)"
+                value="ºC (Celsius)"
               />
               <svg
                 class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
@@ -289,18 +289,18 @@ exports[`UnitUtils renders correctly 1`] = `
       <h2
         class="text-3xl font-bold text-success-2 "
       >
-        About Celsius (ºC)
+        About Kelvin (K)
       </h2>
       <p>
-        Celsius is a commonly used temperature scale in which the freezing point of water at sea level is defined as 0 degrees Celsius (0 ºC) and the boiling point of water at sea level is defined as 100 degrees Celsius (100 ºC). It is widely used in everyday contexts and scientific applications.
+        Kelvin is the base unit of temperature in the International System of Units (SI). It is defined such that absolute zero, the absence of all thermal energy, is 0 Kelvin (0 K). One Kelvin is equal in size to one degree Celsius, but the Kelvin scale starts at absolute zero.
       </p>
       <h2
         class="text-3xl font-bold text-success-2 "
       >
-        About Fahrenheit (ºF)
+        About Celsius (ºC)
       </h2>
       <p>
-        Fahrenheit is a temperature scale commonly used in the United States and a few other countries. In this scale, the freezing point of water is defined as 32 degrees Fahrenheit (32 ºF) and the boiling point of water is defined as 212 degrees Fahrenheit (212 ºF). It's less common in scientific applications but still widely used in everyday settings in some regions.
+        Celsius is a commonly used temperature scale in which the freezing point of water at sea level is defined as 0 degrees Celsius (0 ºC) and the boiling point of water at sea level is defined as 100 degrees Celsius (100 ºC). It is widely used in everyday contexts and scientific applications.
       </p>
       <hr />
       <h2
@@ -822,7 +822,7 @@ exports[`UnitUtils renders correctly 2`] = `
             >
               <input
 -               aria-label="input value for unit g"
-+               aria-label="input value for unit ºC"
++               aria-label="input value for unit K"
                 class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded "
                 type="number"
                 value="0"
@@ -835,7 +835,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
                   type="text"
 -                 value="g (gram)"
-+                 value="ºC (Celsius)"
++                 value="K (Kelvin)"
                 />
                 <svg
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
@@ -848,11 +848,11 @@ exports[`UnitUtils renders correctly 2`] = `
             >
               <input
 -               aria-label="input value for unit st"
-+               aria-label="input value for unit ºF"
++               aria-label="input value for unit ºC"
                 class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded "
                 type="number"
 -               value="0"
-+               value="32"
++               value="-273.1"
               />
               <div
                 class="relative undefined"
@@ -862,7 +862,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
                   type="text"
 -                 value="st (stone)"
-+                 value="ºF (Fahrenheit)"
++                 value="ºC (Celsius)"
                 />
                 <svg
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
@@ -875,21 +875,21 @@ exports[`UnitUtils renders correctly 2`] = `
           class="text-3xl font-bold text-success-2 "
         >
 -         About gram (g)
-+         About Celsius (ºC)
++         About Kelvin (K)
         </h2>
         <p>
 -         The gram is the base unit of mass in the International System of Units (SI). It is defined as one-thousandth of a kilogram (0.001 kg). Grams are commonly used for measuring small quantities of mass, such as food ingredients or small objects.
-+         Celsius is a commonly used temperature scale in which the freezing point of water at sea level is defined as 0 degrees Celsius (0 ºC) and the boiling point of water at sea level is defined as 100 degrees Celsius (100 ºC). It is widely used in everyday contexts and scientific applications.
++         Kelvin is the base unit of temperature in the International System of Units (SI). It is defined such that absolute zero, the absence of all thermal energy, is 0 Kelvin (0 K). One Kelvin is equal in size to one degree Celsius, but the Kelvin scale starts at absolute zero.
         </p>
         <h2
           class="text-3xl font-bold text-success-2 "
         >
 -         About stone (st)
-+         About Fahrenheit (ºF)
++         About Celsius (ºC)
         </h2>
         <p>
 -         The stone is a unit of mass commonly used in the United Kingdom and Ireland. It is equal to 14 pounds or approximately 6.35029 kilograms. Stones are used for measuring the mass of people, particularly in discussions of body weight or in medical contexts.
-+         Fahrenheit is a temperature scale commonly used in the United States and a few other countries. In this scale, the freezing point of water is defined as 32 degrees Fahrenheit (32 ºF) and the boiling point of water is defined as 212 degrees Fahrenheit (212 ºF). It's less common in scientific applications but still widely used in everyday settings in some regions.
++         Celsius is a commonly used temperature scale in which the freezing point of water at sea level is defined as 0 degrees Celsius (0 ºC) and the boiling point of water at sea level is defined as 100 degrees Celsius (100 ºC). It is widely used in everyday contexts and scientific applications.
         </p>
         <hr />
         <h2

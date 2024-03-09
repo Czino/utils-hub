@@ -1,4 +1,4 @@
-import { useState, type Dispatch, type SetStateAction } from 'react'
+import { useEffect, useState, type Dispatch, type SetStateAction } from 'react'
 import { HiOutlineArrowsRightLeft } from 'react-icons/hi2'
 import { Input } from '../../../components/Input'
 import { Select } from '../../../components/Select'
@@ -30,6 +30,15 @@ export const UnitConverter = ({ type, setType, unit1, setUnit1, unit2, setUnit2 
   const [value1, setValue1] = useState(0)
   const [value2, setValue2] = useState(fromUnit1[unit2](value1))
 
+  useEffect(() => {
+    const unitValues = window.location.hash.split('&').map((keyVal) => keyVal.split('='))
+    const newValue1 = unitValues[0]?.[1]
+    const newValue2 = unitValues[1]?.[1]
+    if (!newValue1 || !newValue2) return
+    setValue1(Number(newValue1))
+    setValue2(Number(newValue2))
+  }, [])
+
   const updateType = (t: UnitType) => {
     const newUnits = keys(conversionMap[t])
     if (!units[0] || !units[1]) return
@@ -39,34 +48,41 @@ export const UnitConverter = ({ type, setType, unit1, setUnit1, unit2, setUnit2 
     // @ts-ignore unit should be a key of converter
     setUnit2(newUnits[1])
     // @ts-ignore unit should be a key of converter
-    setValue2(conversionMap[t][newUnits[0]][newUnits[1]](value1))
+    const newValue2 = conversionMap[t][newUnits[0]][newUnits[1]](value1)
+    setValue2(newValue2)
     // @ts-ignore unit should be a key of converter
-    updateURLPath({ type: t, unit1: newUnits[0], unit2: newUnits[1] })
+    updateURLPath({ type: t, unit1: newUnits[0], unit2: newUnits[1], value1, value2: newValue2 })
   }
   const updateUnit1 = (unit: Unit) => {
     setUnit1(unit)
-    setValue1(fromUnit2[unit](value2))
-    updateURLPath({ type, unit1: unit, unit2 })
+    const newValue1 = fromUnit2[unit](value2)
+    setValue1(newValue1)
+    updateURLPath({ type, unit1: unit, unit2, value1: newValue1, value2 })
   }
   const updateUnit2 = (unit: Unit) => {
     setUnit2(unit)
-    setValue2(fromUnit1[unit](value1))
-    updateURLPath({ type, unit1, unit2: unit })
+    const newValue2 = fromUnit1[unit](value1)
+    setValue2(newValue2)
+    updateURLPath({ type, unit1, unit2: unit, value1, value2: newValue2 })
   }
   const updateValue1 = (value: number) => {
     setValue1(value)
-    setValue2(fromUnit1[unit2](value))
+    const newValue2 = fromUnit1[unit2](value)
+    setValue2(newValue2)
+    updateURLPath({ type, unit1, unit2, value1: value, value2: newValue2 })
   }
   const updateValue2 = (value: number) => {
     setValue2(value)
-    setValue1(fromUnit2[unit1](value))
+    const newValue1 = fromUnit2[unit1](value)
+    setValue1(newValue1)
+    updateURLPath({ type, unit1, unit2, value1: newValue1, value2: value })
   }
   const swapUnits = () => {
     setValue1(value2)
     setValue2(value1)
     setUnit1(unit2)
     setUnit2(unit1)
-    updateURLPath({ type, unit1: unit2, unit2: unit1 })
+    updateURLPath({ type, unit1: unit2, unit2: unit1, value1: value2, value2: value1 })
   }
 
   return (
