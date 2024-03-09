@@ -1,36 +1,40 @@
-import { useState } from 'react'
+import { useState, type Dispatch, type SetStateAction } from 'react'
 import { FiShuffle } from 'react-icons/fi'
-import { Headline } from '../components/Headline'
-import { Input } from '../components/Input'
-import { Select } from '../components/Select'
-import en from '../i18n/en'
-import { i18n } from '../i18n/i18n'
-import { ScreenWithSideNavigation } from '../templates/ScreenWithSideNavigation'
-import { keys } from '../utils/object/keys'
-import { TYPES, conversionMap, type Unit, type UnitType } from '../utils/unit/conversionMap'
+import { Input } from '../../../components/Input'
+import { Select } from '../../../components/Select'
+import en from '../../../i18n/en'
+import { i18n } from '../../../i18n/i18n'
+import { keys } from '../../../utils/object/keys'
+import { TYPES, conversionMap, type Unit, type UnitType } from '../../../utils/unit/conversionMap'
 
 type Props = {
   type: UnitType
   unit1: Unit
   unit2: Unit
 }
-// TODO add little explainer of the formula for each conversion
-export const UnitUtils = (props: Props) => {
-  const [type, setType] = useState<UnitType>(props.type)
+const updateURLPath = (args: Props) => {
+  window.history.replaceState(null, document.title, `/utils/units/${args.type}-${args.unit1}-${args.unit2}`)
+}
+const getUnitWithName = (unit: Unit) => `${unit} (${i18n(en.units[`${unit}.name`])})`
+type UnitConverterProps = {
+  type: UnitType
+  setType: Dispatch<SetStateAction<UnitType>>
+  unit1: Unit
+  setUnit1: Dispatch<SetStateAction<Unit>>
+  unit2: Unit
+  setUnit2: Dispatch<SetStateAction<Unit>>
+}
+export const UnitConverter = ({ type, setType, unit1, setUnit1, unit2, setUnit2 }: UnitConverterProps) => {
   const converters = conversionMap[type]
   const units = keys(converters)
-  const [unit1, setUnit1] = useState(props.unit1)
-  const [unit2, setUnit2] = useState(props.unit2)
   // @ts-ignore unit should be a key of converters
   const fromUnit1 = converters[unit1]
   // @ts-ignore unit should be a key of converters
   const fromUnit2 = converters[unit2]
+
   const [value1, setValue1] = useState(0)
   const [value2, setValue2] = useState(fromUnit1[unit2](value1))
 
-  const updateURLPath = (args: Props) => {
-    window.history.replaceState(null, document.title, `/utils/units/${args.type}-${args.unit1}-${args.unit2}`)
-  }
   const updateType = (t: UnitType) => {
     const newUnits = keys(conversionMap[t])
     if (!units[0] || !units[1]) return
@@ -62,10 +66,15 @@ export const UnitUtils = (props: Props) => {
     setValue2(value)
     setValue1(fromUnit2[unit1](value))
   }
+  const swapUnits = () => {
+    setValue1(value2)
+    setValue2(value1)
+    setUnit1(unit2)
+    setUnit2(unit1)
+  }
+
   return (
-    <ScreenWithSideNavigation>
-      <Headline>{i18n(en.units.title)}</Headline>
-      <p>{i18n(en.units.description)}</p>
+    <>
       <div className="w-[180px]">
         <Select
           aria-label={i18n(en.units.selectUnitType)}
@@ -94,12 +103,16 @@ export const UnitUtils = (props: Props) => {
           >
             {keys(conversionMap[type]).map((unit) => (
               <option key={unit} value={unit}>
-                {unit} ({i18n(en.units[`${unit}.name`])})
+                {getUnitWithName(unit)}
               </option>
             ))}
           </Select>
         </div>
-        <div className="grid col-span-4 justify-center items-center md:col-span-1">
+        <div
+          className="grid col-span-4 justify-center items-center md:col-span-1"
+          onClick={swapUnits}
+          aria-label={i18n(en.units.swapUnits)}
+        >
           <FiShuffle />
         </div>
         <Input
@@ -116,12 +129,12 @@ export const UnitUtils = (props: Props) => {
           >
             {keys(conversionMap[type]).map((unit) => (
               <option key={unit} value={unit}>
-                {unit} ({i18n(en.units[`${unit}.name`])})
+                {getUnitWithName(unit)}
               </option>
             ))}
           </Select>
         </div>
       </div>
-    </ScreenWithSideNavigation>
+    </>
   )
 }

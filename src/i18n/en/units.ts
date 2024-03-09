@@ -10,6 +10,7 @@ export default {
   inputUnit: 'input value for unit $unit',
   selectUnit1: 'select unit 1',
   selectUnit2: 'select unit 2',
+  swapUnits: 'swap units',
   temperature: 'temperature',
   distance: 'distance',
   weight: 'weight',
