@@ -13,6 +13,8 @@ type Props<T> = Omit<React.ComponentProps<'input'>, 'value' | 'onChange'> & {
   value: T
   onChange?: (value: T) => void
 }
+
+// TODO close on dropdown click when open
 export const Select = <T,>({ className, children, value, defaultValue, onChange, ...props }: Props<T>) => {
   const options = Array.isArray(children) ? children.map(mapChildToOption) : []
   const display = options.find((o) => o.value === value)?.label
