@@ -54,7 +54,10 @@ export const NavigationColumn = () => {
         </ul>
       </nav>
       <div
-        className="flex fixed right-0 bottom-0 z-20 justify-end p-4 w-full bg-white md:hidden"
+        className={[
+          'flex fixed right-0 bottom-0 z-20 justify-end p-4 w-full bg-white  md:hidden ',
+          !isVisible && 'border shadow-2xl border-top-1',
+        ].join(' ')}
         role="button"
         onClick={toggleIsVisible}
       >
