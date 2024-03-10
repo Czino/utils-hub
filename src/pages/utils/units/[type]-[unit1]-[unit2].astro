@@ -27,7 +27,7 @@ const { type, unit1, unit2 } = Astro.params;
     <meta name="description" content={i18n(en.units.shortDescription)}>
   </head>
 
-  <body class="bg-white">
+  <body class="bg-gradient-to-tr from-60% from-white to-accent">
     <UnitUtils {...{ type: type, unit1, unit2 } } client:visible />
   </body>
 </html>
