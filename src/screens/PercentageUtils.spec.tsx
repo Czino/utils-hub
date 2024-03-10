@@ -32,7 +32,7 @@ describe('PercentageUtils', () => {
     const $percent = getByLabelText(percentageLabel)
     await userEvent.clear($percent)
     await userEvent.type($percent, '10')
-    expect($value1).toHaveValue(20)
+    expect($value1).toHaveValue(1)
     expect($percent).toHaveValue(10)
   })
 })

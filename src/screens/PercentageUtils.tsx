@@ -31,7 +31,7 @@ export const PercentageUtils = () => {
   }
   const updatePercentage = (value: number) => {
     setPercentage(value)
-    setValue1(round((value2 * value) / CENT, PRECISION))
+    setValue2(round(value1 / (value / CENT), PRECISION))
   }
 
   return (
