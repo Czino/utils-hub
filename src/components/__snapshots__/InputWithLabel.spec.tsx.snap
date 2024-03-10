@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputWithLabel should render InputWithLabel with styles 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="text-base"
+    >
+      label
+    </label>
+    <input
+      class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded mt-4"
+      value="text"
+    />
+  </div>
+</DocumentFragment>
+`;

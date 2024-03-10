@@ -38,8 +38,9 @@ export const PercentageUtils = () => {
     <ScreenWithSideNavigation>
       <Headline>{i18n(en.percentages.title)}</Headline>
       <p>{i18n(en.percentages.description)}</p>
-      <div className="grid grid-cols-4 gap-4 items-center lg:grid-cols-7">
+      <div className="grid grid-cols-7 gap-4 items-center">
         <InputWithLabel
+          containerClassName="col-span-2"
           id="percentages-value-1"
           label={i18n(en.percentages.number1)}
           type="number"
@@ -48,6 +49,7 @@ export const PercentageUtils = () => {
           onChange={(e) => updateValue1(Number(e.currentTarget.value))}
         />
         <InputWithLabel
+          containerClassName="col-span-2"
           id="percentages-value-2"
           label={i18n(en.percentages.number2)}
           type="number"
@@ -59,7 +61,7 @@ export const PercentageUtils = () => {
         <div className="grid justify-center items-center self-center h-full">
           <FiArrowRight />
         </div>
-        <div className="relative">
+        <div className="relative col-span-2">
           <InputWithLabel
             type="number"
             id="percentages-value-percent"
@@ -69,7 +71,7 @@ export const PercentageUtils = () => {
             className="appearance-none"
             onChange={(e) => updatePercentage(Number(e.currentTarget.value))}
           />
-          <FiPercent className="absolute bottom-2.5 right-8" />
+          <FiPercent className="absolute bottom-[8px] md:bottom-2.5 right-6 w-4 h-4 md:w-6 md:h-6" />
         </div>
       </div>
     </ScreenWithSideNavigation>
