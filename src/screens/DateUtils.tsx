@@ -37,7 +37,7 @@ export const DateUtils = () => {
           onChange={(value) => setLocale(value.replace('_', '-'))}
         >
           {locales.map((l) => (
-            <option value={l}>
+            <option key={l} value={l}>
               {allLocales[l].name} ({i18n(en.language[l])})
             </option>
           ))}

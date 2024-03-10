@@ -20,7 +20,7 @@ describe('NavigationColumn', () => {
     expect(base).toMatchSnapshot()
   })
   it('should highlight current page', () => {
-    const { path, title } = navigation[0]
+    const { path, title } = navigation[1]!
     window.location.href = `http://localhost:3000${path}`
     const { getByText } = render(<NavigationColumn />)
 

@@ -4,17 +4,24 @@ import { useToggle } from '../hooks/useToggle'
 import en from '../i18n/en'
 import { i18n } from '../i18n/i18n'
 
-export const navigation = [
-  { path: '/utils/list', title: en.list.shortTitle },
-  { path: '/utils/text', title: en.text.shortTitle },
-  { path: '/utils/units', title: en.units.shortTitle },
-  { path: '/utils/fractions', title: en.fractions.shortTitle },
+type NavigationItem = {
+  path?: string
+  title: string
+}
+export const navigation: NavigationItem[] = [
+  { title: en.navigation.time },
   { path: '/utils/date', title: en.date.shortTitle },
-  { path: '/utils/encoding', title: en.encoding.shortTitle },
   // { path: '/utils/hashing', title: en.hashing.shortTitle }, // TODO
   // { path: '/utils/numbers', title: en.numbers.shortTitle }, // TODO
+  { title: en.navigation.numbers },
+  { path: '/utils/fractions', title: en.fractions.shortTitle },
   { path: '/utils/percentages', title: en.percentages.shortTitle },
-] as const
+  { path: '/utils/units', title: en.units.shortTitle },
+  { title: en.navigation.text },
+  { path: '/utils/text', title: en.text.shortTitle },
+  { path: '/utils/list', title: en.list.shortTitle },
+  { path: '/utils/encoding', title: en.encoding.shortTitle },
+]
 
 export const NavigationColumn = () => {
   const [isVisible, toggleIsVisible] = useToggle()
@@ -42,13 +49,19 @@ export const NavigationColumn = () => {
       >
         <ul>
           <li className="font-bold">
-            <a href="/">{i18n(en.home.title)}</a>
+            <h1>
+              <a href="/">{i18n(en.home.title)}</a>
+            </h1>
           </li>
           {navigation.map(({ path, title }) => (
             <li key={path}>
-              <a href={path} className={current.includes(path) ? 'text-highlight-1' : ''}>
-                {title}
-              </a>
+              {path ? (
+                <a href={path} className={current.includes(path) ? 'text-highlight-1' : ''}>
+                  {title}
+                </a>
+              ) : (
+                <h2 className="mt-4 font-bold">{title}</h2>
+              )}
             </li>
           ))}
         </ul>

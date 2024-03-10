@@ -15,10 +15,73 @@ exports[`UnitUtils renders correctly 1`] = `
         <li
           class="font-bold"
         >
-          <a
-            href="/"
+          <h1>
+            <a
+              href="/"
+            >
+              UtilityHub
+            </a>
+          </h1>
+        </li>
+        <li>
+          <h2
+            class="mt-4 font-bold"
           >
-            UtilityHub
+            Time
+          </h2>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/date"
+          >
+            Dates
+          </a>
+        </li>
+        <li>
+          <h2
+            class="mt-4 font-bold"
+          >
+            Numbers
+          </h2>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/fractions"
+          >
+            Fractions
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/percentages"
+          >
+            Percentages 
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/units"
+          >
+            Units
+          </a>
+        </li>
+        <li>
+          <h2
+            class="mt-4 font-bold"
+          >
+            Text
+          </h2>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/text"
+          >
+            Text
           </a>
         </li>
         <li>
@@ -32,49 +95,9 @@ exports[`UnitUtils renders correctly 1`] = `
         <li>
           <a
             class=""
-            href="/utils/text"
-          >
-            Text
-          </a>
-        </li>
-        <li>
-          <a
-            class=""
-            href="/utils/units"
-          >
-            Units
-          </a>
-        </li>
-        <li>
-          <a
-            class=""
-            href="/utils/fractions"
-          >
-            Fractions
-          </a>
-        </li>
-        <li>
-          <a
-            class=""
-            href="/utils/date"
-          >
-            Dates
-          </a>
-        </li>
-        <li>
-          <a
-            class=""
             href="/utils/encoding"
           >
             Encoding
-          </a>
-        </li>
-        <li>
-          <a
-            class=""
-            href="/utils/percentages"
-          >
-            Percentages 
           </a>
         </li>
       </ul>
@@ -797,7 +820,7 @@ exports[`UnitUtils renders correctly 2`] = `
 - First value
 + Second value
 
-@@ -131,11 +131,11 @@
+@@ -154,11 +154,11 @@
           >
             <div
               class="flex flex-row gap-4"
@@ -810,7 +833,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 temperature
               </a>
             </div>
-@@ -157,11 +157,11 @@
+@@ -180,11 +180,11 @@
             >
               <div
                 class="w-px h-full bg-dark"
@@ -823,7 +846,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 weight
               </a>
             </div>
-@@ -197,11 +197,11 @@
+@@ -220,11 +220,11 @@
           >
             <div
               class="grid col-span-4 gap-4"
@@ -836,7 +859,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 value="0"
               />
               <div
-@@ -209,11 +209,11 @@
+@@ -232,11 +232,11 @@
               >
                 <input
                   aria-label="select unit 1"
@@ -849,7 +872,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
                   fill="none"
                   height="1em"
-@@ -254,23 +254,23 @@
+@@ -277,23 +277,23 @@
             </div>
             <div
               class="grid col-span-4 gap-4"
@@ -876,7 +899,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
                   fill="none"
                   height="1em"
-@@ -292,493 +292,493 @@
+@@ -315,493 +315,493 @@
         </div>
         <hr />
         <h2

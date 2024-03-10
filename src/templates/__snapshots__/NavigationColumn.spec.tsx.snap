@@ -12,10 +12,73 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
       <li
         class="font-bold"
       >
-        <a
-          href="/"
+        <h1>
+          <a
+            href="/"
+          >
+            UtilityHub
+          </a>
+        </h1>
+      </li>
+      <li>
+        <h2
+          class="mt-4 font-bold"
         >
-          UtilityHub
+          Time
+        </h2>
+      </li>
+      <li>
+        <a
+          class=""
+          href="/utils/date"
+        >
+          Dates
+        </a>
+      </li>
+      <li>
+        <h2
+          class="mt-4 font-bold"
+        >
+          Numbers
+        </h2>
+      </li>
+      <li>
+        <a
+          class=""
+          href="/utils/fractions"
+        >
+          Fractions
+        </a>
+      </li>
+      <li>
+        <a
+          class=""
+          href="/utils/percentages"
+        >
+          Percentages 
+        </a>
+      </li>
+      <li>
+        <a
+          class=""
+          href="/utils/units"
+        >
+          Units
+        </a>
+      </li>
+      <li>
+        <h2
+          class="mt-4 font-bold"
+        >
+          Text
+        </h2>
+      </li>
+      <li>
+        <a
+          class=""
+          href="/utils/text"
+        >
+          Text
         </a>
       </li>
       <li>
@@ -29,49 +92,9 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
       <li>
         <a
           class=""
-          href="/utils/text"
-        >
-          Text
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/utils/units"
-        >
-          Units
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/utils/fractions"
-        >
-          Fractions
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/utils/date"
-        >
-          Dates
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
           href="/utils/encoding"
         >
           Encoding
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/utils/percentages"
-        >
-          Percentages 
         </a>
       </li>
     </ul>
@@ -132,10 +155,73 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 +       <li
 +         class="font-bold"
 +       >
-+         <a
-+           href="/"
++         <h1>
++           <a
++             href="/"
++           >
++             UtilityHub
++           </a>
++         </h1>
++       </li>
++       <li>
++         <h2
++           class="mt-4 font-bold"
 +         >
-+           UtilityHub
++           Time
++         </h2>
++       </li>
++       <li>
++         <a
++           class=""
++           href="/utils/date"
++         >
++           Dates
++         </a>
++       </li>
++       <li>
++         <h2
++           class="mt-4 font-bold"
++         >
++           Numbers
++         </h2>
++       </li>
++       <li>
++         <a
++           class=""
++           href="/utils/fractions"
++         >
++           Fractions
++         </a>
++       </li>
++       <li>
++         <a
++           class=""
++           href="/utils/percentages"
++         >
++           Percentages 
++         </a>
++       </li>
++       <li>
++         <a
++           class=""
++           href="/utils/units"
++         >
++           Units
++         </a>
++       </li>
++       <li>
++         <h2
++           class="mt-4 font-bold"
++         >
++           Text
++         </h2>
++       </li>
++       <li>
++         <a
++           class=""
++           href="/utils/text"
++         >
++           Text
 +         </a>
 +       </li>
 +       <li>
@@ -149,49 +235,9 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 +       <li>
 +         <a
 +           class=""
-+           href="/utils/text"
-+         >
-+           Text
-+         </a>
-+       </li>
-+       <li>
-+         <a
-+           class=""
-+           href="/utils/units"
-+         >
-+           Units
-+         </a>
-+       </li>
-+       <li>
-+         <a
-+           class=""
-+           href="/utils/fractions"
-+         >
-+           Fractions
-+         </a>
-+       </li>
-+       <li>
-+         <a
-+           class=""
-+           href="/utils/date"
-+         >
-+           Dates
-+         </a>
-+       </li>
-+       <li>
-+         <a
-+           class=""
 +           href="/utils/encoding"
 +         >
 +           Encoding
-+         </a>
-+       </li>
-+       <li>
-+         <a
-+           class=""
-+           href="/utils/percentages"
-+         >
-+           Percentages 
 +         </a>
 +       </li>
 +     </ul>
