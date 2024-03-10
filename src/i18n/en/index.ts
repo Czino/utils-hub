@@ -6,6 +6,7 @@ import home from './home'
 import language from './language'
 import list from './list'
 import navigation from './navigation'
+import percentages from './percentages'
 import text from './text'
 import units from './units'
 
@@ -20,4 +21,5 @@ export default {
   list,
   units,
   text,
+  percentages,
 }

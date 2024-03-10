@@ -66,7 +66,15 @@ exports[`Home should render correctly 1`] = `
             class=""
             href="/utils/encoding"
           >
-            Encoding Utilities
+            Encoding
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/percentages"
+          >
+            Percentages 
           </a>
         </li>
       </ul>

@@ -63,7 +63,15 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
           class=""
           href="/utils/encoding"
         >
-          Encoding Utilities
+          Encoding
+        </a>
+      </li>
+      <li>
+        <a
+          class=""
+          href="/utils/percentages"
+        >
+          Percentages 
         </a>
       </li>
     </ul>
@@ -175,7 +183,15 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 +           class=""
 +           href="/utils/encoding"
 +         >
-+           Encoding Utilities
++           Encoding
++         </a>
++       </li>
++       <li>
++         <a
++           class=""
++           href="/utils/percentages"
++         >
++           Percentages 
 +         </a>
 +       </li>
 +     </ul>

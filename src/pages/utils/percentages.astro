@@ -1,0 +1,18 @@
+---
+import en from '../../i18n/en/index';
+import { i18n } from '../../i18n/i18n';
+import { PercentageUtils } from '../../screens/PercentageUtils';
+import Head from '../../templates/head.astro';
+---
+
+<html lang="en">
+  <head>
+    <Head />
+    <title>{i18n(en.percentages.title)} - {i18n(en.percentages.subtitle)} – {i18n(en.home.title)}</title>
+    <meta name="description" content={i18n(en.percentages.shortDescription)}>
+  </head>
+
+  <body>
+    <PercentageUtils client:visible />
+  </body>
+</html>

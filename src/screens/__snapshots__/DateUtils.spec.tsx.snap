@@ -66,7 +66,15 @@ exports[`DateUtils renders default 1`] = `
             class=""
             href="/utils/encoding"
           >
-            Encoding Utilities
+            Encoding
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/utils/percentages"
+          >
+            Percentages 
           </a>
         </li>
       </ul>
@@ -213,7 +221,7 @@ exports[`DateUtils updates date and displays in given format 1`] = `
 - First value
 + Second value
 
-@@ -120,11 +120,11 @@
+@@ -128,11 +128,11 @@
         >
           <input
             aria-label="input date"
@@ -226,7 +234,7 @@ exports[`DateUtils updates date and displays in given format 1`] = `
             class="relative col-span-3 md:col-span-2"
           >
             <input
-@@ -178,23 +178,23 @@
+@@ -186,23 +186,23 @@
           <div
             class="col-span-3"
           >
@@ -262,7 +270,7 @@ exports[`DateUtils updates locale and displays localized format 1`] = `
 - First value
 + Second value
 
-@@ -120,20 +120,20 @@
+@@ -128,20 +128,20 @@
         >
           <input
             aria-label="input date"
@@ -285,7 +293,7 @@ exports[`DateUtils updates locale and displays localized format 1`] = `
               class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
               fill="none"
               height="1em"
-@@ -178,23 +178,23 @@
+@@ -186,23 +186,23 @@
           <div
             class="col-span-3"
           >

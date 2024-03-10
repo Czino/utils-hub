@@ -11,8 +11,9 @@ export const navigation = [
   { path: '/utils/fractions', title: en.fractions.shortTitle },
   { path: '/utils/date', title: en.date.shortTitle },
   { path: '/utils/encoding', title: en.encoding.shortTitle },
-  // { path: '/utils/hashing', title: en.hashing.shortTitle },
-  // { path: '/utils/numbers', title: en.numbers.shortTitle },
+  // { path: '/utils/hashing', title: en.hashing.shortTitle }, // TODO
+  // { path: '/utils/numbers', title: en.numbers.shortTitle }, // TODO
+  { path: '/utils/percentages', title: en.percentages.shortTitle },
 ] as const
 
 export const NavigationColumn = () => {
