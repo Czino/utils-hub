@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FiArrowRight, FiPercent } from 'react-icons/fi'
+import { FiPercent } from 'react-icons/fi'
 
 import { Headline } from '../components/Headline'
 import { InputWithLabel } from '../components/InputWithLabel'
@@ -38,9 +38,8 @@ export const PercentageUtils = () => {
     <ScreenWithSideNavigation>
       <Headline>{i18n(en.percentages.title)}</Headline>
       <p>{i18n(en.percentages.description)}</p>
-      <div className="grid grid-cols-7 gap-4 items-center">
+      <div className="flex flex-row gap-4 items-center">
         <InputWithLabel
-          containerClassName="col-span-2"
           id="percentages-value-1"
           label={i18n(en.percentages.number1)}
           type="number"
@@ -48,20 +47,7 @@ export const PercentageUtils = () => {
           value={value1}
           onChange={(e) => updateValue1(Number(e.currentTarget.value))}
         />
-        <InputWithLabel
-          containerClassName="col-span-2"
-          id="percentages-value-2"
-          label={i18n(en.percentages.number2)}
-          type="number"
-          aria-label={`${i18n(en.form.number)}: ${i18n(en.percentages.number2)}`}
-          value={value2}
-          onChange={(e) => updateValue2(Number(e.currentTarget.value))}
-        />
-
-        <div className="grid justify-center items-center self-center h-full">
-          <FiArrowRight />
-        </div>
-        <div className="relative col-span-2">
+        <div className="relative">
           <InputWithLabel
             type="number"
             id="percentages-value-percent"
@@ -73,6 +59,14 @@ export const PercentageUtils = () => {
           />
           <FiPercent className="absolute bottom-[8px] md:bottom-2.5 right-6 w-4 h-4 md:w-6 md:h-6" />
         </div>
+        <InputWithLabel
+          id="percentages-value-2"
+          label={i18n(en.percentages.number2)}
+          type="number"
+          aria-label={`${i18n(en.form.number)}: ${i18n(en.percentages.number2)}`}
+          value={value2}
+          onChange={(e) => updateValue2(Number(e.currentTarget.value))}
+        />
       </div>
     </ScreenWithSideNavigation>
   )

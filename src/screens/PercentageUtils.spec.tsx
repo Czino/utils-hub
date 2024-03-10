@@ -5,7 +5,7 @@ import { PercentageUtils } from './PercentageUtils'
 
 describe('PercentageUtils', () => {
   const value1Label = 'input number: number 1'
-  const value2Label = 'input number: number 2'
+  const value2Label = 'input number: of number 2'
   const percentageLabel = 'input percentage'
 
   it('updates value 1 and calculates percent', async () => {

@@ -6,6 +6,7 @@ export default {
       colors: {
         transparent: 'transparent',
         white: '#FAFCFF',
+        accent: '#E1FFFB',
         black: '#4c5454',
         dark: '#523f38',
         highlight: {
