@@ -1,5 +1,5 @@
-import { ABSOLUTE_ZERO_ºC } from '../constants'
 import { celsiusToKelvin } from './celsiusToKelvin'
+import { ABSOLUTE_ZERO_ºC } from './constants'
 
 describe('celsiusToKelvin', () => {
   it('should convert celsius to kelvin', () => {

@@ -120,6 +120,33 @@ export default {
     'The liter is a unit of volume equal to one cubic decimeter (1 dm³) or one-thousandth of a cubic meter (0.001 m³). It is widely used for measuring the volume of liquids in everyday contexts, such as beverages, fuel, and household products.',
   'about.mL':
     'The milliliter is a unit of volume in the metric system, commonly used for measuring small volumes of liquids. It is equal to one-thousandth of a liter (0.001 L). Milliliters are widely utilized in various fields, including medicine, cooking, chemistry, beverages, and cosmetics. They provide a convenient and precise way to measure and dispense liquids accurately, making them valuable in both scientific and everyday contexts.',
+  'about.galUS':
+    'A US gallon is a unit of volume in the United States customary system, equal to 3.78541 liters. It is used for measuring liquid capacities.',
+  'about.gal':
+    'Typically refers to the US gallon in American English. In British English, it might refer to the imperial gallon, which is approximately 4.54609 liters, but the context is crucial since "gal" can be ambiguous.',
+  'about.in³':
+    'A cubic inch is a unit of volume equal to the volume of a cube with each of its sides being one inch long. It is used in both the imperial and US customary systems.',
+  'about.ft³':
+    "A cubic foot is a unit of volume in the imperial and US customary measurement systems, equal to the volume of a cube with sides of one foot in length. It's commonly used in construction and shipping.",
+  'about.yd³':
+    'A cubic yard is a unit of volume used in the United States and the United Kingdom, equal to the volume of a cube with sides of one yard (three feet) in length.',
+  'about.tbspUS':
+    'A US tablespoon is a unit of volume equal to 1/32 of a US pint, or about 14.79 milliliters. It is used in cooking to measure liquid or bulk solid cooking ingredients.',
+  'about.tbsp':
+    "In British and Australian English, a tablespoon (imperial) is typically 17.76 milliliters, but this can vary depending on the country. It's important to specify the system being used.",
+  'about.tspUS': 'A US teaspoon is a unit of volume equal to 1/96 of a US pint, or about 4.93 milliliters.',
+  'about.tsp':
+    'A teaspoon is a unit of volume often used in cooking to measure ingredients. In countries using the metric system, it is typically considered equivalent to 5 milliliters.',
+  'about.cupUS':
+    'The US cup is a volume unit commonly used in American cooking. It is equal to 1/16th of a US gallon, or about 237 milliliters.',
+  'about.cup':
+    'In countries using the metric system, a cup is typically 250 milliliters, used for measuring cooking ingredients. However, the exact volume can vary by country.',
+  'about.pint':
+    'The pint is a unit of volume in the imperial system used in the UK and other countries, equal to 1/8th of an imperial gallon or about 568 milliliters.',
+  'about.pintUS':
+    'In the United States, a pint is equal to 1/8th of a US gallon or approximately 473 milliliters. It is commonly used for liquids in the US.',
+  'about.drop':
+    "A drop is a non-standardized unit of measure that can vary depending on the tool used (like a dropper or pipette) and the fluid's properties. In medicine and pharmacology, it is often approximated to about 0.05 milliliters per drop, but this can vary widely.",
   'about.Pa':
     "The Pascal is the SI unit of pressure. It is defined as one newton per square meter (N/m²). It's commonly used in scientific and engineering contexts.",
   'about.kPa':
@@ -184,6 +211,20 @@ export default {
   'km³.name': 'cubic kilometer',
   'L.name': 'liter',
   'mL.name': 'Milliliter',
+  'galUS.name': 'Gallon (US)',
+  'gal.name': 'Gallon',
+  'in³.name': 'Cubic inch',
+  'ft³.name': 'Cubic feet',
+  'yd³.name': 'Cubic yard',
+  'tbspUS.name': 'Tablespoon (US)',
+  'tbsp.name': 'Tablespoon',
+  'tspUS.name': 'Teaspoon (US)',
+  'tsp.name': 'Teaspoon',
+  'cupUS.name': 'Cup (US)',
+  'cup.name': 'Cup',
+  'pint.name': 'Pint',
+  'pintUS.name': 'Pint (US)',
+  'drop.name': 'Drop',
   'Pa.name': 'Pascal',
   'kPa.name': 'Kilopascal',
   'MPa.name': 'Megapascal',

@@ -1,0 +1,14 @@
+export const US_GALLON_IN_M3 = 264.172
+export const GALLON_IN_M3 = 219.969
+export const IN3_IN_M3 = 61023.7
+export const FT3_IN_M3 = 35.3147
+export const YD3_IN_M3 = 1.307951
+export const US_TBSP_IN_M3 = 67628
+export const TBSP_IN_M3 = 56312.13
+export const US_TSP_IN_M3 = 202884
+export const TSP_IN_M3 = 56312.1
+export const US_CUP_IN_M3 = 4166.667
+export const CUP_IN_M3 = 3519.508
+export const PINT_IMP_IN_M3 = 1759.754
+export const US_PINT_IN_M3 = 2113.376
+export const DROP_IN_M3 = 2e7

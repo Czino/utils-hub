@@ -1,6 +1,7 @@
 /* eslint-disable max-statements */
-import { ABSOLUTE_ZERO_ºC, KILO, MEGA } from './constants'
+import { KILO, MEGA } from './constants'
 import { conversionMap } from './conversionMap'
+import { ABSOLUTE_ZERO_ºC } from './temperature/constants'
 
 describe('conversionMap.temperature', () => {
   it('should convert temperature units', () => {
@@ -96,6 +97,20 @@ describe('conversionMap.volume', () => {
     expect(conversionMap.volume['m³']['km³'](1e9)).toEqual(1)
     expect(conversionMap.volume['m³'].L(1)).toEqual(1000)
     expect(conversionMap.volume['m³'].mL(1)).toEqual(1000000)
+    expect(conversionMap.volume['m³'].galUS(1)).toEqual(264.172)
+    expect(conversionMap.volume['m³'].gal(1)).toEqual(219.969)
+    expect(conversionMap.volume['m³']['in³'](1)).toEqual(61023.7)
+    expect(conversionMap.volume['m³']['ft³'](1)).toEqual(35.315)
+    expect(conversionMap.volume['m³']['yd³'](1)).toEqual(1.308)
+    expect(conversionMap.volume['m³'].tbspUS(1)).toEqual(67628)
+    expect(conversionMap.volume['m³'].tbsp(1)).toEqual(56312.13)
+    expect(conversionMap.volume['m³'].tspUS(1)).toEqual(202884)
+    expect(conversionMap.volume['m³'].tsp(1)).toEqual(56312.1)
+    expect(conversionMap.volume['m³'].cupUS(1)).toEqual(4166.667)
+    expect(conversionMap.volume['m³'].cup(1)).toEqual(3519.508)
+    expect(conversionMap.volume['m³'].pint(1)).toEqual(1759.754)
+    expect(conversionMap.volume['m³'].pintUS(1)).toEqual(2113.376)
+    expect(conversionMap.volume['m³'].drop(1)).toEqual(20000000)
 
     expect(conversionMap.volume['m³']['m³'](1000)).toEqual(1000)
     expect(conversionMap.volume['dm³']['m³'](1000)).toEqual(1)

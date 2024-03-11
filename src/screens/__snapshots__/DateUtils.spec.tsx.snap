@@ -168,7 +168,8 @@ exports[`DateUtils renders default 1`] = `
             value="en (English)"
           />
           <svg
-            class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+            aria-label="dropdown"
+            class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
             fill="none"
             height="1em"
             stroke="currentColor"
@@ -257,7 +258,7 @@ exports[`DateUtils updates date and displays in given format 1`] = `
             class="relative col-span-3 md:col-span-2"
           >
             <input
-@@ -209,23 +209,23 @@
+@@ -210,23 +210,23 @@
           <div
             class="col-span-3"
           >
@@ -313,10 +314,10 @@ exports[`DateUtils updates locale and displays localized format 1`] = `
 +             value="en (English)"
             />
             <svg
-              class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+              aria-label="dropdown"
+              class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
               fill="none"
-              height="1em"
-@@ -209,23 +209,23 @@
+@@ -210,23 +210,23 @@
           <div
             class="col-span-3"
           >

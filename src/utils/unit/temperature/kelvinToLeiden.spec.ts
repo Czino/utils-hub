@@ -1,4 +1,4 @@
-import { ABSOLUTE_ZERO_ºC } from '../constants'
+import { ABSOLUTE_ZERO_ºC } from './constants'
 import { kelvinToLeiden } from './kelvinToLeiden'
 
 describe('kelvinToLeiden', () => {

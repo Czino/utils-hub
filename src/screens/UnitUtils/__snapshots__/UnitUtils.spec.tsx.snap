@@ -240,7 +240,8 @@ exports[`UnitUtils renders correctly 1`] = `
                 value="K (Kelvin)"
               />
               <svg
-                class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+                aria-label="dropdown"
+                class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
                 fill="none"
                 height="1em"
                 stroke="currentColor"
@@ -297,7 +298,8 @@ exports[`UnitUtils renders correctly 1`] = `
                 value="ºC (Celsius)"
               />
               <svg
-                class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+                aria-label="dropdown"
+                class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
                 fill="none"
                 height="1em"
                 stroke="currentColor"
@@ -820,6 +822,19 @@ exports[`UnitUtils renders correctly 2`] = `
 - First value
 + Second value
 
+@@ -142,11 +142,11 @@
+          class="text-5xl text-success-2 font-bold "
+        >
+          Unit Utilities
+        </h1>
+        <p>
+-         Weight conversions shouldn't weigh you down. Our tool lightens the load, effortlessly turning kilograms into pounds, ounces into grams, and more. It's the perfect balance between simplicity and accuracy.
++         Tired of scratching your head over converting units? Say goodbye to confusion! This page lets you effortlessly switch between different units, like turning chilly Celsius into toasty Fahrenheit, so you're never left in the cold.
+        </p>
+        <div
+          class="grid gap-8"
+        >
+          <div
 @@ -154,11 +154,11 @@
           >
             <div
@@ -869,10 +884,10 @@ exports[`UnitUtils renders correctly 2`] = `
 +                 value="K (Kelvin)"
                 />
                 <svg
-                  class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+                  aria-label="dropdown"
+                  class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
                   fill="none"
-                  height="1em"
-@@ -277,23 +277,23 @@
+@@ -278,23 +278,23 @@
             </div>
             <div
               class="grid col-span-4 gap-4"
@@ -896,10 +911,10 @@ exports[`UnitUtils renders correctly 2`] = `
 +                 value="ºC (Celsius)"
                 />
                 <svg
-                  class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+                  aria-label="dropdown"
+                  class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
                   fill="none"
-                  height="1em"
-@@ -315,493 +315,493 @@
+@@ -317,493 +317,493 @@
         </div>
         <hr />
         <h2
