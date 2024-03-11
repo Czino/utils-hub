@@ -1,48 +1,61 @@
 import { useState } from 'react'
-import { FiArrowRight } from 'react-icons/fi'
+import { FiArrowDown, FiArrowRight } from 'react-icons/fi'
 import { Headline } from '../components/Headline'
-import { Input } from '../components/Input'
 import { Select } from '../components/Select'
+import { TextArea } from '../components/TextArea'
 import en from '../i18n/en'
 import { i18n } from '../i18n/i18n'
 import { ScreenWithSideNavigation } from '../templates/ScreenWithSideNavigation'
+import { decodeString } from '../utils/encoding/decodeString'
 import { encodeString } from '../utils/encoding/encodeString'
 
 export const encodings = ['base64', 'binary', 'hex'] as const
-
+type Encoding = (typeof encodings)[number]
 export const EncodingUtils = () => {
   const [text, setText] = useState('')
-  const [encoding, setEncoding] = useState(encodings[0])
-  const encodedText = encodeString(text, encoding)
+  const [encoding, setEncoding] = useState<Encoding>(encodings[0])
+  const [encodedText, setEncodedText] = useState(encodeString(text, encoding))
 
+  const updateText = (newText: string) => {
+    setText(newText)
+    setEncodedText(encodeString(newText, encoding))
+  }
+  const updateEncoding = (newEncoding: Encoding) => {
+    setEncoding(newEncoding)
+    setEncodedText(encodeString(text, newEncoding))
+  }
+  const updateEncodedText = (newEncodedText: string) => {
+    setEncodedText(newEncodedText)
+    setText(decodeString(newEncodedText, encoding))
+  }
   return (
     <ScreenWithSideNavigation>
       <Headline>{i18n(en.encoding.title)}</Headline>
       <p>{i18n(en.encoding.description)}</p>
-      <div className="grid grid-cols-3 gap-4 items-center md:grid-cols-9">
-        <Input
-          className="col-span-3"
-          type="text"
+      <div className="grid grid-cols-3 gap-4 md:grid-cols-9">
+        <TextArea
+          className="col-span-3 text-base"
           aria-label={i18n(en.form.text)}
           value={text}
-          onChange={(e) => setText(e.currentTarget.value)}
+          onChange={(e) => updateText(e.currentTarget.value)}
         />
-        <Select
-          className="col-span-3 md:col-span-2"
-          aria-label={i18n(en.encoding.selectEncoding)}
-          value={encoding}
-          onChange={setEncoding}
-        >
-          {encodings.map((enc) => (
-            <option key={enc}>{enc}</option>
-          ))}
-        </Select>
-        <div className="grid col-span-3 justify-center items-center self-center h-full md:col-span-1">
-          <FiArrowRight />
+        <div className="grid gap-4 items-start col-span-3 md:col-span-2">
+          <Select aria-label={i18n(en.encoding.selectEncoding)} value={encoding} onChange={updateEncoding}>
+            {encodings.map((enc) => (
+              <option key={enc}>{enc}</option>
+            ))}
+          </Select>
+          <div className="flex justify-center">
+            <FiArrowRight className="hidden md:block" />
+            <FiArrowDown className="md:hidden" />
+          </div>
         </div>
-        <div className="col-span-3" aria-label={i18n(en.encoding.encoded)}>
-          {encodedText}
-        </div>
+        <TextArea
+          className="col-span-3 font-mono text-base"
+          aria-label={i18n(en.encoding.inputEncodedText)}
+          value={encodedText}
+          onChange={(e) => updateEncodedText(e.currentTarget.value)}
+        />
       </div>
     </ScreenWithSideNavigation>
   )

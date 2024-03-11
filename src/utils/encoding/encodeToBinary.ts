@@ -1,4 +1,5 @@
-const BINARY = 2
+import { BINARY } from './constants'
+
 export const encodeToBinary = (str: string) =>
   str
     .split('')

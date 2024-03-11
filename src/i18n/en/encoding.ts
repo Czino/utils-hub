@@ -6,4 +6,5 @@ export default {
   shortDescription: 'No matter if you need cleartext, hex, base64 or others, this encoding tool got you covered.',
   selectEncoding: 'select encoding',
   encoded: 'encoded value',
+  inputEncodedText: 'input encoded text',
 }
