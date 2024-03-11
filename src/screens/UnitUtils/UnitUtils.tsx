@@ -33,7 +33,7 @@ export const UnitUtils = (props: Props) => {
   return (
     <ScreenWithSideNavigation>
       <Headline>{i18n(en.units.title)}</Headline>
-      <p>{i18n(en.units.description)}</p>
+      <p>{i18n(en.units[`description.${type}`])}</p>
       <UnitConverter
         {...{
           type,

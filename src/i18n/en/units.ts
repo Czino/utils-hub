@@ -2,10 +2,42 @@ export default {
   title: 'Unit Utilities',
   shortTitle: 'Units',
   subtitle: 'Quickly convert from one unit to another',
-  shortDescription:
+  'description.temperature':
     "Tired of scratching your head over converting units? Say goodbye to confusion! This page lets you effortlessly switch between different units, like turning chilly Celsius into toasty Fahrenheit, so you're never left in the cold.",
-  description:
-    "Tired of scratching your head over converting units? Say goodbye to confusion! This page lets you effortlessly switch between different units, like turning chilly Celsius into toasty Fahrenheit, so you're never left in the cold.",
+  'description.pressure':
+    "Feeling the pressure with unit conversions? Relax, we've got you covered. Our tool effortlessly translates psi into bars, pascals into atmospheres, and beyond. Now you can gauge the pressure without any stress.",
+  'description.velocity':
+    'Speed through your unit conversions without breaking a sweat. From miles per hour to meters per second, and knots to kilometers per hour, our page makes shifting gears between velocity units smooth and easy.',
+  'description.area':
+    "Converting area units can be a vast challenge, but with our tool, it's a walk in the park. Acres to square meters, square feet to square kilometers – we help you cover the ground effortlessly.",
+  'description.volume':
+    'Dive into volume conversions without getting lost in the depths. Our page turns liters into gallons, cubic meters into cubic feet, and more, making it simple to measure up in any unit you need.',
+  'description.weight':
+    "Weight conversions shouldn't weigh you down. Our tool lightens the load, effortlessly turning kilograms into pounds, ounces into grams, and more. It's the perfect balance between simplicity and accuracy.",
+  'description.distance':
+    "Go the distance with easy unit conversions. Whether you're measuring in miles or meters, kilometers or yards, our tool helps you cross the finish line without breaking stride.",
+  'description.data Size':
+    'From bytes to terabytes, converting data sizes can be overwhelming. But with our intuitive tool, you can scale up or down without confusion, ensuring your data measurements are precise and easy to understand.',
+  'description.energy':
+    'Transforming energy units with ease is no longer a dream. Joules to calories, BTUs to kilowatt-hours, our page empowers you to convert energy units without getting your wires crossed.',
+  'shortDescription.temperature':
+    'Seamlessly switch between Celsius, Fahrenheit, and Kelvin. Our temperature conversion tool makes it easy to adjust your readings to the scale you need.',
+  'shortDescription.pressure':
+    'Convert pressure units like psi to bar, pascals to atmospheres with ease. Simplify your calculations with our quick conversion tool.',
+  'shortDescription.velocity':
+    'Speedy velocity unit conversions from mph to m/s, knots to km/h. Use our fast converter to keep pace with your needs.',
+  'shortDescription.area':
+    'Effortlessly convert area units, from acres to square meters, square feet to square kilometers. Make measuring spaces simple.',
+  'shortDescription.volume':
+    'Volume conversions made easy. Switch between liters and gallons, cubic meters and cubic feet swiftly with our tool.',
+  'shortDescription.weight':
+    'Lighten your load with quick weight conversions. Kilograms to pounds, ounces to grams – get accurate results in an instant.',
+  'shortDescription.distance':
+    'Bridge any distance by converting units like miles to meters, kilometers to yards. Our converter makes navigation straightforward.',
+  'shortDescription.dataSize':
+    'Resize your digital data with ease. Convert bytes to terabytes and everything in between for precise data management.',
+  'shortDescription.energy':
+    'Power through energy unit conversions, from joules to calories, BTUs to kWh. Energize your calculations with our efficient tool.',
   selectUnitType: 'select unit type',
   inputUnit: 'input value for unit $unit',
   selectUnit1: 'select unit 1',

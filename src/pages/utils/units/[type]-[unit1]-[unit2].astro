@@ -24,7 +24,7 @@ const { type, unit1, unit2 } = Astro.params;
   <head>
     <Head />
     <title>{i18n(en.units.title)} – {i18n(en.units.subtitle)} – {i18n(en.home.title)}</title>
-    <meta name="description" content={i18n(en.units.shortDescription)}>
+    <meta name="description" content={i18n(en.units[`shortDescription.${type}`])}>
   </head>
 
   <body class="bg-gradient-to-tr from-60% from-white to-accent">
