@@ -5,12 +5,15 @@ import { Select } from './Select'
 expect.extend({ toMatchDiffSnapshot })
 
 describe('Select', () => {
-  const base = render(
-    <Select className="mt-4" value="text">
+  const onChange = jest.fn()
+
+  const template = (
+    <Select className="mt-4" value="text" aria-label="label" onChange={onChange}>
       <option>1</option>
       <option>2</option>
-    </Select>,
-  ).asFragment()
+    </Select>
+  )
+  const base = render(template).asFragment()
   it('should render Select', () => {
     expect(base).toMatchSnapshot()
   })
@@ -19,35 +22,25 @@ describe('Select', () => {
     expect(asFragment()).toMatchSnapshot()
   })
   it('should open options when focus', async () => {
-    const { asFragment, getByLabelText } = render(
-      <Select className="mt-4" value="text" aria-label="label">
-        <option>1</option>
-        <option>2</option>
-      </Select>,
-    )
+    const { asFragment, getByLabelText } = render(template)
     await userEvent.click(getByLabelText('label'))
     expect(asFragment()).toMatchDiffSnapshot(base)
   })
+  it('should close options when click on dropdown', async () => {
+    const { asFragment, getByLabelText } = render(template)
+    await userEvent.click(getByLabelText('label'))
+    await userEvent.click(getByLabelText('dropdown'))
+    expect(asFragment()).toMatchDiffSnapshot(base)
+  })
   it('lets user type search and select option', async () => {
-    const onChange = jest.fn()
-    const { getByLabelText } = render(
-      <Select className="mt-4" value="text" aria-label="label" onChange={onChange}>
-        <option>1</option>
-        <option>2</option>
-      </Select>,
-    )
+    const { getByLabelText } = render(template)
     await userEvent.click(getByLabelText('label'))
     await userEvent.type(getByLabelText('label'), '2')
     await userEvent.click(getByLabelText('option 2'))
     expect(onChange).toHaveBeenCalledWith('2')
   })
   it('filters search and displays all options when search term is empty', async () => {
-    const { asFragment, getByLabelText } = render(
-      <Select className="mt-4" value="text" aria-label="label">
-        <option>1</option>
-        <option>2</option>
-      </Select>,
-    )
+    const { asFragment, getByLabelText } = render(template)
     await userEvent.click(getByLabelText('label'))
     const whenAllOptions = asFragment()
     await userEvent.type(getByLabelText('label'), '2')

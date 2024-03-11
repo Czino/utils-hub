@@ -1,5 +1,7 @@
 import React, { useState, type ReactElement } from 'react'
 import { FiChevronDown } from 'react-icons/fi'
+import en from '../i18n/en'
+import { i18n } from '../i18n/i18n'
 
 type Option<T> = { value: T; label: string }
 
@@ -14,7 +16,6 @@ type Props<T> = Omit<React.ComponentProps<'input'>, 'value' | 'onChange'> & {
   onChange?: (value: T) => void
 }
 
-// TODO close on dropdown click when open
 export const Select = <T,>({ className, children, value, defaultValue, onChange, ...props }: Props<T>) => {
   const options = Array.isArray(children) ? children.map(mapChildToOption) : []
   const display = options.find((o) => o.value === value)?.label
@@ -48,6 +49,11 @@ export const Select = <T,>({ className, children, value, defaultValue, onChange,
     if (code !== 'Enter') return
     if (filteredOptions[0]) handleSelect(filteredOptions[0])
   }
+  const toggleOpen = () => {
+    if (!isOpen) return onFocus()
+    setSearchTerm(undefined)
+    return setIsOpen(false)
+  }
 
   return (
     <div className={`relative ${className}`}>
@@ -60,7 +66,11 @@ export const Select = <T,>({ className, children, value, defaultValue, onChange,
         className="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
         {...props}
       />
-      <FiChevronDown className="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none" />
+      <FiChevronDown
+        className="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
+        aria-label={i18n(en.form.dropdown)}
+        onClick={toggleOpen}
+      />
       {isOpen && (
         <ul className="overflow-auto absolute z-10 mt-1 w-full max-h-60 bg-white rounded border border-dark">
           {filteredOptions.map((option) => (

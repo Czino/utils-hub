@@ -3,4 +3,5 @@ export default {
   locale: 'select locale',
   number: 'input number',
   text: 'input text',
+  dropdown: 'dropdown',
 }

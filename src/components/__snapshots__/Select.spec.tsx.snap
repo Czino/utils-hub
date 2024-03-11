@@ -20,10 +20,10 @@ exports[`Select filters search and displays all options when search term is empt
 +       value="2"
       />
       <svg
-        class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+        aria-label="dropdown"
+        class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
         fill="none"
-        height="1em"
-@@ -24,17 +24,11 @@
+@@ -25,17 +25,11 @@
           points="6 9 12 15 18 9"
         />
       </svg>
@@ -43,24 +43,17 @@ exports[`Select filters search and displays all options when search term is empt
           2"
 `;
 
+exports[`Select should close options when click on dropdown 1`] = `
+"Snapshot Diff:
+Compared values have no visual difference."
+`;
+
 exports[`Select should open options when focus 1`] = `
 "Snapshot Diff:
 - First value
 + Second value
 
-@@ -1,11 +1,10 @@
-  <DocumentFragment>
-    <div
-      class="relative mt-4"
-    >
-      <input
--       aria-label="label"
-        class="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
-        type="text"
-        value=""
-      />
-      <svg
-@@ -22,23 +21,7 @@
+@@ -23,23 +23,7 @@
       >
         <polyline
           points="6 9 12 15 18 9"
@@ -92,12 +85,14 @@ exports[`Select should render Select 1`] = `
     class="relative mt-4"
   >
     <input
+      aria-label="label"
       class="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
       type="text"
       value=""
     />
     <svg
-      class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+      aria-label="dropdown"
+      class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
       fill="none"
       height="1em"
       stroke="currentColor"
@@ -127,7 +122,8 @@ exports[`Select should render Select without options 1`] = `
       value=""
     />
     <svg
-      class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none"
+      aria-label="dropdown"
+      class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
       fill="none"
       height="1em"
       stroke="currentColor"
