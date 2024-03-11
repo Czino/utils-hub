@@ -14,7 +14,7 @@ exports[`Select filters search and displays all options when search term is empt
     >
       <input
         aria-label="label"
-        class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
+        class="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
         type="text"
 -       value=""
 +       value="2"
@@ -55,7 +55,7 @@ exports[`Select should open options when focus 1`] = `
     >
       <input
 -       aria-label="label"
-        class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
+        class="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
         type="text"
         value=""
       />
@@ -92,7 +92,7 @@ exports[`Select should render Select 1`] = `
     class="relative mt-4"
   >
     <input
-      class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
+      class="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
       type="text"
       value=""
     />
@@ -122,7 +122,7 @@ exports[`Select should render Select without options 1`] = `
     class="relative mt-4"
   >
     <input
-      class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
+      class="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
       type="text"
       value=""
     />

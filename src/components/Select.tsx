@@ -57,7 +57,7 @@ export const Select = <T,>({ className, children, value, defaultValue, onChange,
         onChange={(e) => onSearch(e.currentTarget.value)}
         onKeyDown={(e) => selectFirst(e.code)}
         onFocus={onFocus}
-        className="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
+        className="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
         {...props}
       />
       <FiChevronDown className="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 pointer-events-none" />

@@ -9,7 +9,7 @@ exports[`DateUtils renders default 1`] = `
       class="fixed inset-0 transition-[opacity] bg-black pointer-events-none opacity-0"
     />
     <nav
-      class="bg-white fixed z-10 p-4 transition-[top] overflow-auto pb-32 w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px]"
+      class="bg-white fixed z-10 p-4 transition-[top] overflow-auto pb-32 w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px] md:border-right-1"
     >
       <ul>
         <li
@@ -154,7 +154,7 @@ exports[`DateUtils renders default 1`] = `
       >
         <input
           aria-label="input date"
-          class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded col-span-3"
+          class="w-full text-xs md:text-xl appearance-none bg-white text-dark p-2 border border-dark rounded col-span-3"
           type="datetime-local"
           value="2022-05-03 12:59"
         />
@@ -163,7 +163,7 @@ exports[`DateUtils renders default 1`] = `
         >
           <input
             aria-label="select locale"
-            class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
+            class="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
             type="text"
             value="en (English)"
           />
@@ -233,7 +233,7 @@ exports[`DateUtils renders default 1`] = `
       </div>
     </div>
     <div
-      class="w-[280px] hidden md:block"
+      class="w-[280px] hidden lg:block"
     />
   </div>
 </DocumentFragment>
@@ -248,7 +248,7 @@ exports[`DateUtils updates date and displays in given format 1`] = `
         >
           <input
             aria-label="input date"
-            class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded col-span-3"
+            class="w-full text-xs md:text-xl appearance-none bg-white text-dark p-2 border border-dark rounded col-span-3"
             type="datetime-local"
 -           value="2023-01-04T19:32"
 +           value="2022-05-03 12:59"
@@ -297,7 +297,7 @@ exports[`DateUtils updates locale and displays localized format 1`] = `
         >
           <input
             aria-label="input date"
-            class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded col-span-3"
+            class="w-full text-xs md:text-xl appearance-none bg-white text-dark p-2 border border-dark rounded col-span-3"
             type="datetime-local"
 -           value="2023-01-04T19:32"
 +           value="2022-05-03 12:59"
@@ -307,7 +307,7 @@ exports[`DateUtils updates locale and displays localized format 1`] = `
           >
             <input
               aria-label="select locale"
-              class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
+              class="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
               type="text"
 -             value="de (German)"
 +             value="en (English)"

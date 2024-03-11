@@ -3,7 +3,7 @@
 exports[`TextArea should render TextArea with styles 1`] = `
 <DocumentFragment>
   <textarea
-    class="px-2 py-2 w-full rounded border h-[300px] border-dark mt-4"
+    class="px-2 py-2 w-full bg-white rounded border h-[300px] border-dark mt-4"
   >
     text
   </textarea>

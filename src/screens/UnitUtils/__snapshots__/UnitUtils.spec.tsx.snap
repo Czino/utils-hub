@@ -9,7 +9,7 @@ exports[`UnitUtils renders correctly 1`] = `
       class="fixed inset-0 transition-[opacity] bg-black pointer-events-none opacity-0"
     />
     <nav
-      class="bg-white fixed z-10 p-4 transition-[top] overflow-auto pb-32 w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px]"
+      class="bg-white fixed z-10 p-4 transition-[top] overflow-auto pb-32 w-full h-full top-full md:h-screen md:relative md:left-0 md:w-[240px] md:border-right-1"
     >
       <ul>
         <li
@@ -226,7 +226,7 @@ exports[`UnitUtils renders correctly 1`] = `
           >
             <input
               aria-label="input value for unit K"
-              class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded "
+              class="w-full text-xs md:text-xl appearance-none bg-white text-dark p-2 border border-dark rounded "
               type="number"
               value="0"
             />
@@ -235,7 +235,7 @@ exports[`UnitUtils renders correctly 1`] = `
             >
               <input
                 aria-label="select unit 1"
-                class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
+                class="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
                 type="text"
                 value="K (Kelvin)"
               />
@@ -283,7 +283,7 @@ exports[`UnitUtils renders correctly 1`] = `
           >
             <input
               aria-label="input value for unit ºC"
-              class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded "
+              class="w-full text-xs md:text-xl appearance-none bg-white text-dark p-2 border border-dark rounded "
               type="number"
               value="-273.1"
             />
@@ -292,7 +292,7 @@ exports[`UnitUtils renders correctly 1`] = `
             >
               <input
                 aria-label="select unit 2"
-                class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
+                class="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
                 type="text"
                 value="ºC (Celsius)"
               />
@@ -809,7 +809,7 @@ exports[`UnitUtils renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="w-[280px] hidden md:block"
+      class="w-[280px] hidden lg:block"
     />
   </div>
 </DocumentFragment>
@@ -854,7 +854,7 @@ exports[`UnitUtils renders correctly 2`] = `
               <input
 -               aria-label="input value for unit g"
 +               aria-label="input value for unit K"
-                class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded "
+                class="w-full text-xs md:text-xl appearance-none bg-white text-dark p-2 border border-dark rounded "
                 type="number"
                 value="0"
               />
@@ -863,7 +863,7 @@ exports[`UnitUtils renders correctly 2`] = `
               >
                 <input
                   aria-label="select unit 1"
-                  class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
+                  class="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
                   type="text"
 -                 value="g (gram)"
 +                 value="K (Kelvin)"
@@ -880,7 +880,7 @@ exports[`UnitUtils renders correctly 2`] = `
               <input
 -               aria-label="input value for unit st"
 +               aria-label="input value for unit ºC"
-                class="w-full text-xs md:text-xl appearance-none bg-transparent text-dark p-2 border border-dark rounded "
+                class="w-full text-xs md:text-xl appearance-none bg-white text-dark p-2 border border-dark rounded "
                 type="number"
 -               value="0"
 +               value="-273.1"
@@ -890,7 +890,7 @@ exports[`UnitUtils renders correctly 2`] = `
               >
                 <input
                   aria-label="select unit 2"
-                  class="p-2 w-full text-xs bg-transparent rounded border md:text-xl border-dark"
+                  class="p-2 w-full text-xs bg-white rounded border md:text-xl border-dark"
                   type="text"
 -                 value="st (stone)"
 +                 value="ºC (Celsius)"

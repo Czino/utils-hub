@@ -44,7 +44,7 @@ export const NavigationColumn = () => {
           'bg-white fixed z-10 p-4 transition-[top] overflow-auto pb-32',
           'w-full h-full',
           isVisible ? 'top-12' : 'top-full',
-          'md:h-screen md:relative md:left-0 md:w-[240px]',
+          'md:h-screen md:relative md:left-0 md:w-[240px] md:border-right-1',
         ].join(' ')}
       >
         <ul>
@@ -54,7 +54,7 @@ export const NavigationColumn = () => {
             </h1>
           </li>
           {navigation.map(({ path, title }) => (
-            <li key={path}>
+            <li key={path || title}>
               {path ? (
                 <a href={path} className={current.includes(path) ? 'text-highlight-1' : ''}>
                   {title}
