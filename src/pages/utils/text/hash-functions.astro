@@ -1,0 +1,18 @@
+---
+import en from '../../../i18n/en/index';
+import { i18n } from '../../../i18n/i18n';
+import { HashingUtils } from '../../../screens/HashingUtils';
+import Head from '../../../templates/head.astro';
+---
+
+<html lang="en">
+  <head>
+    <Head />
+    <title>{i18n(en.hashing.title)} - {i18n(en.hashing.subtitle)} – {i18n(en.home.title)}</title>
+    <meta name="description" content={i18n(en.hashing.shortDescription)}>
+  </head>
+
+  <body class="bg-gradient-to-tr from-60% from-white to-accent">
+    <HashingUtils client:visible />
+  </body>
+</html>

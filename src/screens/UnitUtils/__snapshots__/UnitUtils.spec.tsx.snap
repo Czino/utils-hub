@@ -108,6 +108,14 @@ exports[`UnitUtils renders correctly 1`] = `
             Encoding
           </a>
         </li>
+        <li>
+          <a
+            class=""
+            href="/utils/text/hash-functions"
+          >
+            Hash functions
+          </a>
+        </li>
       </ul>
     </nav>
     <div
@@ -830,7 +838,7 @@ exports[`UnitUtils renders correctly 2`] = `
 - First value
 + Second value
 
-@@ -150,11 +150,11 @@
+@@ -158,11 +158,11 @@
           class="text-5xl text-success-2 font-bold "
         >
           Unit Utilities
@@ -843,7 +851,7 @@ exports[`UnitUtils renders correctly 2`] = `
           class="grid gap-8"
         >
           <div
-@@ -162,11 +162,11 @@
+@@ -170,11 +170,11 @@
           >
             <div
               class="flex flex-row gap-4"
@@ -856,7 +864,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 temperature
               </a>
             </div>
-@@ -188,11 +188,11 @@
+@@ -196,11 +196,11 @@
             >
               <div
                 class="w-px h-full bg-dark"
@@ -869,7 +877,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 weight
               </a>
             </div>
-@@ -228,11 +228,11 @@
+@@ -236,11 +236,11 @@
           >
             <div
               class="grid col-span-4 gap-4"
@@ -882,7 +890,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 value="0"
               />
               <div
-@@ -240,11 +240,11 @@
+@@ -248,11 +248,11 @@
               >
                 <input
                   aria-label="select unit 1"
@@ -895,7 +903,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   aria-label="dropdown"
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
                   fill="none"
-@@ -286,23 +286,23 @@
+@@ -294,23 +294,23 @@
             </div>
             <div
               class="grid col-span-4 gap-4"
@@ -922,7 +930,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   aria-label="dropdown"
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
                   fill="none"
-@@ -325,493 +325,493 @@
+@@ -333,493 +333,493 @@
         </div>
         <hr />
         <h2

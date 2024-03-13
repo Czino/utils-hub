@@ -108,6 +108,14 @@ exports[`Home should render correctly 1`] = `
             Encoding
           </a>
         </li>
+        <li>
+          <a
+            class=""
+            href="/utils/text/hash-functions"
+          >
+            Hash functions
+          </a>
+        </li>
       </ul>
     </nav>
     <div

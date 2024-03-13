@@ -105,6 +105,14 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
           Encoding
         </a>
       </li>
+      <li>
+        <a
+          class=""
+          href="/utils/text/hash-functions"
+        >
+          Hash functions
+        </a>
+      </li>
     </ul>
   </nav>
   <div
@@ -254,6 +262,14 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 +           href="/utils/text/encoding"
 +         >
 +           Encoding
++         </a>
++       </li>
++       <li>
++         <a
++           class=""
++           href="/utils/text/hash-functions"
++         >
++           Hash functions
 +         </a>
 +       </li>
 +     </ul>
