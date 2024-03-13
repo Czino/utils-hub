@@ -30,7 +30,7 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
       <li>
         <a
           class=""
-          href="/utils/date"
+          href="/utils/time/date"
         >
           Dates
         </a>
@@ -45,7 +45,7 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
       <li>
         <a
           class=""
-          href="/utils/numbers"
+          href="/utils/numbers/base"
         >
           Numbers 
         </a>
@@ -53,7 +53,7 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
       <li>
         <a
           class=""
-          href="/utils/fractions"
+          href="/utils/numbers/fractions"
         >
           Fractions
         </a>
@@ -61,7 +61,7 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
       <li>
         <a
           class=""
-          href="/utils/percentages"
+          href="/utils/numbers/percentages"
         >
           Percentages 
         </a>
@@ -92,7 +92,7 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
       <li>
         <a
           class=""
-          href="/utils/list"
+          href="/utils/text/list"
         >
           Lists
         </a>
@@ -100,7 +100,7 @@ exports[`NavigationColumn should render NavigationColumn 1`] = `
       <li>
         <a
           class=""
-          href="/utils/encoding"
+          href="/utils/text/encoding"
         >
           Encoding
         </a>
@@ -181,7 +181,7 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 +       <li>
 +         <a
 +           class=""
-+           href="/utils/date"
++           href="/utils/time/date"
 +         >
 +           Dates
 +         </a>
@@ -196,7 +196,7 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 +       <li>
 +         <a
 +           class=""
-+           href="/utils/numbers"
++           href="/utils/numbers/base"
 +         >
 +           Numbers 
 +         </a>
@@ -204,7 +204,7 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 +       <li>
 +         <a
 +           class=""
-+           href="/utils/fractions"
++           href="/utils/numbers/fractions"
 +         >
 +           Fractions
 +         </a>
@@ -212,7 +212,7 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 +       <li>
 +         <a
 +           class=""
-+           href="/utils/percentages"
++           href="/utils/numbers/percentages"
 +         >
 +           Percentages 
 +         </a>
@@ -243,7 +243,7 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 +       <li>
 +         <a
 +           class=""
-+           href="/utils/list"
++           href="/utils/text/list"
 +         >
 +           Lists
 +         </a>
@@ -251,7 +251,7 @@ exports[`NavigationColumn should show NavigationColumn when clicking on menu ico
 +       <li>
 +         <a
 +           class=""
-+           href="/utils/encoding"
++           href="/utils/text/encoding"
 +         >
 +           Encoding
 +         </a>

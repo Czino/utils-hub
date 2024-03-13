@@ -1,3 +1,4 @@
+import base from './base'
 import date from './date'
 import encoding from './encoding'
 import form from './form'
@@ -6,7 +7,6 @@ import home from './home'
 import language from './language'
 import list from './list'
 import navigation from './navigation'
-import numbers from './numbers'
 import percentages from './percentages'
 import text from './text'
 import units from './units'
@@ -20,7 +20,7 @@ export default {
   language,
   list,
   navigation,
-  numbers,
+  base,
   percentages,
   text,
   units,

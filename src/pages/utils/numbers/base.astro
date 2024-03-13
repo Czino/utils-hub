@@ -1,0 +1,18 @@
+---
+import en from '../../../i18n/en/index';
+import { i18n } from '../../../i18n/i18n';
+import { NumberUtils } from '../../../screens/NumberUtils';
+import Head from '../../../templates/head.astro';
+---
+
+<html lang="en">
+  <head>
+    <Head />
+    <title>{i18n(en.base.title)} - {i18n(en.base.subtitle)} – {i18n(en.home.title)}</title>
+    <meta name="description" content={i18n(en.base.shortDescription)}>
+  </head>
+
+  <body class="bg-gradient-to-tr from-60% from-white to-accent">
+    <NumberUtils client:visible />
+  </body>
+</html>

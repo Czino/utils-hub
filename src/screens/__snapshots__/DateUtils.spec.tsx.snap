@@ -33,7 +33,7 @@ exports[`DateUtils renders default 1`] = `
         <li>
           <a
             class=""
-            href="/utils/date"
+            href="/utils/time/date"
           >
             Dates
           </a>
@@ -48,7 +48,7 @@ exports[`DateUtils renders default 1`] = `
         <li>
           <a
             class=""
-            href="/utils/numbers"
+            href="/utils/numbers/base"
           >
             Numbers 
           </a>
@@ -56,7 +56,7 @@ exports[`DateUtils renders default 1`] = `
         <li>
           <a
             class=""
-            href="/utils/fractions"
+            href="/utils/numbers/fractions"
           >
             Fractions
           </a>
@@ -64,7 +64,7 @@ exports[`DateUtils renders default 1`] = `
         <li>
           <a
             class=""
-            href="/utils/percentages"
+            href="/utils/numbers/percentages"
           >
             Percentages 
           </a>
@@ -95,7 +95,7 @@ exports[`DateUtils renders default 1`] = `
         <li>
           <a
             class=""
-            href="/utils/list"
+            href="/utils/text/list"
           >
             Lists
           </a>
@@ -103,7 +103,7 @@ exports[`DateUtils renders default 1`] = `
         <li>
           <a
             class=""
-            href="/utils/encoding"
+            href="/utils/text/encoding"
           >
             Encoding
           </a>

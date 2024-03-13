@@ -33,28 +33,28 @@ export const NumberUtils = () => {
 
   return (
     <ScreenWithSideNavigation>
-      <Headline>{i18n(en.numbers.title)}</Headline>
-      <p>{i18n(en.numbers.description)}</p>
+      <Headline>{i18n(en.base.title)}</Headline>
+      <p>{i18n(en.base.description)}</p>
       <div className="flex flex-row gap-4 items-center">
         <InputWithLabel
-          label={i18n(en.numbers.number1)}
+          label={i18n(en.base.number1)}
           type="number"
-          aria-label={`${i18n(en.form.number)}: ${i18n(en.numbers.number1)}`}
+          aria-label={`${i18n(en.form.number)}: ${i18n(en.base.number1)}`}
           value={number1}
           onChange={(e) => updateNumber1(e.currentTarget.value)}
         />
         <InputWithLabel
-          label={i18n(en.numbers.base)}
+          label={i18n(en.base.base)}
           type="number"
-          aria-label={`${i18n(en.form.number)}: ${i18n(en.numbers.base)}`}
+          aria-label={`${i18n(en.form.number)}: ${i18n(en.base.base)}`}
           value={base}
           onChange={(e) => updateBase(Number(e.currentTarget.value))}
         />
         <InputWithLabel
-          id="numbers-value-2"
-          label={i18n(en.numbers.number2)}
+          id="base-value-2"
+          label={i18n(en.base.number2)}
           type="text"
-          aria-label={`${i18n(en.form.number)}: ${i18n(en.numbers.number2)}`}
+          aria-label={`${i18n(en.form.number)}: ${i18n(en.base.number2)}`}
           value={number2}
           onChange={(e) => updateNumber2(e.currentTarget.value)}
         />

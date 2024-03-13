@@ -10,17 +10,17 @@ type NavigationItem = {
 }
 export const navigation: NavigationItem[] = [
   { title: en.navigation.time },
-  { path: '/utils/date', title: en.date.shortTitle },
+  { path: '/utils/time/date', title: en.date.shortTitle },
   // { path: '/utils/hashing', title: en.hashing.shortTitle }, // TODO
   { title: en.navigation.numbers },
-  { path: '/utils/numbers', title: en.numbers.shortTitle },
-  { path: '/utils/fractions', title: en.fractions.shortTitle },
-  { path: '/utils/percentages', title: en.percentages.shortTitle },
+  { path: '/utils/numbers/base', title: en.base.shortTitle },
+  { path: '/utils/numbers/fractions', title: en.fractions.shortTitle },
+  { path: '/utils/numbers/percentages', title: en.percentages.shortTitle },
   { path: '/utils/units', title: en.units.shortTitle },
   { title: en.navigation.text },
   { path: '/utils/text', title: en.text.shortTitle },
-  { path: '/utils/list', title: en.list.shortTitle },
-  { path: '/utils/encoding', title: en.encoding.shortTitle },
+  { path: '/utils/text/list', title: en.list.shortTitle },
+  { path: '/utils/text/encoding', title: en.encoding.shortTitle },
 ]
 
 export const NavigationColumn = () => {
