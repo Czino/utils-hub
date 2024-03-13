@@ -11,13 +11,15 @@ const mapChildToOption = (child: ReactElement) => {
   const val = child.props.value || label
   return { value: val, label }
 }
+const sortOptions = <T,>(a: Option<T>, b: Option<T>) => (a.label < b.label ? -1 : 1)
+
 type Props<T> = Omit<React.ComponentProps<'input'>, 'value' | 'onChange'> & {
   value: T
   onChange?: (value: T) => void
 }
 
 export const Select = <T,>({ className, children, value, defaultValue, onChange, ...props }: Props<T>) => {
-  const options = Array.isArray(children) ? children.map(mapChildToOption) : []
+  const options = Array.isArray(children) ? children.map(mapChildToOption).sort(sortOptions) : []
   const display = options.find((o) => o.value === value)?.label
   const [isOpen, setIsOpen] = useState(false)
   const [searchTerm, setSearchTerm] = useState(defaultValue)

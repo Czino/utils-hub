@@ -111,6 +111,11 @@ exports[`Select should render Select 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Select should render Select with sorted options 1`] = `
+"Snapshot Diff:
+Compared values have no visual difference."
+`;
+
 exports[`Select should render Select without options 1`] = `
 <DocumentFragment>
   <div

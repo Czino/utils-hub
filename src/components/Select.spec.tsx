@@ -21,6 +21,15 @@ describe('Select', () => {
     const { asFragment } = render(<Select className="mt-4" value="text"></Select>)
     expect(asFragment()).toMatchSnapshot()
   })
+  it('should render Select with sorted options', () => {
+    const { asFragment } = render(
+      <Select className="mt-4" value="text" aria-label="label" onChange={onChange}>
+        <option>2</option>
+        <option>1</option>
+      </Select>,
+    )
+    expect(asFragment()).toMatchDiffSnapshot(base)
+  })
   it('should open options when focus', async () => {
     const { asFragment, getByLabelText } = render(template)
     await userEvent.click(getByLabelText('label'))
