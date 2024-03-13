@@ -48,6 +48,14 @@ exports[`DateUtils renders default 1`] = `
         <li>
           <a
             class=""
+            href="/utils/numbers"
+          >
+            Numbers 
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
             href="/utils/fractions"
           >
             Fractions
@@ -245,7 +253,7 @@ exports[`DateUtils updates date and displays in given format 1`] = `
 - First value
 + Second value
 
-@@ -151,11 +151,11 @@
+@@ -159,11 +159,11 @@
         >
           <input
             aria-label="input date"
@@ -258,7 +266,7 @@ exports[`DateUtils updates date and displays in given format 1`] = `
             class="relative col-span-3 md:col-span-2"
           >
             <input
-@@ -210,23 +210,23 @@
+@@ -218,23 +218,23 @@
           <div
             class="col-span-3"
           >
@@ -294,7 +302,7 @@ exports[`DateUtils updates locale and displays localized format 1`] = `
 - First value
 + Second value
 
-@@ -151,20 +151,20 @@
+@@ -159,20 +159,20 @@
         >
           <input
             aria-label="input date"
@@ -317,7 +325,7 @@ exports[`DateUtils updates locale and displays localized format 1`] = `
               aria-label="dropdown"
               class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
               fill="none"
-@@ -210,23 +210,23 @@
+@@ -218,23 +218,23 @@
           <div
             class="col-span-3"
           >

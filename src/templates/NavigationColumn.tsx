@@ -12,8 +12,8 @@ export const navigation: NavigationItem[] = [
   { title: en.navigation.time },
   { path: '/utils/date', title: en.date.shortTitle },
   // { path: '/utils/hashing', title: en.hashing.shortTitle }, // TODO
-  // { path: '/utils/numbers', title: en.numbers.shortTitle }, // TODO
   { title: en.navigation.numbers },
+  { path: '/utils/numbers', title: en.numbers.shortTitle },
   { path: '/utils/fractions', title: en.fractions.shortTitle },
   { path: '/utils/percentages', title: en.percentages.shortTitle },
   { path: '/utils/units', title: en.units.shortTitle },

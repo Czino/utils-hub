@@ -6,6 +6,7 @@ import home from './home'
 import language from './language'
 import list from './list'
 import navigation from './navigation'
+import numbers from './numbers'
 import percentages from './percentages'
 import text from './text'
 import units from './units'
@@ -13,13 +14,14 @@ import units from './units'
 export default {
   date,
   encoding,
-  navigation,
   form,
   fractions,
   home,
   language,
   list,
-  units,
-  text,
+  navigation,
+  numbers,
   percentages,
+  text,
+  units,
 }

@@ -48,6 +48,14 @@ exports[`UnitUtils renders correctly 1`] = `
         <li>
           <a
             class=""
+            href="/utils/numbers"
+          >
+            Numbers 
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
             href="/utils/fractions"
           >
             Fractions
@@ -822,7 +830,7 @@ exports[`UnitUtils renders correctly 2`] = `
 - First value
 + Second value
 
-@@ -142,11 +142,11 @@
+@@ -150,11 +150,11 @@
           class="text-5xl text-success-2 font-bold "
         >
           Unit Utilities
@@ -835,7 +843,7 @@ exports[`UnitUtils renders correctly 2`] = `
           class="grid gap-8"
         >
           <div
-@@ -154,11 +154,11 @@
+@@ -162,11 +162,11 @@
           >
             <div
               class="flex flex-row gap-4"
@@ -848,7 +856,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 temperature
               </a>
             </div>
-@@ -180,11 +180,11 @@
+@@ -188,11 +188,11 @@
             >
               <div
                 class="w-px h-full bg-dark"
@@ -861,7 +869,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 weight
               </a>
             </div>
-@@ -220,11 +220,11 @@
+@@ -228,11 +228,11 @@
           >
             <div
               class="grid col-span-4 gap-4"
@@ -874,7 +882,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 value="0"
               />
               <div
-@@ -232,11 +232,11 @@
+@@ -240,11 +240,11 @@
               >
                 <input
                   aria-label="select unit 1"
@@ -887,7 +895,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   aria-label="dropdown"
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
                   fill="none"
-@@ -278,23 +278,23 @@
+@@ -286,23 +286,23 @@
             </div>
             <div
               class="grid col-span-4 gap-4"
@@ -914,7 +922,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   aria-label="dropdown"
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
                   fill="none"
-@@ -317,493 +317,493 @@
+@@ -325,493 +325,493 @@
         </div>
         <hr />
         <h2
