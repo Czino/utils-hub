@@ -56,7 +56,7 @@ export const NavigationColumn = () => {
           {navigation.map(({ path, title }) => (
             <li key={path || title}>
               {path ? (
-                <a href={path} className={current.includes(path) ? 'text-highlight-1' : ''}>
+                <a href={path} className={current === path ? 'text-highlight-1' : ''}>
                   {title}
                 </a>
               ) : (

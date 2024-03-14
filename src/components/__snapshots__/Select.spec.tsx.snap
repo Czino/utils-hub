@@ -113,7 +113,33 @@ exports[`Select should render Select 1`] = `
 
 exports[`Select should render Select with sorted options 1`] = `
 "Snapshot Diff:
-Compared values have no visual difference."
+- First value
++ Second value
+
+@@ -23,23 +23,7 @@
+      >
+        <polyline
+          points="6 9 12 15 18 9"
+        />
+      </svg>
+-     <ul
+-       class="overflow-auto absolute z-10 mt-1 w-full max-h-60 bg-white rounded border border-dark"
+-     >
+-       <li
+-         aria-label="option 1"
+-         class="p-2 text-xs cursor-pointer md:text-xl hover:bg-gray-100"
+-       >
+-         1
+-       </li>
+-       <li
+-         aria-label="option 2"
+-         class="p-2 text-xs cursor-pointer md:text-xl hover:bg-gray-100"
+-       >
+-         2
+-       </li>
+-     </ul>
+    </div>
+  </DocumentFragment>"
 `;
 
 exports[`Select should render Select without options 1`] = `
@@ -145,4 +171,35 @@ exports[`Select should render Select without options 1`] = `
     </svg>
   </div>
 </DocumentFragment>
+`;
+
+exports[`Select should render Select without sorting 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -23,23 +23,7 @@
+      >
+        <polyline
+          points="6 9 12 15 18 9"
+        />
+      </svg>
+-     <ul
+-       class="overflow-auto absolute z-10 mt-1 w-full max-h-60 bg-white rounded border border-dark"
+-     >
+-       <li
+-         aria-label="option 2"
+-         class="p-2 text-xs cursor-pointer md:text-xl hover:bg-gray-100"
+-       >
+-         2
+-       </li>
+-       <li
+-         aria-label="option 1"
+-         class="p-2 text-xs cursor-pointer md:text-xl hover:bg-gray-100"
+-       >
+-         1
+-       </li>
+-     </ul>
+    </div>
+  </DocumentFragment>"
 `;

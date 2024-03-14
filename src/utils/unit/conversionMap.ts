@@ -1,3 +1,4 @@
+import { BINARY } from '../encoding/constants'
 import { round } from '../math/round'
 import { keys } from '../object/keys'
 import {
@@ -75,11 +76,10 @@ const PRECISION = 3
 const GRAMS_PER_OUNCE = 28.349523125
 const GRAMS_PER_POUND = 453.59237
 const GRAMS_PER_STONE = 6350.29318
-
+const BYTE = 8
 // TODO add velocity
 // TODO add area
 // TODO add energy
-// TODO add data size
 export const baseMap = {
   temperature: {
     K: {
@@ -220,6 +220,31 @@ export const baseMap = {
     at: { Pa: technicalAtmosphereToPascal },
     psf: { Pa: psfToPascal },
   },
+  data: {
+    bit: {
+      bit: (bit: number) => bit,
+      nibble: (bit: number) => round(bit / BYTE / BINARY, PRECISION),
+      byte: (bit: number) => round(bit / BYTE, PRECISION),
+      KB: (bit: number) => round(bit / BYTE / BINARY ** 10, PRECISION),
+      MB: (bit: number) => round(bit / BYTE / BINARY ** 20, PRECISION),
+      GB: (bit: number) => round(bit / BYTE / BINARY ** 30, PRECISION),
+      TB: (bit: number) => round(bit / BYTE / BINARY ** 40, PRECISION),
+      PB: (bit: number) => round(bit / BYTE / BINARY ** 50, PRECISION),
+      EB: (bit: number) => round(bit / BYTE / BINARY ** 60, PRECISION),
+      ZB: (bit: number) => round(bit / BYTE / BINARY ** 70, PRECISION),
+      YB: (bit: number) => round(bit / BYTE / BINARY ** 80, PRECISION),
+    },
+    nibble: { bit: (nibble: number) => (nibble * BYTE) / BINARY },
+    byte: { bit: (byte: number) => byte * BYTE },
+    KB: { bit: (KB: number) => KB * BYTE * BINARY ** 10 },
+    MB: { bit: (MB: number) => MB * BYTE * BINARY ** 20 },
+    GB: { bit: (GB: number) => GB * BYTE * BINARY ** 30 },
+    TB: { bit: (TB: number) => TB * BYTE * BINARY ** 40 },
+    PB: { bit: (PB: number) => PB * BYTE * BINARY ** 50 },
+    EB: { bit: (EB: number) => EB * BYTE * BINARY ** 60 },
+    ZB: { bit: (ZB: number) => ZB * BYTE * BINARY ** 70 },
+    YB: { bit: (YB: number) => YB * BYTE * BINARY ** 80 },
+  },
 }
 
 export type UnitType = keyof typeof baseMap
@@ -229,7 +254,8 @@ export type distanceUnit = keyof typeof baseMap.distance
 export type WeightUnit = keyof typeof baseMap.weight
 export type VolumeUnit = keyof typeof baseMap.volume
 export type PressureUnit = keyof typeof baseMap.pressure
-export type Unit = TemperatureUnit | distanceUnit | WeightUnit | VolumeUnit | PressureUnit
+export type DataUnit = keyof typeof baseMap.data
+export type Unit = TemperatureUnit | distanceUnit | WeightUnit | VolumeUnit | PressureUnit | DataUnit
 
 type PartialConversionInfo = Record<string, Record<string, (value: number) => number>>
 type ConversionInfo<U extends string> = Record<U, Record<U, (value: number) => number>>
@@ -257,4 +283,5 @@ export const conversionMap = {
   weight: mapConverters<WeightUnit>('g', baseMap.weight),
   volume: mapConverters<VolumeUnit>('m³', baseMap.volume),
   pressure: mapConverters<PressureUnit>('Pa', baseMap.pressure),
+  data: mapConverters<DataUnit>('bit', baseMap.data),
 }

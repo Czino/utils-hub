@@ -14,6 +14,7 @@ describe('Select', () => {
     </Select>
   )
   const base = render(template).asFragment()
+
   it('should render Select', () => {
     expect(base).toMatchSnapshot()
   })
@@ -21,13 +22,26 @@ describe('Select', () => {
     const { asFragment } = render(<Select className="mt-4" value="text"></Select>)
     expect(asFragment()).toMatchSnapshot()
   })
-  it('should render Select with sorted options', () => {
-    const { asFragment } = render(
+  it('should render Select with sorted options', async () => {
+    const { asFragment, getByLabelText } = render(
       <Select className="mt-4" value="text" aria-label="label" onChange={onChange}>
         <option>2</option>
         <option>1</option>
       </Select>,
     )
+    await userEvent.click(getByLabelText('label'))
+
+    expect(asFragment()).toMatchDiffSnapshot(base)
+  })
+  it('should render Select without sorting', async () => {
+    const { asFragment, getByLabelText } = render(
+      <Select className="mt-4" sort={false} value="text" aria-label="label" onChange={onChange}>
+        <option>2</option>
+        <option>1</option>
+      </Select>,
+    )
+    await userEvent.click(getByLabelText('label'))
+
     expect(asFragment()).toMatchDiffSnapshot(base)
   })
   it('should open options when focus', async () => {

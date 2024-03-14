@@ -233,6 +233,19 @@ exports[`UnitUtils renders correctly 1`] = `
               pressure
             </a>
           </div>
+          <div
+            class="flex flex-row gap-4"
+          >
+            <div
+              class="w-px h-full bg-dark"
+            />
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-success-1 visited:text-success-1"
+              href="/utils/units/data-bit-nibble"
+            >
+              data
+            </a>
+          </div>
         </div>
         <div
           class="grid grid-cols-9 gap-4"
@@ -877,7 +890,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 weight
               </a>
             </div>
-@@ -236,11 +236,11 @@
+@@ -249,11 +249,11 @@
           >
             <div
               class="grid col-span-4 gap-4"
@@ -890,7 +903,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 value="0"
               />
               <div
-@@ -248,11 +248,11 @@
+@@ -261,11 +261,11 @@
               >
                 <input
                   aria-label="select unit 1"
@@ -903,7 +916,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   aria-label="dropdown"
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
                   fill="none"
-@@ -294,23 +294,23 @@
+@@ -307,23 +307,23 @@
             </div>
             <div
               class="grid col-span-4 gap-4"
@@ -930,7 +943,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   aria-label="dropdown"
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
                   fill="none"
-@@ -333,493 +333,493 @@
+@@ -346,493 +346,493 @@
         </div>
         <hr />
         <h2

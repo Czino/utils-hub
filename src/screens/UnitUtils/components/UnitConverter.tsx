@@ -122,6 +122,7 @@ export const UnitConverter = ({ type, setType, unit1, setUnit1, unit2, setUnit2 
           />
           <Select
             aria-label={i18n(en.units.selectUnit1)}
+            sort={false}
             value={unit1}
             onChange={(value) => updateUnit1(value as Unit)}
           >
@@ -148,6 +149,7 @@ export const UnitConverter = ({ type, setType, unit1, setUnit1, unit2, setUnit2 
           />
           <Select
             aria-label={i18n(en.units.selectUnit2)}
+            sort={false}
             value={unit2}
             onChange={(value) => updateUnit2(value as Unit)}
           >

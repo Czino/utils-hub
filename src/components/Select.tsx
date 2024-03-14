@@ -15,11 +15,14 @@ const sortOptions = <T,>(a: Option<T>, b: Option<T>) => (a.label < b.label ? -1 
 
 type Props<T> = Omit<React.ComponentProps<'input'>, 'value' | 'onChange'> & {
   value: T
+  sort?: boolean
   onChange?: (value: T) => void
 }
 
-export const Select = <T,>({ className, children, value, defaultValue, onChange, ...props }: Props<T>) => {
-  const options = Array.isArray(children) ? children.map(mapChildToOption).sort(sortOptions) : []
+export const Select = <T,>({ className, sort = true, children, value, defaultValue, onChange, ...props }: Props<T>) => {
+  let options = Array.isArray(children) ? children.map(mapChildToOption) : []
+  if (sort) options = options.toSorted(sortOptions)
+
   const display = options.find((o) => o.value === value)?.label
   const [isOpen, setIsOpen] = useState(false)
   const [searchTerm, setSearchTerm] = useState(defaultValue)
