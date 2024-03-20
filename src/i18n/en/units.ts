@@ -86,6 +86,33 @@ export default {
     'The mile is a unit of length commonly used in the imperial and US customary systems. It is equal to 5280 feet or approximately 1.609 kilometers.',
   'about.nmi':
     'The nautical mile is a unit of length used primarily in navigation and maritime contexts. It is defined as one minute of latitude along any meridian and is approximately equal to 1.852 kilometers.',
+  'about.m²':
+    "Square meter (m²): The go-to unit for measuring areas, like in construction or to get a feel for the size of a room. It's about the area of a square that's 1 meter on each side.",
+  'about.dm²':
+    "Square decimeter (dm²): Smaller than a square meter, imagine a square that's 10 cm (or about 4 inches) on each side. Handy for smaller surfaces like a book cover.",
+  'about.cm²':
+    'Square centimeter (cm²): This tiny area is about the size of a postage stamp or the tip of your thumb. Great for measuring small surfaces.',
+  'about.mm²':
+    "Square millimeter (mm²): Extremely small, this is the area of a square that's 1 mm on each side. Think about the size of a pencil tip.",
+  'about.µm²':
+    'Square micrometer (µm²): Entering the microscopic world, this is the area for things too small to see without magnification, like cells and bacteria.',
+  'about.nm²':
+    'Square nanometer (nm²): Deep into the realm of the ultra-tiny, used in physics and chemistry to measure molecules and atomic surfaces.',
+  'about.km²':
+    'Square kilometer (km²): This large area unit is used for measuring cities, lakes, or large tracts of forest, equivalent to a square 1 km on each side.',
+  'about.in²':
+    'Square inch (in²): A small area, roughly the size of a square postage stamp. Common in the U.S. for measuring non-digital displays or small surface areas.',
+  'about.ft²': 'Square feet (ft²): Frequently used in real estate to measure room and building sizes.',
+  'about.yd²':
+    'Square yard (yd²): Larger than a square foot, this unit is often used in fabric and land measurement. Imagine a square 3 feet on each side.',
+  'about.ac':
+    "Acre (ac): A traditional measure of land, about the size of a football field. It's a common unit for assessing property sizes in the U.S.",
+  'about.a':
+    "Are (a): Equal to 100 square meters, it's not the most common unit but is used in some contexts for land measurement.",
+  'about.ha':
+    'Hectare (ha): A much larger unit than the are, commonly used around the world for measuring large areas of land, like parks and forests. One hectare equals 10,000 square meters or 2.47 acres.',
+  'about.ff':
+    'Football field (ff): While not an official measurement unit, it provides a familiar reference for size, roughly equal to 1.3 acre or 0.5 hectares, giving a relatable sense of scale for large areas.',
   'about.g':
     'The gram is the base unit of mass in the International System of Units (SI). It is defined as one-thousandth of a kilogram (0.001 kg). Grams are commonly used for measuring small quantities of mass, such as food ingredients or small objects.',
   'about.kg':
@@ -193,8 +220,9 @@ export default {
     'A yottabyte (1,024 YB) can theoretically store immense, almost unimaginable volumes of data, like the information content of the entire digital universe today. For example, the aggregate data of many large-scale global networks over decades.',
   temperature: 'temperature',
   distance: 'distance',
-  weight: 'weight',
+  area: 'area',
   volume: 'volume',
+  weight: 'weight',
   pressure: 'pressure',
   data: 'data',
   'K.name': 'Kelvin',
@@ -217,6 +245,20 @@ export default {
   'yd.name': 'yard',
   'mi.name': 'mile',
   'nmi.name': 'nautical mile',
+  'm².name': 'square meter',
+  'dm².name': 'square decimeter',
+  'cm².name': 'square centimeter',
+  'mm².name': 'square millimeter',
+  'µm².name': 'square micrometer',
+  'nm².name': 'square nanometer',
+  'km².name': 'square kilometer',
+  'in².name': 'square inch',
+  'ft².name': 'square feet',
+  'yd².name': 'square yard',
+  'ac.name': 'acre',
+  'a.name': 'are',
+  'ha.name': 'hectare',
+  'ff.name': 'football field',
   'g.name': 'gram',
   'kg.name': 'kilogram',
   't.name': 'ton',

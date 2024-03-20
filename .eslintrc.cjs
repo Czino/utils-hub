@@ -276,6 +276,8 @@ module.exports = {
       files: ['*.spec.tsx', '*.spec.ts'],
       rules: {
         'no-magic-numbers': 'off',
+        'max-statements': ['error', 50],
+        'max-lines-per-function': ['error', 300],
       },
     },
     {

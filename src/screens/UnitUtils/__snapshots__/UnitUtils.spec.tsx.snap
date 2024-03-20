@@ -202,9 +202,9 @@ exports[`UnitUtils renders correctly 1`] = `
             />
             <a
               class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-success-1 visited:text-success-1"
-              href="/utils/units/weight-g-kg"
+              href="/utils/units/area-m²-dm²"
             >
-              weight
+              area
             </a>
           </div>
           <div
@@ -218,6 +218,19 @@ exports[`UnitUtils renders correctly 1`] = `
               href="/utils/units/volume-m³-dm³"
             >
               volume
+            </a>
+          </div>
+          <div
+            class="flex flex-row gap-4"
+          >
+            <div
+              class="w-px h-full bg-dark"
+            />
+            <a
+              class="text-highlight-1 hover:underline active:text-highlight-2 visited:text-success-2 text-2xl font-bold capitalize text-success-1 visited:text-success-1"
+              href="/utils/units/weight-g-kg"
+            >
+              weight
             </a>
           </div>
           <div
@@ -877,7 +890,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 temperature
               </a>
             </div>
-@@ -196,11 +196,11 @@
+@@ -222,11 +222,11 @@
             >
               <div
                 class="w-px h-full bg-dark"
@@ -890,7 +903,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 weight
               </a>
             </div>
-@@ -249,11 +249,11 @@
+@@ -262,11 +262,11 @@
           >
             <div
               class="grid col-span-4 gap-4"
@@ -903,7 +916,7 @@ exports[`UnitUtils renders correctly 2`] = `
                 value="0"
               />
               <div
-@@ -261,11 +261,11 @@
+@@ -274,11 +274,11 @@
               >
                 <input
                   aria-label="select unit 1"
@@ -916,7 +929,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   aria-label="dropdown"
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
                   fill="none"
-@@ -307,23 +307,23 @@
+@@ -320,23 +320,23 @@
             </div>
             <div
               class="grid col-span-4 gap-4"
@@ -943,7 +956,7 @@ exports[`UnitUtils renders correctly 2`] = `
                   aria-label="dropdown"
                   class="absolute right-1 top-1/2 w-6 h-6 transform -translate-y-1/2 cursor-pointer"
                   fill="none"
-@@ -346,493 +346,493 @@
+@@ -359,493 +359,493 @@
         </div>
         <hr />
         <h2
